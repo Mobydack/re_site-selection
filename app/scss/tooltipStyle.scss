@@ -1,0 +1,17 @@
+ .ukit-alt-tooltip {
+    position: absolute;
+    opacity: 1;
+    width: 420px;
+    text-align: center;
+    transition: opacity 0.2s ease-in-out;
+    color: #3a3d41;
+    background-color: #fff;
+    border: 1px solid #afc1cb;
+    border-radius: 2px;
+    padding: 13px 14px;
+    font: {
+        family: avenir-regular;
+        size: 14px;
+    }
+    pointer-events: none;
+}

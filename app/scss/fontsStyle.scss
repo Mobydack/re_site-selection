@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'ukit';
+    src: url('../fonts/ukit.eot?hkumea');
+    src: url('../fonts/ukit.eot?hkumea#iefix') format('embedded-opentype'),
+      url('../fonts/ukit.ttf?hkumea') format('truetype'),
+      url('../fonts/ukit.woff?hkumea') format('woff'),
+      url('../fonts/ukit.svg?hkumea#ukit') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: avenir-bold;
+    src: url(../fonts/AvenirNextCyr-Bold.otf); /* Путь к файлу со шрифтом */
+}
+  
+@font-face {
+    font-family: avenir-medium;
+    src: url(../fonts/AvenirNextCyr-Medium.otf); /* Путь к файлу со шрифтом */
+}
+  
+@font-face {
+    font-family: avenir-regular;
+    src: url(../fonts/AvenirNextCyr-Regular.otf); /* Путь к файлу со шрифтом */
+}
+  
+@font-face {
+    font-family: avenir-demi;
+    src: url(../fonts/AvenirNextCyr-Demi.otf); /* Путь к файлу со шрифтом */
+}

@@ -1,0 +1,32 @@
+*, *:after, *:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    min-width: 380px;
+    background: #E7EBEE;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}
+
+button, select, input {
+    outline: none;
+    border: none;
+    font: inherit;
+    color: inherit;
+}
+button {
+    cursor: pointer;
+}
+img ,img:focus, img:active {
+    outline: none;
+    border: none;
+}
+select {
+    -webkit-appearance: none;
+}

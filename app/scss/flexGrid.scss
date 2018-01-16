@@ -1,0 +1,43 @@
+[class*="grid__row"] {
+    display: flex;
+    flex-direction: row;
+}
+
+@for $i from 1 through 12 { 
+    .col-#{$i} {
+        flex: $i;
+    }
+}
+
+@media (max-width: 575.99px) { //xs
+    .grid__row-xs {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767.99px) { //sm
+    .grid__row-sm {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 991.99px) { //md
+    .grid__row-md {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1199.99px) { //lg
+    .grid__row-lg {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 1200px) { //xl
+    .grid__row-xl {
+        flex-direction: column;
+    }
+}
+
+
+
