@@ -60,6 +60,49 @@
             }
         }
     }
+    &.create-new-site--table {
+        flex-direction: row;
+        width: 100%;
+        max-width: 100%;
+        min-height: 0px;
+        height: 30%;
+        .zero-site {
+            flex-direction: row;
+            flex: 1 1 50%;
+            margin-right: 24px;
+            margin-bottom: 18px;
+            img {
+                margin: 18px;
+            }
+            span {
+                margin-top: 0;
+            }
+        }
+        .ukit-alt {
+            margin-top: 0;
+            flex: 1 1 50%;
+            align-self: flex-start;
+            &__button {
+                &-fb2ukit, &-vk2ukit {
+                    min-height: 0;
+                    flex-direction: row;
+                    padding: 6px 12px 10px;
+                }
+            }
+        }
+        @media (max-width: 980px) {
+            flex-direction: column;
+            .zero-site {
+                flex-basis: 100%;
+                width: 100%;
+                margin-right: 0;
+            }
+            .ukit-alt {
+                flex-basis: 100%;
+                width: 100%;
+            }
+        }
+    }
 }
 
 .tile {
@@ -214,7 +257,10 @@
                                 color: rgba(19, 32, 38, 0.5);
                             }
                             &:hover {
-                                background-color: rgba(19, 32, 38, 0.5);
+                                background: {
+                                    image: url(../img/img-publish-icn-table.png);
+                                    color: rgba(19, 32, 38, 0.5);
+                                }
                             }
                         }
                     }
@@ -415,7 +461,199 @@
             }
         }
     }
+    .secondary-table {
+        display: none;
+    }
     &.modal__item-site--table {
-        
+        margin: 8px;
+        flex-direction: row;
+        width: 100%;
+        max-width: 100%;
+        .preview {
+            padding: 0 160px 0 0;
+            .primary {
+                padding-top: 0;
+                button {
+                    padding: 0;
+                    color: #4CAF4F;
+                    background-color: transparent;
+                    font: {
+                        family: avenir-medium;
+                        size: 14px;
+                    }
+                }
+                .primary__help {
+                    display: none;
+                }
+                .primary__pay {
+                    display: none;
+                }
+            }
+            .secondary {
+                display: none;
+            }
+            &:before {
+                content: " ";
+                background-size: 24%;
+            }
+        }
+        .info {
+            width: 100%;
+            padding: 12px 18px;
+            &__site-name {
+                width: 90%;
+            }
+            &__site-data-wrapper {
+                width: 90%;
+                justify-content: flex-start;
+                .url-publish-wrapper {
+                    margin-right: 14px;
+                }
+            }
+        }
+        &:hover {
+            cursor: pointer;
+            .preview {
+                &__overlay {
+                    opacity: 1;
+                }
+            }
+        }
+        .secondary {
+            display: none;
+            justify-content: space-between;
+            padding: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            align-items: center;
+            position: absolute;
+            right: 18px;
+            &__leftgroup {
+                display: flex;
+                .edit-button {
+                    font: {
+                        family: avenir-regular;
+                        size: 14px;
+                    }
+                    padding: 8px 16px 10px 10px;
+                    background-color: #E8EBED;
+                    color: #7095A7;
+                    transition: 0.1s ease-in-out;
+                    border-radius: 18px;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    i {
+                        background: {
+                            image: url(../img/img-edit-icn-table.png);
+                            repeat: no-repeat;
+                            position: center;
+                            origin: content-box;
+                        }
+                        display: inline-block;
+                        width: 18px;
+                        height: 18px;
+                        margin-left: 4px;
+                        margin-right: 10px;
+                    }
+                    &:hover {
+                        background-color: #3B7694;
+                        color: #fff;
+                        i {
+                            background-image: url(../img/img-edit-icn.png);
+                        }
+                        
+                    }
+                    &.expired {
+                        i {
+                            background-image: url(../img/img-payment-icn-table.png);
+                        }
+                        &:hover {
+                            i {
+                                background-image: url(../img/img-payment-icn.png);
+                            }
+                        }
+                    }
+                }
+                .publish-button {
+                    display: inline-block;
+                    border-radius: 50%;
+                    margin-left: 12px;
+                    background: {
+                        image: url(../img/img-publish-icn-table.png);
+                        color: #E8EBED;
+                        repeat: no-repeat;
+                        origin: content-box;
+                        position: center;
+                    }
+                    cursor: pointer;
+                    width: 36px;
+                    height: 36px;
+                    transition: 0.1s ease-in-out;
+                    &:hover {
+                        background: {
+                            color: #FFCC00;
+                            image: url(../img/img-publish-icn-hover.png);
+                        }
+                    }
+                    &.publish-button--disabled {
+                        cursor: not-allowed;
+                        background: {
+                            image: url(../img/img-publish-icn-disabled-table.png);
+                            color: rgba(232, 235, 237, 0.5);
+                        }
+                        &:hover {
+                            background-image: url(../img/img-publish-icn-disabled-table.png);
+                        }
+                    }
+                }
+                .premium-button {
+                    width: 36px;
+                    height: 36px;
+                    margin-left: 12px;
+                    border-radius: 50%;
+                    transition: 0.1s ease-in-out;
+                    cursor: pointer;
+                    background: {
+                        color: #E8EBED;
+                        image: url(../img/img-payment-icn-table.png);
+                        repeat: no-repeat;
+                        origin: content-box;
+                        position: center;
+                    }
+                    &:hover {
+                        background: {
+                            image: url(../img/img-payment-icn.png);
+                            color: #4caf50;
+                        }
+                    }
+                }
+            }
+            &__delete-button {
+                width: 36px;
+                height: 36px;
+                margin-left: 12px;
+                border-radius: 50%;
+                background: {
+                    image: url(../img/img-delete-icn-table.png);
+                    color: #E8EBED;
+                    repeat: no-repeat;
+                    origin: content-box;
+                    position: center;
+                }
+                &:hover {
+                    background: {
+                        image: url(../img/img-delete-icn.png);
+                        color: #C2445C;
+                    }
+                    
+                }
+            }
+        }
+        &:hover {
+            .secondary-table {
+                display: flex;
+            }
+        }
     }
 }
