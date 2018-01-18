@@ -12,6 +12,9 @@
             padding: 0 26px;
         }
         @import 'itemCardStyle.scss';
+        .tile {
+            display: none;
+        }
     }
     transform: translateY(-20px);
     opacity: 0;
@@ -20,5 +23,10 @@
         opacity: 1;
         transform: translateY(0px);
         margin-top: 133px;
+        .modal {
+            .tile {
+                display: inherit;
+            }
+        }
     }
 }
