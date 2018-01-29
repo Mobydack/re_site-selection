@@ -135,7 +135,8 @@ select {
     margin: auto; }
     .header-wrapper .top-wrapper .top__logo {
       max-width: 230px;
-      margin-top: -4px; }
+      margin-top: -4px;
+      margin-right: 12px; }
       .header-wrapper .top-wrapper .top__logo .d-logo img {
         height: 30px; }
     .header-wrapper .top-wrapper .top__site {
@@ -220,12 +221,16 @@ select {
         .header-wrapper .top-wrapper .top__profile .sign-out:before {
           content: "\e620"; }
   @media (max-width: 767.99px) {
-    .header-wrapper .top-wrapper .top__logo {
-      margin-top: 8px; }
-    .header-wrapper .top-wrapper .top__site {
-      margin-top: 12px; }
-    .header-wrapper .top-wrapper .top__profile {
-      margin: 12px 0; } }
+    .header-wrapper .top-wrapper .top {
+      max-width: 100%; }
+      .header-wrapper .top-wrapper .top__site {
+        min-width: 50%; }
+        .header-wrapper .top-wrapper .top__site .create-new-site {
+          display: none; }
+      .header-wrapper .top-wrapper .top__profile .notifications {
+        display: none; }
+      .header-wrapper .top-wrapper .top__profile .user__name {
+        display: none; } }
 
 .header-wrapper .bottom-wrapper {
   position: relative;
@@ -333,6 +338,12 @@ select {
   top: 0;
   width: 100%;
   z-index: 2; }
+
+.dash-wrapper {
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/f78b724c75.jpg);
+  background-repeat: no-repeat; }
 
 .modal-wrapper {
   transform: translateY(-20px);
@@ -848,7 +859,8 @@ select {
   position: absolute;
   opacity: 0;
   z-index: 9999;
-  width: 420px;
+  max-width: 420px;
+  width: 100%;
   text-align: center;
   transition: opacity 0.2s ease-in-out;
   color: #3a3d41;

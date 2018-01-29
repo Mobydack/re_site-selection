@@ -17,6 +17,7 @@
             &__logo {
                 max-width: 230px;
                 margin-top: -4px;
+                margin-right: 12px;
                 .d-logo {
                     img {
                         height: 30px;
@@ -129,15 +130,24 @@
         }
         @media (max-width: 767.99px) {
             .top {
+                max-width: 100%;
                 &__logo {
-                    margin-top: 8px;
                 }
                 &__site {
-                    margin-top: 12px;
+                    min-width: 50%;
+                    .create-new-site {
+                        display: none;
+                    }
                 }
                 &__profile {
-                    margin: 12px 0;
-
+                    .notifications {
+                        display: none;
+                    }
+                    .user {
+                        &__name {
+                            display: none;
+                        }
+                    }
                 }
             }
         }

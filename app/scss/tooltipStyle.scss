@@ -3,7 +3,8 @@
     position: absolute;
     opacity: 0;
     z-index: 9999;
-    width: 420px;
+    max-width: 420px;
+    width: 100%;
     text-align: center;
     transition: opacity 0.2s ease-in-out;
     color: #3a3d41;
