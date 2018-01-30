@@ -154,10 +154,11 @@
     }
     .bottom-wrapper {
         position: relative;
+        max-height: 0;
         opacity: 0;
         transform: translateY(-20px);
         background-color: #1D2A33;
-        transition: opacity, transform, height, .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+        transition: opacity, transform, .3s cubic-bezier(0.0, 0.0, 0.2, 1);
         font: {
             family: avenir-regular;
             size: 14px;
@@ -265,8 +266,8 @@
             }
         }
         &.bottom-wrapper--active {
-            display: block;
             transform: translateY(0px);
+            max-height: 100%;
             opacity: 1;
         }
         @media (max-width: 768px) {

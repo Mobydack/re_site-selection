@@ -5,8 +5,10 @@
 }
 body {
     min-height: 100vh;
-    min-width: 380px;
+    min-width: 320px;
     background: #E7EBEE;
+    display: flex;
+    flex-direction: column;
 }
 div {
     outline: 0;

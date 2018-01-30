@@ -6,7 +6,9 @@
         headerWrapper: document.querySelector('.header-wrapper'),
         modalWrapper:  document.querySelector('.modal-wrapper'),
         modal: document.querySelector('.modal'),
-        createNewSite: document.querySelector('.tile.create-new-site')
+        createNewSite: document.querySelector('.tile.create-new-site'),
+        dashWrapper: document.querySelector('.dash-wrapper'),
+        editButtonToTest: document.querySelectorAll('.edit-button')
     }
     listElements.buttonModalView.addEventListener('click', viewEvent);
     const arrCard = Array.from(document.querySelectorAll('.modal__item-site'));
@@ -23,15 +25,6 @@
         }
     });
 
-    // $('.ukit-alt-title-img').hover(function(){
-    //     let offset = $(this).offset(),
-    //         topMargin = 20,
-    //         leftMargin = 0;
-    //     $('.ukit-alt-title-tooltip').css('opacity', '1');
-    //     $('.ukit-alt-title-tooltip').offset({top: offset.top - $('.ukit-alt-title-tooltip').height() - topMargin, left: offset.left - $(this).width() / 3 + leftMargin});
-    //   }, function(){
-    //     $('.ukit-alt-title-tooltip').css('opacity', '0');
-    //   });
     const massAltTooltip = Array.from(document.querySelectorAll(".ukit-alt .ukit-alt-title-img"));
     massAltTooltip.forEach((el, i, arr)=>{
         el.addEventListener('mouseenter', hoverEnterAltTooltip);
@@ -71,5 +64,13 @@
         listElements.bottomWrapper.classList.toggle('bottom-wrapper--active');
         listElements.headerWrapper.classList.toggle('header--fixed');
         listElements.modalWrapper.classList.toggle('modal-wrapper--active');
+        listElements.dashWrapper.classList.toggle('dash-wrapper--deactive');
+
+    }
+    Array.from(listElements.editButtonToTest).forEach((el, ind, arr)=>{
+        el.addEventListener('click', testeditButton);
+    });
+    function testeditButton() {
+        alert('test');
     }
 })();
