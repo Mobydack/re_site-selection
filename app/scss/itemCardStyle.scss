@@ -18,6 +18,9 @@
             margin-top: 18px;
             color: #3A3D41;
         }
+        &:hover {
+            background-color: #fff;
+        }
     }
     .ukit-alt {
         margin-top: 18px;
@@ -61,6 +64,9 @@
                         position: center
                     }
                 }
+                &:hover {
+                    background-color: #fff;
+                }
             }
         }
     }
@@ -85,12 +91,16 @@
         .ukit-alt {
             margin-top: 0;
             flex: 1 1 50%;
-            align-self: flex-start;
+            align-self: stretch;
+            margin-bottom: 18px;
             &__button {
                 &-fb2ukit, &-vk2ukit {
                     min-height: 0;
                     flex-direction: row;
                     padding: 6px 12px 10px;
+                    span {
+                        text-align: left;
+                    }
                 }
             }
         }
@@ -104,6 +114,7 @@
             .ukit-alt {
                 flex-basis: 100%;
                 width: 100%;
+                margin-bottom: 0px;
             }
         }
     }
@@ -323,40 +334,40 @@
                 position: center;
             }
         }
-        &.expired:before {
-            content: "Период закончился";
-            background: {
-                image: url(../img/expired-warning.png);
-                color: rgba(255, 255, 255, 0.8);
-                position: center;
-                origin: content-box;
-                repeat: no-repeat;
-            }
-            color: rgb(194, 68, 92);
-            font: {
-                size: 21px;
-                family: avenir-medium;
-            }
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        &.locked:before {
-            content: "Сайт заблокирован";
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: {
-                image: url(../img/locked-site.png);
-                color: rgba(194,68,92,0.8);
-                position: center;
-                origin: content-box;
-                repeat: no-repeat;
-            }
+        &.selected-site:after, &.expired:after, &.locked:after {
+            content: attr(data-lang-text);
             color: #fff;
             font: {
                 family: avenir-medium;
-                size: 21px;
+                size: 18px;
+            }
+            letter-spacing: .4px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 60%;
+            z-index: 1;
+        }
+        &.expired:before {
+            background: {
+                // image: url(../img/expired-warning.png);
+                image: url(../img/new_icn/icn_big/icn-big-timer.svg);
+                color: rgba(38, 56, 69, 0.9);
+                position: 50% 47%;
+                origin: content-box;
+                repeat: no-repeat;
+                size: 65px;
+            }
+        }
+        &.locked:before {
+            background: {
+                // image: url(../img/locked-site.png);
+                image: url(../img/new_icn/icn_big/icn-big-warning.svg);
+                color: rgba(194,68,92,0.8);
+                position: 50% 47%;
+                origin: content-box;
+                repeat: no-repeat;
+                size: 65px;
             }
         }
         &:hover {
@@ -366,6 +377,7 @@
                 }
                 &__overlay {
                     opacity: 1;
+                    z-index: 2;
                     .secondary {
                         pointer-events: auto;
                     }
@@ -507,6 +519,11 @@
             &:before {
                 content: " ";
                 background-size: 24%;
+            }
+            &.selected-site, &.expired, &.locked {
+                &:after {
+                    display: none;
+                }
             }
         }
         .info {

@@ -179,6 +179,7 @@
                     }
                     .filter-select {
                         background-color: transparent;
+                        cursor: pointer;
                         &:hover {
                             color: #a2b9c7;
                         }
