@@ -328,17 +328,18 @@
         &.selected-site:before {
             background: {
                 image: url(../img/icn-big-check.svg);
-                color: rgba(51,143,255,0.6);
+                color: rgba(51,143,255,0.9);
                 repeat: no-repeat;
                 origin: content-box;
-                position: center;
+                position: 50% 47%;
+                size: 60px;
             }
         }
         &.selected-site:after, &.expired:after, &.locked:after {
             content: attr(data-lang-text);
             color: #fff;
             font: {
-                family: avenir-medium;
+                family: avenir-regular;
                 size: 18px;
             }
             letter-spacing: .4px;
@@ -355,7 +356,7 @@
                 position: 50% 47%;
                 origin: content-box;
                 repeat: no-repeat;
-                size: 65px;
+                size: 60px;
             }
         }
         &.locked:before {
@@ -365,7 +366,7 @@
                 position: 50% 47%;
                 origin: content-box;
                 repeat: no-repeat;
-                size: 65px;
+                size: 60px;
             }
         }
         &:hover {
@@ -438,9 +439,6 @@
                     padding-right: 7px;
                     overflow: hidden;
                     text-overflow: ellipsis;
-                    &:hover {
-                        text-decoration: underline;
-                    }
                 }
                 &--unpublish {
                     .publish-domain-name {
