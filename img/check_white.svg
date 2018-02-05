@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>icn / site-select / check / white</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M7.61492578,11.3431837 L13.1087184,4.40246123 C13.4775373,3.93649742 14.1457422,3.86464556 14.6011958,4.24197562 C15.0625412,4.62418695 15.1327724,5.3078117 14.7639534,5.77377551 L8.57121761,13.5975388 C8.33161181,13.9002554 7.96564895,14.0366354 7.61375215,13.9915792 C7.36364402,13.980706 7.11629147,13.8797682 6.9220538,13.6878665 L3.32401551,10.1330999 C2.90243982,9.71659429 2.8907138,9.02930863 3.29782471,8.59800444 C3.71020215,8.16112074 4.38198537,8.14912412 4.80356106,8.56562974 L7.61492578,11.3431837 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icn-/-site-select-/-check-/-white">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="glyph" fill="#FFFFFF" fill-rule="nonzero" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

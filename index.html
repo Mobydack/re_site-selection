@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="header-wrapper">
+        <div class="top-wrapper">
+            <div class="top grid__row">
+                <div class="top__logo col-1">
+                    <a href="/sites/url/k58dbaa38/dashBoard" class="d-logo">
+                        <img src="img/ukit-logo.svg" alt="ukit-logo">
+                    </a>
+                </div>
+                <div class="top__site col-1">
+                    <button class="open-modal-view" title="Выбрать сайт из моих сайтов" tabindex="1">
+                        <span>Мои сайты</span>
+                    </button>
+                    <a href="http://ukit.com/neowizard" class="create-new-site" title="Создать новый сайт" tabindex="2"></a>
+                    <a href="#" class="current-site" tabindex="3">home-kitchen.ru</a>
+                </div>
+                <div class="top__profile col-1">
+                    <a href="/sites/url/gp5ycaq96/dashBoard/profile" class="user">
+                        <img src="img/avatar.jpeg" alt="user-avatar" class="user__avatar">
+                        <span class="user__name">Артём Жигалин</span>
+                    </a>
+                    <span class="notifications" title="Уведомления"></span>
+                    <a href="" class="sign-out" title="Выйти"></a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-wrapper">
+            <div class="bottom grid__row-sm">
+                <div class="sort-filter col-1 grid__row">
+                    <div class="filter-select-wrapper grid__row-md">
+                        <span class="select-title">Показывать:</span>
+                        <select name="filter-select" class="filter-select" tabindex="3">
+                            <option value="all">Все сайты</option>
+                            <option value="published">Опубликованные</option>
+                            <option value="unpublished">Неопубликованные</option>
+                            <option value="trial">С тарифом "Триал"</option>
+                            <option value="payment">С платным тарфиом</option>
+                        </select>
+                    </div>
+                    <div class="filter-select-wrapper grid__row-md">
+                        <span class="select-title">Сортировать:</span>
+                        <select name="filter-select" class="filter-select" tabindex="4">
+                            <option value="new">Сначала новые </option>
+                            <option value="old">Сначала старые</option>
+                            <option value="a-z">По алфавиту А-Я</option>
+                            <option value="z-a">Поалфавиту Я-А</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="view-select col-1">
+                    <button title="В виде карточек" class="view-select__cards view-select--active" tabindex="5"></button>
+                    <button title="В виде таблицы" class="view-select__table" tabindex="6"></button>    
+                </div>
+            </div>
+            <button class="close-modal"></button>
+        </div>
+    </header>
+    <main class="main-wrapper">
+        <div class="dash-wrapper">
+
+        </div>
+        <div class="modal-wrapper">
+            <div class="modal">
+                <!-- create-site-item -->
+                <div class="tile create-new-site">
+                    <a href="http://ukit.com/neowizard" class="zero-site" title="Создать новый сайт из тематического шаблона">
+                        <img src="img/button-create.png" alt=" ">
+                        <span>Создать новый сайт</span>
+                    </a>
+                    <div class="ukit-alt">
+                        <a href="https://ukit.com/ru/lp/convert" title="Создать сайт из страницы на Facebook" class="ukit-alt__button-fb2ukit">
+                            <img src="img/btn-fb.png" alt=" ">
+                            <span>Создать сайт из страницы Facebook</span>
+                            <div class="ukit-alt-title-img" data-tooltip-hover="tooltip-1"></div>
+                        </a>
+                        <a href="https://ukit.com/ru/lp/convert-vk" title="Создать сайт из страницы во ВКонтакте" class="ukit-alt__button-vk2ukit">
+                            <img src="img/btn-vk.png" alt=" ">
+                            <span>Создать сайт из паблика VK</span>
+                            <div class="ukit-alt-title-img" data-tooltip-hover="tooltip-1"></div>
+                        </a>
+                    </div>
+                </div> 
+                <!-- first-site -->
+                <div class="tile modal__item-site">
+                    <div class="preview selected-site" tabindex="10" data-lang-text="Выбранный сайт">
+                        <img src="img/preview_site/cafe-stuff.jpg" alt=" " class="preview__image-site">
+                        <div class="preview__overlay">
+                            <div class="primary">
+                                <button>Выбрать сайт</button>
+                            </div>
+                            <div class="secondary">
+                                <div class="secondary__leftgroup">
+                                    <button class="edit-button"><i></i>Редактировать</button>
+                                    <div class="publish-button publish-button--disabled"></div>
+                                </div>
+                                <button class="secondary__delete-button"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="info__site-name">
+                            <input type="text" value="Студия домашней кухни" placeholder="Введите заголовок">
+                        </div>
+                        <div class="info__site-data-wrapper">
+                            <div class="url-publish-wrapper" title="Опубликован 28.8.2017">
+                                <img src="img/img-published-icn.png" alt=" ">
+                                <a href="https://home-kitchen.ru" class="publish-domain-name">home-kitchen.ru</a>
+                            </div>
+                            <div class="tariff-name">
+                                <img src="img/new_icn/diamond/green.svg" alt="">
+                                <span>Премиум +</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="secondary secondary-table">
+                        <div class="secondary__leftgroup">
+                            <button class="edit-button"><i></i>Редактировать</button>
+                            <div class="publish-button publish-button--disabled"></div>
+                        </div>
+                        <button class="secondary__delete-button"></button>
+                    </div>
+                </div>
+                <!-- second-site -->
+                <div class="tile modal__item-site">
+                    <div class="preview">
+                        <img src="img/preview_site/alisia.jpg" alt=" " class="preview__image-site">
+                        <div class="preview__overlay">
+                            <div class="primary">
+                                <button>Выбрать сайт</button>
+                            </div>
+                            <div class="secondary">
+                                <div class="secondary__leftgroup">
+                                    <button class="edit-button"><i></i>Редактировать</button>
+                                    <div class="publish-button publish-button--disabled"></div>
+                                    <div class="premium-button"></div>
+                                </div>
+                                <button class="secondary__delete-button"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="info__site-name">
+                            <input type="text" value="Модель Алисия Ансем" placeholder="Введите заголовок">
+                        </div>
+                        <div class="info__site-data-wrapper">
+                            <div class="url-publish-wrapper" title="Опубликован 10.9.2017">
+                                <img src="img/img-published-icn.png" alt=" ">
+                                <a href="https://alisia-ansem.ru" class="publish-domain-name">alisia-ansem.ru</a>
+                            </div>
+                            <div class="tariff-counter">
+                                <img src="img/new_icn/timer/grey.svg" alt="">
+                                <span>Осталось 7 дней</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="secondary secondary-table">
+                        <div class="secondary__leftgroup">
+                            <button class="edit-button"><i></i>Редактировать</button>
+                            <div class="publish-button publish-button--disabled"></div>
+                            <div class="premium-button"></div>
+                        </div>
+                        <button class="secondary__delete-button"></button>
+                    </div>
+                </div>
+                <!-- third site -->
+                <div class="tile modal__item-site">
+                    <div class="preview">
+                        <img src="img/preview_site/annelis.jpg" alt=" " class="preview__image-site">
+                        <div class="preview__overlay">
+                            <div class="primary">
+                                <button>Выбрать сайт</button>
+                            </div>
+                            <div class="secondary">
+                                <div class="secondary__leftgroup">
+                                    <button class="edit-button"><i></i>Редактировать</button>
+                                    <div class="publish-button publish-button--disabled"></div>
+                                    <div class="premium-button"></div>
+                                </div>
+                                <button class="secondary__delete-button"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="info__site-name">
+                            <input type="text" value="Маникюрный салон «Аннелис»" placeholder="Введите заголовок">
+                        </div>
+                        <div class="info__site-data-wrapper">
+                            <div class="url-publish-wrapper" title="Опубликован сегодня в 9:52">
+                                <img src="img/img-published-icn.png" alt=" ">
+                                <a href="https://1wvcqkq24.urest.org" class="publish-domain-name">1wvcqkq24.urest.org</a>
+                            </div>
+                            <div class="tariff-counter">
+                                <img src="img/new_icn/timer/grey.svg" alt="">
+                                <span>Осталось 10 дней</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="secondary secondary-table">
+                        <div class="secondary__leftgroup">
+                            <button class="edit-button"><i></i>Редактировать</button>
+                            <div class="publish-button publish-button--disabled"></div>
+                            <div class="premium-button"></div>
+                        </div>
+                        <button class="secondary__delete-button"></button>
+                    </div>
+                </div>
+                <!-- forth-ste -->
+                <div class="tile modal__item-site">
+                    <div class="preview">
+                        <img src="img/preview_site/creators.jpg" alt=" " class="preview__image-site">
+                        <div class="preview__overlay">
+                            <div class="primary">
+                                <button>Выбрать сайт</button>
+                            </div>
+                            <div class="secondary">
+                                <div class="secondary__leftgroup">
+                                    <button class="edit-button"><i></i>Редактировать</button>
+                                    <div class="publish-button publish-button--disabled"></div>
+                                </div>
+                                <button class="secondary__delete-button"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="info__site-name">
+                            <input type="text" value="Магазин hand-made товаров" placeholder="Введите заголовок">
+                        </div>
+                        <div class="info__site-data-wrapper">
+                            <div class="url-publish-wrapper">
+                                <img src="img/img-published-icn.png" alt=" ">
+                                <a href="https://hand-made-creators.com" class="publish-domain-name">hand-made-creators.com</a>
+                            </div>
+                            <div class="tariff-name">
+                                <img src="img/new_icn/cart/green.svg" alt="">
+                                <span>Магазин</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="secondary secondary-table">
+                        <div class="secondary__leftgroup">
+                            <button class="edit-button"><i></i>Редактировать</button>
+                            <div class="publish-button publish-button--disabled"></div>
+                        </div>
+                        <button class="secondary__delete-button"></button>
+                    </div>
+                </div>
+                <!-- fifth-site -->
+                <div class="tile modal__item-site">
+                    <div class="preview">
+                        <img src="img/preview_site/botanique.jpg" alt=" " class="preview__image-site">
+                        <div class="preview__overlay">
+                            <div class="primary">
+                                <button>Выбрать сайт</button>
+                            </div>
+                            <div class="secondary">
+                                <div class="secondary__leftgroup">
+                                    <button class="edit-button"><i></i>Редактировать</button>
+                                    <div class="publish-button"></div>
+                                </div>
+                                <button class="secondary__delete-button"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="info__site-name">
+                            <input type="text" value="Флористический дизайн от «Botanique»" placeholder="Введите заголовок">
+                        </div>
+                        <div class="info__site-data-wrapper">
+                            <div class="url-publish-wrapper url-publish-wrapper--unpublish">
+                                <img src="img/img-unpublished-icn.png" alt=" ">
+                                <a href="https://ботаник-дизайн.рф" class="publish-domain-name">ботаник-дизайн.рф</a>
+                            </div>
+                            <div class="tariff-name">
+                                <img src="img/new_icn/label/green.svg" alt="">
+                                <span>Промо</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="secondary secondary-table">
+                        <div class="secondary__leftgroup">
+                            <button class="edit-button"><i></i>Редактировать</button>
+                            <div class="publish-button"></div>
+                        </div>
+                        <button class="secondary__delete-button"></button>
+                    </div>
+                </div>
+                <!-- sixth-site -->
+                <div class="tile modal__item-site">
+                    <div class="preview" tabindex="10">
+                        <img src="img/preview_site/namaste.jpg" alt=" " class="preview__image-site">
+                        <div class="preview__overlay">
+                            <div class="primary">
+                                <button>Выбрать сайт</button>
+                            </div>
+                            <div class="secondary">
+                                <div class="secondary__leftgroup">
+                                    <button class="edit-button"><i></i>Редактировать</button>
+                                    <div class="publish-button publish-button--disabled"></div>
+                                </div>
+                                <button class="secondary__delete-button"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="info__site-name">
+                            <input type="text" value="Йога-центр «Намасте»" placeholder="Введите заголовок">
+                        </div>
+                        <div class="info__site-data-wrapper">
+                            <div class="url-publish-wrapper">
+                                <img src="img/img-published-icn.png" alt=" ">
+                                <a href="https://yoga-namaste.ru" class="publish-domain-name">yoga-namaste.ru</a>
+                            </div>
+                            <div class="tariff-name">
+                                <img src="img/new_icn/crown/green.svg" alt="">
+                                <span>Про</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="secondary secondary-table">
+                        <div class="secondary__leftgroup">
+                            <button class="edit-button"><i></i>Редактировать</button>
+                            <div class="publish-button publish-button--disabled"></div>
+                        </div>
+                        <button class="secondary__delete-button"></button>
+                    </div>
+                </div>
+                <!-- seventh-site -->
+                <div class="tile modal__item-site">
+                    <div class="preview" tabindex="10">
+                        <img src="img/preview_site/it-event.jpg" alt=" " class="preview__image-site">
+                        <div class="preview__overlay">
+                            <div class="primary">
+                                <button>Выбрать сайт</button>
+                            </div>
+                            <div class="secondary">
+                                <div class="secondary__leftgroup">
+                                    <button class="edit-button"><i></i>Редактировать</button>
+                                    <div class="publish-button"></div>
+                                    <div class="premium-button"></div>
+                                </div>
+                                <button class="secondary__delete-button"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="info__site-name">
+                            <input type="text" value="IT Марафон «Хакслет»" placeholder="Введите заголовок">
+                        </div>
+                        <div class="info__site-data-wrapper">
+                            <div class="url-publish-wrapper">
+                                <img src="img/img-unpublished-icn.png" alt=" ">
+                                <a href="https://6acx2uyo73rb.ukit.me" class="publish-domain-name">6acx2uyo73rb.ukit.me</a>
+                            </div>
+                            <div class="tariff-counter">
+                                <img src="img/new_icn/timer/grey.svg" alt="">
+                                <span>Осталось 3 дней</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="secondary secondary-table">
+                        <div class="secondary__leftgroup">
+                            <button class="edit-button"><i></i>Редактировать</button>
+                            <div class="publish-button"></div>
+                            <div class="premium-button"></div>
+                        </div>
+                        <button class="secondary__delete-button"></button>
+                    </div>
+                </div>
+                <!-- eight-site -->
+                <div class="tile modal__item-site">
+                    <div class="preview" tabindex="10">
+                        <img src="img/preview_site/waytogo.jpg" alt=" " class="preview__image-site">
+                        <div class="preview__overlay">
+                            <div class="primary">
+                                <button>Выбрать сайт</button>
+                            </div>
+                            <div class="secondary">
+                                <div class="secondary__leftgroup">
+                                    <button class="edit-button"><i></i>Редактировать</button>
+                                    <div class="publish-button"></div>
+                                    <div class="premium-button"></div>
+                                </div>
+                                <button class="secondary__delete-button"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="info__site-name">
+                            <input type="text" value="Приложение для путешественников" placeholder="Введите заголовок">
+                        </div>
+                        <div class="info__site-data-wrapper">
+                            <div class="url-publish-wrapper">
+                                <img src="img/img-unpublished-icn.png" alt=" ">
+                                <a href="https://waytodo-app.com" class="publish-domain-name">waytodo-app.com</a>
+                            </div>
+                            <div class="tariff-counter">
+                                <img src="img/new_icn/square-hat/green.svg" alt="">
+                                <span>Муниципальный</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="secondary secondary-table">
+                        <div class="secondary__leftgroup">
+                            <button class="edit-button"><i></i>Редактировать</button>
+                            <div class="publish-button"></div>
+                            <div class="premium-button"></div>
+                        </div>
+                        <button class="secondary__delete-button"></button>
+                    </div>
+                </div>
+                <!-- ninth-site -->
+                <div class="tile modal__item-site">
+                    <div class="preview" tabindex="10">
+                        <img src="img/preview_site/florist.jpg" alt=" " class="preview__image-site">
+                        <div class="preview__overlay">
+                            <div class="primary">
+                                <button>Выбрать сайт</button>
+                            </div>
+                            <div class="secondary">
+                                <div class="secondary__leftgroup">
+                                    <button class="edit-button"><i></i>Редактировать</button>
+                                    <div class="publish-button publish-button--disabled"></div>
+                                </div>
+                                <button class="secondary__delete-button"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="info__site-name">
+                            <input type="text" value="Галерея цветов «Флорист»" placeholder="Введите заголовок">
+                        </div>
+                        <div class="info__site-data-wrapper">
+                            <div class="url-publish-wrapper">
+                                <img src="img/img-published-icn.png" alt=" ">
+                                <a href="https://галерея-флорист.рф" class="publish-domain-name">галерея-флорист.рф</a>
+                            </div>
+                            <div class="tariff-name">
+                                <img src="img/new_icn/timer/grey.svg" alt="">
+                                <span>Осталось 14 дней</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="secondary secondary-table">
+                        <div class="secondary__leftgroup">
+                            <button class="edit-button"><i></i>Редактировать</button>
+                            <div class="publish-button publish-button--disabled"></div>
+                        </div>
+                        <button class="secondary__delete-button"></button>
+                    </div>
+                </div>
+                <!-- tenth-site -->
+                <div class="tile modal__item-site">
+                    <div class="preview expired" tabindex="10" data-lang-text="Период закончился">
+                        <img src="img/preview_site/music-station.jpg" alt=" " class="preview__image-site">
+                        <div class="preview__overlay">
+                            <div class="primary">
+                                <button>Выбрать сайт</button>
+                                <button class="primary__pay"><i></i>Оплатить тариф</button>
+                            </div>
+                            <div class="secondary">
+                                <div class="secondary__leftgroup">
+                                    <button class="edit-button"><i></i>Редактировать</button>
+                                    <div class="publish-button publish-button--disabled"></div>
+                                </div>
+                                <button class="secondary__delete-button"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="info__site-name">
+                            <input type="text" value="Приложение для меломанов «Music Station»" placeholder="Введите заголовок">
+                        </div>
+                        <div class="info__site-data-wrapper">
+                            <div class="url-publish-wrapper">
+                                <img src="img/img-unpublished-icn.png" alt=" ">
+                                <a href="https://1u7imgy48.ukit.me" class="publish-domain-name">1u7imgy48.ukit.me</a>
+                            </div>
+                            <div class="tariff-expired">
+                                <img src="img/new_icn/timer/red.svg" alt="">
+                                <span>Период закончился</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="secondary secondary-table">
+                        <div class="secondary__leftgroup">
+                            <button class="edit-button expired"><i></i>Оплатить тариф</button>
+                            <div class="publish-button publish-button--disabled"></div>
+                        </div>
+                        <button class="secondary__delete-button"></button>
+                    </div>
+                </div>
+                <!-- eleventh-site -->
+                <div class="tile modal__item-site">
+                    <div class="preview locked" tabindex="10" data-lang-text="Сайт заблокирован">
+                        <img src="img/preview_site/hairdresser.jpg" alt=" " class="preview__image-site">
+                        <div class="preview__overlay">
+                            <div class="primary">
+                                <button>Выбрать сайт</button>
+                                <button class="primary__help">Написать в поддержку</button>
+                            </div>
+                            <div class="secondary">
+                                <div class="secondary__leftgroup">
+                                    <button class="edit-button"><i></i>Редактировать</button>
+                                    <div class="publish-button publish-button--disabled"></div>
+                                </div>
+                                <button class="secondary__delete-button"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="info__site-name">
+                            <input type="text" value="Барбершоп «Hairdresser»" placeholder="Введите заголовок">
+                        </div>
+                        <div class="info__site-data-wrapper">
+                            <div class="url-publish-wrapper">
+                                <img src="img/img-unpublished-icn.png" alt=" ">
+                                <a href="https://hairdresser.ru" class="publish-domain-name">hairdresser.ru</a>
+                            </div>
+                            <div class="tariff-expired">
+                                <span>Сайт заблокирован.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="secondary secondary-table">
+                        <div class="secondary__leftgroup">
+                            <button class="edit-button">Написать в поддержку</button>
+                            <div class="publish-button publish-button--disabled"></div>
+                        </div>
+                        <button class="secondary__delete-button"></button>
+                    </div>
+                </div>
+                <!-- end-list-site -->
+            </div>
+        </div>
+    </main>
+    <div class="ukit-alt-tooltip tooltip-1">
+         Данные копируются из страницы, из них создается сайт.
+        <br>
+         Это бесплатно для вашей страницы в соцсети
+    </div>
+    <script src="./script/main.js"></script>
+</body>
+</html>
