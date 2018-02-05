@@ -2,10 +2,10 @@
   "name": "r-site-selection",
   "version": "1.0.0",
   "description": "",
-  "main": "server/server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server/server.js",
-    "postinstall": "npm install mime -D"
+    "start": "node index.js",
+    "postinstall": "npm install mime"
   },
   "author": "",
   "license": "ISC",
