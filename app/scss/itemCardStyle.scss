@@ -327,7 +327,7 @@
         }
         &.selected-site:before {
             background: {
-                image: url(../img/selected-site-mark.png);
+                image: url(../img/icn-big-check.svg);
                 color: rgba(51,143,255,0.6);
                 repeat: no-repeat;
                 origin: content-box;
@@ -350,8 +350,7 @@
         }
         &.expired:before {
             background: {
-                // image: url(../img/expired-warning.png);
-                image: url(../img/new_icn/icn_big/icn-big-timer.svg);
+                image: url(../img/icn-big-timer.svg);
                 color: rgba(38, 56, 69, 0.9);
                 position: 50% 47%;
                 origin: content-box;
@@ -361,8 +360,7 @@
         }
         &.locked:before {
             background: {
-                // image: url(../img/locked-site.png);
-                image: url(../img/new_icn/icn_big/icn-big-warning.svg);
+                image: url(../img/icn-big-warning.svg);
                 color: rgba(194,68,92,0.8);
                 position: 50% 47%;
                 origin: content-box;

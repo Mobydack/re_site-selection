@@ -2,6 +2,7 @@
     .modal {
         max-width: 1500px;
         margin: auto;
+        padding-bottom: 48px;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -9,7 +10,7 @@
             flex-direction: column;
             align-items: center;
             max-width: 980px;
-            padding: 0 26px;
+            padding: 0 26px 48px 26px;
         }
         @import 'itemCardStyle.scss';
         .tile {
