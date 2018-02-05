@@ -3,10 +3,9 @@ const fs = require('fs');
 const path = require('path');
 const mime = require('mime');
 
-const base = './'
 
 http.createServer((req, res) => {
-    let pathname = path.normalize(base + ((req.url === "/") ? `${req.url}index.html` : req.url));
+    let pathname = path.normalize(((req.url === "/") ? `${req.url}index.html` : req.url));
     fs.stat(pathname, (err, stats)=>{
         if(err) {
             res.writeHead(404);
