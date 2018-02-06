@@ -203,13 +203,13 @@
                     opacity: .8;
                     cursor: pointer;
                     background: {
-                        image: url('../img/icn-show-blocks-normal.png');
+                        image: url('../img/view-select/cards/dark.svg');
                         color: transparent;
                         position: center;
                         repeat: no-repeat;
                     }
                     &.view-select--active {
-                        background-image: url('../img/icn-show-blocks-active.png');
+                        background-image: url('../img/view-select/cards/light.svg');
                     }
                     &:hover {
                         opacity: 1;
@@ -221,13 +221,13 @@
                     opacity: .8;
                     cursor: pointer;
                     background:  {
-                        image: url('../img/icn-show-list-normal.png');
+                        image: url('../img/view-select/list/dark.svg');
                         color: transparent;
                         position: center;
                         repeat: no-repeat;
                     }
                     &.view-select--active {
-                        background-image: url('../img/icn-show-list-active.png');
+                        background-image: url('../img/view-select/list/light.svg');
                     }
                     &:hover {
                         opacity: 1;

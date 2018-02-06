@@ -327,18 +327,19 @@
         }
         &.selected-site:before {
             background: {
-                image: url(../img/selected-site-mark.png);
-                color: rgba(51,143,255,0.6);
+                image: url(../img/icn-big-check.svg);
+                color: rgba(51,143,255,0.9);
                 repeat: no-repeat;
                 origin: content-box;
-                position: center;
+                position: 50% 47%;
+                size: 60px;
             }
         }
         &.selected-site:after, &.expired:after, &.locked:after {
             content: attr(data-lang-text);
             color: #fff;
             font: {
-                family: avenir-medium;
+                family: avenir-regular;
                 size: 18px;
             }
             letter-spacing: .4px;
@@ -350,24 +351,22 @@
         }
         &.expired:before {
             background: {
-                // image: url(../img/expired-warning.png);
-                image: url(../img/new_icn/icn_big/icn-big-timer.svg);
+                image: url(../img/icn-big-timer.svg);
                 color: rgba(38, 56, 69, 0.9);
                 position: 50% 47%;
                 origin: content-box;
                 repeat: no-repeat;
-                size: 65px;
+                size: 60px;
             }
         }
         &.locked:before {
             background: {
-                // image: url(../img/locked-site.png);
-                image: url(../img/new_icn/icn_big/icn-big-warning.svg);
+                image: url(../img/icn-big-warning.svg);
                 color: rgba(194,68,92,0.8);
                 position: 50% 47%;
                 origin: content-box;
                 repeat: no-repeat;
-                size: 65px;
+                size: 60px;
             }
         }
         &:hover {
@@ -440,9 +439,6 @@
                     padding-right: 7px;
                     overflow: hidden;
                     text-overflow: ellipsis;
-                    &:hover {
-                        text-decoration: underline;
-                    }
                 }
                 &--unpublish {
                     .publish-domain-name {
