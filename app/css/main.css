@@ -783,7 +783,8 @@ select {
             width: 90%;
             justify-content: flex-start; }
             .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .info__site-data-wrapper .url-publish-wrapper {
-              margin-right: 14px; }
+              margin-right: 14px;
+              max-width: 200px; }
         .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table:hover {
           cursor: pointer; }
           .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table:hover .preview__overlay {
