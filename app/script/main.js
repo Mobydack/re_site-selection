@@ -11,6 +11,7 @@
         editButtonToTest: document.querySelectorAll('.edit-button')
     }
     listElements.buttonModalView.addEventListener('click', viewEvent);
+    listElements.buttonModalView.addEventListener('touchstart', testeditButton);
     const arrCard = Array.from(document.querySelectorAll('.modal__item-site'));
     const arrButtonViewCard = Array.from(document.querySelectorAll('.view-select button'));
     arrButtonViewCard.forEach((el, i, arr) => {
