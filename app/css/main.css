@@ -351,10 +351,21 @@ select {
   overflow: hidden;
   top: 58px;
   z-index: -1;
-  background-image: url(../img/f78b724c75.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
+  display: flex; }
+  .dash-wrapper .image {
+    width: 1024px;
+    height: 767px;
+    background-image: url(../img/f78b724c75.jpg);
+    background-repeat: no-repeat;
+    background-position: top; }
+  .dash-wrapper .bg {
+    flex: 1; }
+    .dash-wrapper .bg__top {
+      background-color: #263844;
+      height: 214px; }
+    .dash-wrapper .bg__middle {
+      background-color: #1D2A33;
+      height: 42px; }
   .dash-wrapper.dash-wrapper--deactive {
     opacity: 0; }
 
