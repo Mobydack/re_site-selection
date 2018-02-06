@@ -76,7 +76,10 @@
     &.create-new-site--table {
         flex-direction: row;
         width: 100%;
-        margin: 8px;
+        margin-left: 8px;
+        margin-right: 8px;
+        margin-top: 16px;
+        margin-bottom: 12px;
         max-width: 100%;
         min-height: 0px;
         height: 30%;
@@ -110,7 +113,7 @@
             }
             img {
                 margin-top: 0;
-                margin-right: 10px;
+                margin-right: 12px;
                 margin-bottom: 0;
                 margin-left: 0;
             }
@@ -496,10 +499,14 @@
         display: none;
     }
     &.modal__item-site--table {
-        margin: 8px;
+        margin-left: 8px;
+        margin-right: 8px;
+        margin-top: 12px;
+        margin-bottom: 12px;
         flex-direction: row;
         width: 100%;
         max-width: 100%;
+        box-shadow: 0 3px 4px 0 rgba(141,168,184,0.20);
         .preview {
             padding: 0 160px 0 0;
             .primary {
