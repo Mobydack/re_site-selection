@@ -4,7 +4,20 @@ const path = require('path');
 const url = require('url');
 const execFile = require("child_process").execFile;
 
-
+let mimeType = {
+    ".html": "text/html", 
+    ".png": "image/png", 
+    ".svg": "image/svg+xml",
+    ".jpeg": "image/jpeg",
+    ".jpg": "image/jpeg",
+    ".css": "text/css",
+    ".js": "text/javascript",
+    ".ttf": "application/x-font-ttf",
+    ".otf": "application/x-font-opentype",
+    ".woff": "application/font-woff",
+    ".woff2": "application/font-woff2",
+    ".eot": "application/vnd.ms-font-object"
+}
 let PORT = process.env.PORT || 3000;
 
 const basePath = "./app"
@@ -19,10 +32,8 @@ http.createServer((req, res)=>{
             res.end();
         }
         else if(stats.isFile()) {
-            execFile('file',['-b','--mime-type',pathName],function(error,stdout,stderr) {
-               let type =  stdout.trim();
-               console.log(type);
-                res.setHeader('Content-Type', type);
+                console.log(mimeType[path.parse(pathName).ext])
+                res.setHeader('Content-Type', mimeType[path.parse(pathName).ext]);
                 let file = fs.createReadStream(pathName);
                 file.on('open', ()=>{
                     res.statusCode = 200;
@@ -33,7 +44,6 @@ http.createServer((req, res)=>{
                     res.write('file permission');
                     res.end();
                 })
-            });
         } else {
             res.writeHead(403);
             res.write('Directory access is forbidden');
