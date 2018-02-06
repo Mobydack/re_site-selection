@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const url = require('url');
 const execFile = require("child_process").execFile;
+const zlib = require('zlib');
 
 let mimeType = {
     ".html": "text/html", 
@@ -34,10 +35,12 @@ http.createServer((req, res)=>{
         else if(stats.isFile()) {
                 console.log(mimeType[path.parse(pathName).ext])
                 res.setHeader('Content-Type', mimeType[path.parse(pathName).ext]);
+                res.setHeader('Content-Encoding', "gzip");
                 let file = fs.createReadStream(pathName);
                 file.on('open', ()=>{
                     res.statusCode = 200;
-                    file.pipe(res);
+                    // file.pipe(res);
+                    file.pipe(zlib.createGzip()).pipe(res);
                 });
                 file.on('error', (err) => {
                     res.statusCode = 403;
