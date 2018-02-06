@@ -478,7 +478,7 @@ select {
       overflow: hidden;
       min-width: 320px;
       max-width: 550px;
-      margin: 16px;
+      margin: 20px;
       display: flex;
       flex: 1 1 23%;
       flex-direction: column;
@@ -674,7 +674,7 @@ select {
           .modal-wrapper .modal .tile.modal__item-site .preview:hover .preview__overlay .secondary {
             pointer-events: auto; }
       .modal-wrapper .modal .tile.modal__item-site .info {
-        padding: 24px 24px 36px;
+        padding: 24px 24px 32px;
         height: 100%;
         background-color: #fff; }
         .modal-wrapper .modal .tile.modal__item-site .info__site-name input {

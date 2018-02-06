@@ -137,7 +137,7 @@
     overflow: hidden;
     min-width: 320px;
     max-width: 550px;
-    margin: 16px;
+    margin: 20px;
     display: flex;
     flex: 1 1 23%;
     flex-direction: column;
@@ -397,7 +397,7 @@
         }
     }
     .info {
-        padding: 24px 24px 36px;
+        padding: 24px 24px 32px;
         height: 100%;
         background-color: #fff;
         &__site-name {
