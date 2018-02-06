@@ -10,14 +10,14 @@
         dashWrapper: document.querySelector('.dash-wrapper'),
         editButtonToTest: document.querySelectorAll('.edit-button')
     }
-    listElements.buttonModalView.addEventListener('click', viewEvent);
+    listElements.buttonModalView.addEventListener('click touchstart', viewEvent);
     const arrCard = Array.from(document.querySelectorAll('.modal__item-site'));
     const arrButtonViewCard = Array.from(document.querySelectorAll('.view-select button'));
     arrButtonViewCard.forEach((el, i, arr) => {
-        el.addEventListener('click', toggleClass);
+        el.addEventListener('click touchstart', toggleClass);
     })
 
-    document.querySelector(".close-modal").addEventListener('click', viewEvent);
+    document.querySelector(".close-modal").addEventListener('click touchstart', viewEvent);
 
     window.addEventListener('resize', ()=> {
         if(window.innerWidth <= 768 && arrCard[0].classList.contains('modal__item-site--table')) {
