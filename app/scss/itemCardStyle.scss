@@ -11,7 +11,7 @@
         border-radius: 4px;
         span {
             font: {
-                family: avenir-demi;
+                family: avenir-medium;
                 size: 18px;
             }
             line-height: 24px;
@@ -33,18 +33,21 @@
         display: flex;
         justify-content: space-between;
         &__button {
+            &-fb2ukit {
+                margin-right: 12px;
+            }
             &-fb2ukit, &-vk2ukit {
                 position: relative;
-                background-color: #F7F9FE;
-                flex: 1 1 48%;
-                max-width: 48%;
+                background-color: #f7f9fc;
+                flex: 1 1 50%;
+                max-width: 50%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 min-height: 100px;
                 border-radius: 4px;
-                padding: 12px 12px 18px;
+                padding: 12px 18px;
                 img {
                     margin: 8px;
                 }
@@ -53,13 +56,13 @@
                 }
                 .ukit-alt-title-img {
                     position: absolute;
-                    top: 10px;
-                    right: 10px;
+                    top: 12px;
+                    right: 12px;
                     width: 18px;
                     height: 18px;
                     opacity: .6;
                     background: {
-                        image: url(../img/img-question-mark.png);
+                        image: url(../img/question-mark/grey.svg);
                         repeat: no-repeat;
                         position: center
                     }
@@ -73,14 +76,14 @@
     &.create-new-site--table {
         flex-direction: row;
         width: 100%;
+        margin: 8px;
         max-width: 100%;
         min-height: 0px;
         height: 30%;
         .zero-site {
             flex-direction: row;
-            flex: 1 1 50%;
+            flex: 1 1 45%;
             margin-right: 24px;
-            margin-bottom: 18px;
             img {
                 margin: 18px;
             }
@@ -90,18 +93,26 @@
         }
         .ukit-alt {
             margin-top: 0;
-            flex: 1 1 50%;
+            flex: 1 1 52%;
             align-self: stretch;
-            margin-bottom: 18px;
             &__button {
                 &-fb2ukit, &-vk2ukit {
                     min-height: 0;
                     flex-direction: row;
-                    padding: 6px 12px 10px;
+                    padding: 12px 18px;
                     span {
                         text-align: left;
                     }
                 }
+            }
+            a {
+                justify-content: flex-start;
+            }
+            img {
+                margin-top: 0;
+                margin-right: 10px;
+                margin-bottom: 0;
+                margin-left: 0;
             }
         }
         @media (max-width: 980px) {
@@ -110,6 +121,7 @@
                 flex-basis: 100%;
                 width: 100%;
                 margin-right: 0;
+                margin-bottom: 10px;
             }
             .ukit-alt {
                 flex-basis: 100%;
@@ -395,7 +407,6 @@
                 font: {
                     family: avenir-medium;
                     size: 18px;
-                    weight: bold;
                 }
                 letter-spacing: .4px;
                 line-height: 24px;
@@ -416,7 +427,7 @@
             color: #3A3D41;
             white-space: nowrap;
             text-overflow: ellipsis;
-            margin-top: 11px;
+            margin-top: 4px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -435,8 +446,8 @@
                     flex-basis: 18px;
                 }
                 .publish-domain-name {
-                    margin-left: 7px;
-                    padding-right: 7px;
+                    margin-left: 6px;
+                    padding-right: 6px;
                     overflow: hidden;
                     text-overflow: ellipsis;
                 }
@@ -454,7 +465,7 @@
                 img {
                 }
                 span {
-                    margin-left: 7px;
+                    margin-left: 6px;
                 }
             }
             .tariff-counter {
@@ -524,7 +535,10 @@
         }
         .info {
             width: 100%;
-            padding: 12px 18px;
+            padding-top: 12px;
+            padding-right: 18px;
+            padding-bottom: 18px;
+            padding-left: 18px;
             &__site-name {
                 width: 90%;
             }
