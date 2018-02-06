@@ -347,6 +347,8 @@ select {
   min-height: calc(100vh - 61px);
   position: absolute;
   width: 100%;
+  max-width: 100%;
+  overflow: hidden;
   top: 58px;
   z-index: -1;
   background-image: url(../img/f78b724c75.jpg);
@@ -792,7 +794,8 @@ select {
             width: 90%;
             justify-content: flex-start; }
             .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .info__site-data-wrapper .url-publish-wrapper {
-              margin-right: 14px; }
+              margin-right: 14px;
+              max-width: 200px; }
         .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table:hover {
           cursor: pointer; }
           .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table:hover .preview__overlay {

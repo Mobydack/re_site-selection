@@ -2,6 +2,8 @@
     min-height: calc(100vh - 61px);
     position: absolute;
     width: 100%;
+    max-width: 100%;
+    overflow: hidden;
     top: 58px;
     z-index: -1;
     background: {
