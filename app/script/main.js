@@ -11,7 +11,6 @@
         editButtonToTest: document.querySelectorAll('.edit-button')
     }
     listElements.buttonModalView.addEventListener('click', viewEvent);
-    listElements.buttonModalView.addEventListener('touchstart', testeditButton);
     const arrCard = Array.from(document.querySelectorAll('.modal__item-site'));
     const arrButtonViewCard = Array.from(document.querySelectorAll('.view-select button'));
     arrButtonViewCard.forEach((el, i, arr) => {
@@ -68,10 +67,11 @@
         listElements.dashWrapper.classList.toggle('dash-wrapper--deactive');
 
     }
-    Array.from(listElements.editButtonToTest).forEach((el, ind, arr)=>{
+    Array.from(listElements.editButtonToTest).forEach((el, ind, arr)=>{ //test
         el.addEventListener('click', testeditButton);
     });
-    function testeditButton() {
+    function testeditButton() { //test function
+       console.log(event.target);
         alert('test');
     }
 })();
