@@ -323,6 +323,8 @@ select {
       background-color: #4dae50;
       transform: rotate(-45deg);
       position: absolute; }
+    .header-wrapper .bottom-wrapper .close-modal:hover {
+      background-color: #16252c; }
   .header-wrapper .bottom-wrapper.bottom-wrapper--active {
     transform: translateY(0px);
     max-height: 100%;
@@ -406,6 +408,30 @@ select {
           color: #3A3D41; }
         .modal-wrapper .modal .tile.create-new-site .zero-site:hover {
           background-color: #fff; }
+        .modal-wrapper .modal .tile.create-new-site .zero-site button {
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          cursor: pointer;
+          background-color: #51B251;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .modal-wrapper .modal .tile.create-new-site .zero-site button:before {
+            content: "";
+            display: block;
+            height: 2px;
+            width: 22px;
+            background-color: white;
+            position: absolute; }
+          .modal-wrapper .modal .tile.create-new-site .zero-site button:after {
+            content: "";
+            display: block;
+            height: 2px;
+            width: 22px;
+            background-color: white;
+            transform: rotate(-90deg);
+            position: absolute; }
       .modal-wrapper .modal .tile.create-new-site .ukit-alt {
         margin-top: 18px;
         color: #3A3D41;
@@ -458,7 +484,7 @@ select {
           flex-direction: row;
           flex: 1 1 45%;
           margin-right: 24px; }
-          .modal-wrapper .modal .tile.create-new-site.create-new-site--table .zero-site img {
+          .modal-wrapper .modal .tile.create-new-site.create-new-site--table .zero-site button {
             margin: 18px; }
           .modal-wrapper .modal .tile.create-new-site.create-new-site--table .zero-site span {
             margin-top: 0; }
@@ -807,10 +833,8 @@ select {
             .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .info__site-data-wrapper .url-publish-wrapper {
               margin-right: 14px;
               max-width: 200px; }
-        .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table:hover {
-          cursor: pointer; }
-          .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table:hover .preview__overlay {
-            opacity: 1; }
+        .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table:hover .preview__overlay {
+          opacity: 1; }
         .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary {
           display: none;
           justify-content: space-between;
@@ -909,7 +933,7 @@ select {
   .modal-wrapper.modal-wrapper--active {
     opacity: 1;
     transform: translateY(0px);
-    margin-top: 133px; }
+    margin-top: 126px; }
     .modal-wrapper.modal-wrapper--active .modal .tile {
       display: inherit; }
 

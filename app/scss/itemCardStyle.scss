@@ -21,6 +21,33 @@
         &:hover {
             background-color: #fff;
         }
+        button {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            cursor: pointer;
+            background-color: #51B251;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:before {
+                content: "";
+                display: block;
+                height: 2px;
+                width: 22px;
+                background-color: white;
+                position: absolute;
+            }
+            &:after {
+                content: "";
+                display: block;
+                height: 2px;
+                width: 22px;
+                background-color: white;
+                transform: rotate(-90deg);
+                position: absolute;
+            }
+        }
     }
     .ukit-alt {
         margin-top: 18px;
@@ -87,7 +114,7 @@
             flex-direction: row;
             flex: 1 1 45%;
             margin-right: 24px;
-            img {
+            button {
                 margin: 18px;
             }
             span {
@@ -559,7 +586,7 @@
             }
         }
         &:hover {
-            cursor: pointer;
+            // cursor: pointer;
             .preview {
                 &__overlay {
                     opacity: 1;

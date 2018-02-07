@@ -265,6 +265,9 @@
                 transform: rotate(-45deg);
                 position: absolute;
             }
+            &:hover {
+                background-color: #16252c;
+            }
         }
         &.bottom-wrapper--active {
             transform: translateY(0px);
