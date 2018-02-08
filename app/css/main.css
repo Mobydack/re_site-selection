@@ -242,7 +242,7 @@ select {
   position: relative;
   max-height: 0;
   opacity: 0;
-  transform: translateY(-20px);
+  transform: translateY(-10px);
   background-color: #1D2A33;
   transition: opacity, transform, 0.3s cubic-bezier(0, 0, 0.2, 1);
   font-family: avenir-regular;
@@ -376,7 +376,7 @@ select {
     opacity: 0; }
 
 .modal-wrapper {
-  transform: translateY(-20px);
+  transform: translateY(-15px);
   opacity: 0;
   transition: opacity, transform, 0.3s cubic-bezier(0, 0, 0.2, 1); }
   .modal-wrapper .modal {
@@ -646,7 +646,7 @@ select {
                 transition: 0.1s ease-in-out; }
                 .modal-wrapper .modal .tile.modal__item-site .preview__overlay .secondary__leftgroup .publish-button:hover {
                   background-color: #FFCC00;
-                  background-image: url(../img/publish/yellow.svg); }
+                  background-image: url(../img/publish/dark.svg); }
                 .modal-wrapper .modal .tile.modal__item-site .preview__overlay .secondary__leftgroup .publish-button.publish-button--disabled {
                   cursor: not-allowed;
                   background-image: url(../img/publish/grey.svg);
@@ -743,6 +743,8 @@ select {
           border-radius: 2px; }
           .modal-wrapper .modal .tile.modal__item-site .info__site-name input:focus {
             border-color: rgba(51, 143, 255, 0.6); }
+          .modal-wrapper .modal .tile.modal__item-site .info__site-name input::placeholder {
+            color: #BCC7D1; }
         .modal-wrapper .modal .tile.modal__item-site .info__site-data-wrapper {
           font-family: avenir-medium;
           font-size: 14px;

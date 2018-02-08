@@ -310,7 +310,7 @@
                         &:hover {
                             background: {
                                 color: #FFCC00;
-                                image: url(../img/publish/yellow.svg);
+                                image: url(../img/publish/dark.svg);
                             }
                         }
                         &.publish-button--disabled {
@@ -452,6 +452,9 @@
                 border-radius: 2px;
                 &:focus {
                    border-color: rgba(51,143,255,0.6);
+                }
+                &::placeholder {
+                color: #BCC7D1;
                 }
             }
         }
