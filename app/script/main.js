@@ -1,4 +1,4 @@
-(function(){
+// (function(){
     var listElements = {
         buttonModalView: document.querySelector('.open-modal-view'),
         bottomWrapper: document.querySelector('.bottom-wrapper'),
@@ -82,4 +82,4 @@
        console.log(event.target);
         alert('test');
     }
-})();
+// })();
