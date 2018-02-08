@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="4px" height="17px" viewBox="0 0 4 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>img-threedots-icn</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Dashboard-/-Site-Selection-/-List-/-Selected-Line-Hover" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-866.000000, -33.000000)">
+        <g id="button-actions" transform="translate(850.000000, 23.000000)" fill="#7094A7">
+            <g id="icn-/-site-select-/-three-dots-/-grey" transform="translate(9.000000, 9.260010)">
+                <path d="M9,1 C10.1122704,1 11,1.8954305 11,3 C11,4.11227036 10.1045695,5 9,5 C7.88772964,5 7,4.1045695 7,3 C7,1.88772964 7.8954305,1 9,1 Z M9,7 C10.1122704,7 11,7.8954305 11,9 C11,10.1122704 10.1045695,11 9,11 C7.88772964,11 7,10.1045695 7,9 C7,7.88772964 7.8954305,7 9,7 Z M9,13 C10.1122704,13 11,13.8954305 11,15 C11,16.1122704 10.1045695,17 9,17 C7.88772964,17 7,16.1045695 7,15 C7,13.8877296 7.8954305,13 9,13 Z" id="glyph"></path>
+            </g>
+        </g>
+    </g>
+</svg>
