@@ -2,4 +2,7 @@
 .DS_Store
 app/.DS_Store
 app/img/.DS_Store
+app/img/Thumbs.db
+app/img/premium_site-original/Thumbs.db
+app/img/premium_site/Thumbs.db
 /.vscode
