@@ -572,6 +572,11 @@
             buttonViewSecondaryTable: document.querySelector('.buttonView-secondary-table')
         }
         listElements.buttonModalView.addEventListener('click', viewEvent);
+        var arrCard = Array.from(document.querySelectorAll('.modal__item-site'));
+        var arrButtonViewCard = Array.from(document.querySelectorAll('.view-select button'));
+        arrButtonViewCard.forEach((el, i, arr) => {
+            el.addEventListener('click', toggleClass);
+        })
         function viewEvent() {
             listElements.buttonModalView.classList.toggle('open-modal-view--active');
             listElements.bottomWrapper.classList.toggle('bottom-wrapper--active');
