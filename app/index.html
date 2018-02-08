@@ -560,6 +560,18 @@
     </div>
     <script src="./script/main.js" type="text/javascript"></script>
     <script>
+        var listElements = {
+        buttonModalView: document.querySelector('.open-modal-view'),
+        bottomWrapper: document.querySelector('.bottom-wrapper'),
+        headerWrapper: document.querySelector('.header-wrapper'),
+        modalWrapper:  document.querySelector('.modal-wrapper'),
+        modal: document.querySelector('.modal'),
+        createNewSite: document.querySelector('.tile.create-new-site'),
+        dashWrapper: document.querySelector('.dash-wrapper'),
+        editButtonToTest: document.querySelectorAll('.edit-button'), //testbutton
+        buttonViewSecondaryTable: document.querySelector('.buttonView-secondary-table')
+        }
+        //-----------------------------------------------------//
         var but = document.querySelector(".open-modal-view");
         but.addEventListener('click', va)
         function va(){
