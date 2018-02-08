@@ -594,14 +594,19 @@
             }
         }
         .secondary {
-            display: none;
+            //display: none; old type
+            display: flex; //new style
             justify-content: space-between;
             padding: 0;
             top: 50%;
+            max-width: 0;//new type
+            transition: max-width, .5s ease-in-out; //new style
             transform: translateY(-50%);
             align-items: center;
             position: absolute;
-            right: 18px;
+            // right: 18px; old style
+            right: 62px; //new style
+            overflow: hidden; //new style
             &__leftgroup {
                 display: flex;
                 .edit-button {
@@ -723,10 +728,32 @@
                     
                 }
             }
+            &.secondary-table--active {//new style
+                max-width: 100%;
+            }
+        }
+        .buttonView-secondary-table { //new style
+            opacity: 0;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #E8EBED;
+            position: absolute;
+            top: 50%;
+            right: 12px;
+            transform: translateY(-50%);
+            transition: opacity, .5s ease;
+            cursor: pointer;
+            &.buttonView-secondary-table--active {
+                opacity: 1;
+            }
         }
         &:hover {
             .secondary-table {
                 display: flex;
+            }
+            .buttonView-secondary-table { //new style
+                opacity: 1;
             }
         }
     }

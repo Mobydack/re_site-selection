@@ -836,14 +836,17 @@ select {
         .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table:hover .preview__overlay {
           opacity: 1; }
         .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary {
-          display: none;
+          display: flex;
           justify-content: space-between;
           padding: 0;
           top: 50%;
+          max-width: 0;
+          transition: max-width, .5s ease-in-out;
           transform: translateY(-50%);
           align-items: center;
           position: absolute;
-          right: 18px; }
+          right: 62px;
+          overflow: hidden; }
           .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__leftgroup {
             display: flex; }
             .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__leftgroup .edit-button {
@@ -926,8 +929,26 @@ select {
             .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__delete-button:hover {
               background-image: url(../img/img-delete-icn.png);
               background-color: #C2445C; }
+          .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary.secondary-table--active {
+            max-width: 100%; }
+        .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .buttonView-secondary-table {
+          opacity: 0;
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          background-color: #E8EBED;
+          position: absolute;
+          top: 50%;
+          right: 12px;
+          transform: translateY(-50%);
+          transition: opacity, .5s ease;
+          cursor: pointer; }
+          .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .buttonView-secondary-table.buttonView-secondary-table--active {
+            opacity: 1; }
         .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table:hover .secondary-table {
           display: flex; }
+        .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table:hover .buttonView-secondary-table {
+          opacity: 1; }
     .modal-wrapper .modal .tile {
       display: none; }
   .modal-wrapper.modal-wrapper--active {

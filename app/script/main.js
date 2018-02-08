@@ -8,7 +8,8 @@
         modal: document.querySelector('.modal'),
         createNewSite: document.querySelector('.tile.create-new-site'),
         dashWrapper: document.querySelector('.dash-wrapper'),
-        editButtonToTest: document.querySelectorAll('.edit-button')
+        editButtonToTest: document.querySelectorAll('.edit-button'), //testbutton
+        buttonViewSecondaryTable: document.querySelector('.buttonView-secondary-table')
     }
     listElements.buttonModalView.addEventListener('click', viewEvent);
     const arrCard = Array.from(document.querySelectorAll('.modal__item-site'));
@@ -30,6 +31,9 @@
         el.addEventListener('mouseenter', hoverEnterAltTooltip);
         el.addEventListener('mouseleave', hoverLeaveAltTooltip);
     });
+
+    listElements.buttonViewSecondaryTable.addEventListener("click", viewLeftGroup);
+
     function hoverEnterAltTooltip() {
         console.log(this)
         const offset = this.getBoundingClientRect(),
@@ -66,6 +70,10 @@
         listElements.modalWrapper.classList.toggle('modal-wrapper--active');
         listElements.dashWrapper.classList.toggle('dash-wrapper--deactive');
 
+    }
+    function viewLeftGroup() {
+        this.classList.toggle("buttonView-secondary-table--active");
+        this.parentNode.querySelector(".secondary-table").classList.toggle("secondary-table--active");
     }
     Array.from(listElements.editButtonToTest).forEach((el, ind, arr)=>{ //test
         el.addEventListener('click', testeditButton);
