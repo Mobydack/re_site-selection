@@ -1,5 +1,4 @@
 (function(){
-    'use strict'
     var listElements = {
         buttonModalView: document.querySelector('.open-modal-view'),
         bottomWrapper: document.querySelector('.bottom-wrapper'),
