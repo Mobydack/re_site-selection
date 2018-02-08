@@ -579,15 +579,15 @@
             listElements.modalWrapper.classList.toggle('modal-wrapper--active');
             listElements.dashWrapper.classList.toggle('dash-wrapper--deactive');
         }
-        function hoverEnterAltTooltip() {
-            var offset = this.getBoundingClientRect(),
-                topMargin = 20,
-                leftMargin = 20;
-            var tooltip = document.querySelector(`.ukit-alt-tooltip.${this.dataset.tooltipHover}`);
-            tooltip.style.top = `${offset.top - tooltip.getBoundingClientRect().height - topMargin}px`;
-            tooltip.style.left = `${offset.left - tooltip.getBoundingClientRect().width / 2 + offset.width / 2}px`;
-            tooltip.style.opacity = 1;
-        }
+        // function hoverEnterAltTooltip() {
+        //     var offset = this.getBoundingClientRect(),
+        //         topMargin = 20,
+        //         leftMargin = 20;
+        //     var tooltip = document.querySelector(`.ukit-alt-tooltip.${this.dataset.tooltipHover}`);
+        //     tooltip.style.top = `${offset.top - tooltip.getBoundingClientRect().height - topMargin}px`;
+        //     tooltip.style.left = `${offset.left - tooltip.getBoundingClientRect().width / 2 + offset.width / 2}px`;
+        //     tooltip.style.opacity = 1;
+        // }
 
         function hoverLeaveAltTooltip() {
             var tooltip = document.querySelector(`.ukit-alt-tooltip.${this.dataset.tooltipHover}`);
