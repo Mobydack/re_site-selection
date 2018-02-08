@@ -15,7 +15,7 @@
             b2: document.querySelector(".b2")
         }
         listButton.b1.addEventListener('touchstart', test);
-        listButton.b2.addEventListener('click', test)
+        listButton.b2.addEventListener('end', test)
         function test() {
             alert(`hello, world, this eventtarget: (${this.classList})`);
         }
