@@ -11,7 +11,6 @@
         buttonViewSecondaryTable: document.querySelector('.buttonView-secondary-table')
     }
     listElements.buttonModalView.addEventListener('click', viewEvent);
-    listElements.buttonModalView.addEventListener('touchstart', testeditButton);
     var arrCard = Array.from(document.querySelectorAll('.modal__item-site'));
     var arrButtonViewCard = Array.from(document.querySelectorAll('.view-select button'));
     arrButtonViewCard.forEach((el, i, arr) => {
