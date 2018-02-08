@@ -74,11 +74,4 @@
         this.classList.toggle("buttonView-secondary-table--active");
         this.parentNode.querySelector(".secondary-table").classList.toggle("secondary-table--active");
     }
-    Array.from(listElements.editButtonToTest).forEach((el, ind, arr)=>{ //test
-        el.addEventListener('click', testeditButton);
-    });
-    function testeditButton() { //test function
-       console.log(event.target);
-        alert('test');
-    }
 // })();
