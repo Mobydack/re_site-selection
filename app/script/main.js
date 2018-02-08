@@ -41,8 +41,8 @@
         console.log(this.clientHeight);
         var tooltip = document.querySelector('.ukit-alt-tooltip.'+ this.dataset.tooltipHover);
         console.log(tooltip);
-        tooltip.style.top = offset.top - tooltip.getBoundingClientRect().height - topMargin + "px";
-        tooltip.style.left = offset.left - tooltip.getBoundingClientRect().width / 2 + offset.width / 2 + 'px`;
+        tooltip.style.top = (offset.top - tooltip.getBoundingClientRect().height - topMargin) + "px";
+        tooltip.style.left = (offset.left - tooltip.getBoundingClientRect().width / 2 + offset.width / 2) + "px";
         tooltip.style.opacity = 1;
     }
 
