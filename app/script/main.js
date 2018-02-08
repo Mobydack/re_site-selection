@@ -1,6 +1,5 @@
-(function(){
-    'use strict'
-    const listElements = {
+// (function(){
+    var listElements = {
         buttonModalView: document.querySelector('.open-modal-view'),
         bottomWrapper: document.querySelector('.bottom-wrapper'),
         headerWrapper: document.querySelector('.header-wrapper'),
@@ -8,11 +7,12 @@
         modal: document.querySelector('.modal'),
         createNewSite: document.querySelector('.tile.create-new-site'),
         dashWrapper: document.querySelector('.dash-wrapper'),
-        editButtonToTest: document.querySelectorAll('.edit-button')
+        editButtonToTest: document.querySelectorAll('.edit-button'), //testbutton
+        buttonViewSecondaryTable: document.querySelector('.buttonView-secondary-table')
     }
     listElements.buttonModalView.addEventListener('click', viewEvent);
-    const arrCard = Array.from(document.querySelectorAll('.modal__item-site'));
-    const arrButtonViewCard = Array.from(document.querySelectorAll('.view-select button'));
+    var arrCard = Array.from(document.querySelectorAll('.modal__item-site'));
+    var arrButtonViewCard = Array.from(document.querySelectorAll('.view-select button'));
     arrButtonViewCard.forEach((el, i, arr) => {
         el.addEventListener('click', toggleClass);
     })
@@ -25,18 +25,21 @@
         }
     });
 
-    const massAltTooltip = Array.from(document.querySelectorAll(".ukit-alt .ukit-alt-title-img"));
+    var massAltTooltip = Array.from(document.querySelectorAll(".ukit-alt .ukit-alt-title-img"));
     massAltTooltip.forEach((el, i, arr)=>{
         el.addEventListener('mouseenter', hoverEnterAltTooltip);
         el.addEventListener('mouseleave', hoverLeaveAltTooltip);
     });
+
+    listElements.buttonViewSecondaryTable.addEventListener("click", viewLeftGroup);
+
     function hoverEnterAltTooltip() {
         console.log(this)
-        const offset = this.getBoundingClientRect(),
+        var offset = this.getBoundingClientRect(),
             topMargin = 20,
             leftMargin = 20;
         console.log(this.clientHeight);
-        const tooltip = document.querySelector(`.ukit-alt-tooltip.${this.dataset.tooltipHover}`);
+        var tooltip = document.querySelector(`.ukit-alt-tooltip.${this.dataset.tooltipHover}`);
         console.log(tooltip);
         tooltip.style.top = `${offset.top - tooltip.getBoundingClientRect().height - topMargin}px`;
         tooltip.style.left = `${offset.left - tooltip.getBoundingClientRect().width / 2 + offset.width / 2}px`;
@@ -44,7 +47,7 @@
     }
 
     function hoverLeaveAltTooltip() {
-        const tooltip = document.querySelector(`.ukit-alt-tooltip.${this.dataset.tooltipHover}`);
+        var tooltip = document.querySelector(`.ukit-alt-tooltip.${this.dataset.tooltipHover}`);
         tooltip.style.opacity = 0;
     }
 
@@ -67,11 +70,8 @@
         listElements.dashWrapper.classList.toggle('dash-wrapper--deactive');
 
     }
-    Array.from(listElements.editButtonToTest).forEach((el, ind, arr)=>{ //test
-        el.addEventListener('click', testeditButton);
-    });
-    function testeditButton() { //test function
-       console.log(event.target);
-        alert('test');
+    function viewLeftGroup() {
+        this.classList.toggle("buttonView-secondary-table--active");
+        this.parentNode.querySelector(".secondary-table").classList.toggle("secondary-table--active");
     }
-})();
+// })();

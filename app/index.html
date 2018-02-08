@@ -17,11 +17,11 @@
                     </a>
                 </div>
                 <div class="top__site col-1">
-                    <button class="open-modal-view" title="Выбрать сайт из моих сайтов" tabindex="1">
+                    <button class="open-modal-view" title="Выбрать сайт из моих сайтов" tabindex="1" type="button">
                         <span>Мои сайты</span>
                     </button>
                     <a href="http://ukit.com/neowizard" class="create-new-site" title="Создать новый сайт" tabindex="2"></a>
-                    <a href="#" class="current-site" tabindex="3">home-kitchen.ru</a>
+                    <a href="index2.html" class="current-site" tabindex="3">home-kitchen.ru</a>
                 </div>
                 <div class="top__profile col-1">
                     <a href="/sites/url/gp5ycaq96/dashBoard/profile" class="user">
@@ -138,6 +138,7 @@
                         </div>
                         <button class="secondary__delete-button" title="Удалить сайт"></button>
                     </div>
+                    <div class="buttonView-secondary-table"></div>
                 </div>
                 <!-- ---------------------- second-site ---------------------- -->
                 <div class="tile modal__item-site">
@@ -557,6 +558,57 @@
         <br>
          Это бесплатно для вашей страницы в соцсети
     </div>
-    <script src="./script/main.js"></script>
+    <script src="./script/main.js" type="text/javascript"></script>
+    <script>
+        var listElements = {
+            buttonModalView: document.querySelector('.open-modal-view'),
+            bottomWrapper: document.querySelector('.bottom-wrapper'),
+            headerWrapper: document.querySelector('.header-wrapper'),
+            modalWrapper:  document.querySelector('.modal-wrapper'),
+            modal: document.querySelector('.modal'),
+            createNewSite: document.querySelector('.tile.create-new-site'),
+            dashWrapper: document.querySelector('.dash-wrapper'),
+            editButtonToTest: document.querySelectorAll('.edit-button'), //testbutton
+            buttonViewSecondaryTable: document.querySelector('.buttonView-secondary-table')
+        }
+        listElements.buttonModalView.addEventListener('click', viewEvent);
+        function viewEvent() {
+            listElements.buttonModalView.classList.toggle('open-modal-view--active');
+            listElements.bottomWrapper.classList.toggle('bottom-wrapper--active');
+            listElements.headerWrapper.classList.toggle('header--fixed');
+            listElements.modalWrapper.classList.toggle('modal-wrapper--active');
+            listElements.dashWrapper.classList.toggle('dash-wrapper--deactive');
+        }
+        // function hoverEnterAltTooltip() {
+        //     var offset = this.getBoundingClientRect(),
+        //         topMargin = 20,
+        //         leftMargin = 20;
+        //     var tooltip = document.querySelector(`.ukit-alt-tooltip.${this.dataset.tooltipHover}`);
+        //     tooltip.style.top = `${offset.top - tooltip.getBoundingClientRect().height - topMargin}px`;
+        //     tooltip.style.left = `${offset.left - tooltip.getBoundingClientRect().width / 2 + offset.width / 2}px`;
+        //     tooltip.style.opacity = 1;
+        // }
+
+        function hoverLeaveAltTooltip() {
+            var tooltip = document.querySelector(`.ukit-alt-tooltip.${this.dataset.tooltipHover}`);
+            tooltip.style.opacity = 0;
+        }
+
+        function toggleClass() {
+            listElements.modal.classList.toggle('modal--table');
+            listElements.createNewSite.classList.toggle('create-new-site--table');
+            arrButtonViewCard.forEach((el, i, arr) => {
+                el.classList.toggle('view-select--active');
+            });
+            arrCard.forEach((el, i, arr) => {
+                el.classList.toggle('modal__item-site--table');
+            });
+        }
+        //-----------------------------------------------------//
+        listElements.buttonModalView.addEventListener('click', va)
+        function va(){
+            alert(1);
+        }
+    </script>
 </body>
 </html>
