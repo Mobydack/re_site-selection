@@ -151,6 +151,10 @@ select {
         padding: 2px 18px 2px;
         border-radius: 6px;
         letter-spacing: .5px;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
         cursor: pointer; }
         .header-wrapper .top-wrapper .top__site .open-modal-view span {
           white-space: nowrap; }
