@@ -47,7 +47,7 @@
     }
 
     function hoverLeaveAltTooltip() {
-        var tooltip = document.querySelector(`.ukit-alt-tooltip.${this.dataset.tooltipHover}`);
+        var tooltip = document.querySelector(".ukit-alt-tooltip."+this.dataset.tooltipHover);
         tooltip.style.opacity = 0;
     }
 
