@@ -19,7 +19,7 @@
 
     document.querySelector(".close-modal").addEventListener('click', viewEvent);
 
-    window.addEventListener('resize', ()=> {
+    window.addEventListener('resize', function(){
         if(window.innerWidth <= 768 && arrCard[0].classList.contains('modal__item-site--table')) {
             toggleClass();
         }
