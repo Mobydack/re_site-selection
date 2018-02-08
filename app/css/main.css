@@ -620,7 +620,7 @@ select {
                 align-items: center;
                 cursor: pointer; }
                 .modal-wrapper .modal .tile.modal__item-site .preview__overlay .secondary__leftgroup .edit-button i {
-                  background-image: url(../img/img-edit-icn.png);
+                  background-image: url(../img/pencil/white.svg);
                   background-repeat: no-repeat;
                   background-position: center;
                   background-origin: content-box;
@@ -635,7 +635,7 @@ select {
                 display: inline-block;
                 border-radius: 50%;
                 margin-left: 12px;
-                background-image: url(../img/img-publish-icn.png);
+                background-image: url(../img/publish/white.svg);
                 background-color: #132026;
                 background-repeat: no-repeat;
                 background-origin: content-box;
@@ -646,13 +646,13 @@ select {
                 transition: 0.1s ease-in-out; }
                 .modal-wrapper .modal .tile.modal__item-site .preview__overlay .secondary__leftgroup .publish-button:hover {
                   background-color: #FFCC00;
-                  background-image: url(../img/img-publish-icn-hover.png); }
+                  background-image: url(../img/publish/yellow.svg); }
                 .modal-wrapper .modal .tile.modal__item-site .preview__overlay .secondary__leftgroup .publish-button.publish-button--disabled {
                   cursor: not-allowed;
-                  background-image: url(../img/img-publish-icn-table.png);
+                  background-image: url(../img/publish/grey.svg);
                   background-color: rgba(19, 32, 38, 0.5); }
                   .modal-wrapper .modal .tile.modal__item-site .preview__overlay .secondary__leftgroup .publish-button.publish-button--disabled:hover {
-                    background-image: url(../img/img-publish-icn-table.png);
+                    background-image: url(../img/publish/grey.svg);
                     background-color: rgba(19, 32, 38, 0.5); }
               .modal-wrapper .modal .tile.modal__item-site .preview__overlay .secondary__leftgroup .premium-button {
                 width: 36px;
@@ -662,7 +662,7 @@ select {
                 transition: 0.1s ease-in-out;
                 cursor: pointer;
                 background-color: #132026;
-                background-image: url(../img/img-payment-icn.png);
+                background-image: url(../img/dollar/white.svg);
                 background-repeat: no-repeat;
                 background-origin: content-box;
                 background-position: center; }
@@ -672,7 +672,7 @@ select {
               width: 36px;
               height: 36px;
               border-radius: 50%;
-              background-image: url(../img/img-delete-icn.png);
+              background-image: url(../img/trash/white.svg);
               background-color: #132026;
               background-repeat: no-repeat;
               background-origin: content-box;
@@ -870,7 +870,7 @@ select {
               align-items: center;
               cursor: pointer; }
               .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__leftgroup .edit-button i {
-                background-image: url(../img/img-edit-icn-table.png);
+                background-image: url(../img/pencil/grey.svg);
                 background-repeat: no-repeat;
                 background-position: center;
                 background-origin: content-box;
@@ -883,16 +883,16 @@ select {
                 background-color: #3B7694;
                 color: #fff; }
                 .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__leftgroup .edit-button:hover i {
-                  background-image: url(../img/img-edit-icn.png); }
+                  background-image: url(../img/pencil/white.svg); }
               .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__leftgroup .edit-button.expired i {
-                background-image: url(../img/img-payment-icn-table.png); }
+                background-image: url(../img/dollar/grey.svg); }
               .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__leftgroup .edit-button.expired:hover i {
-                background-image: url(../img/img-payment-icn.png); }
+                background-image: url(../img/dollar/white.svg); }
             .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__leftgroup .publish-button {
               display: inline-block;
               border-radius: 50%;
               margin-left: 12px;
-              background-image: url(../img/img-publish-icn-table.png);
+              background-image: url(../img/publish/grey.svg);
               background-color: #E8EBED;
               background-repeat: no-repeat;
               background-origin: content-box;
@@ -903,13 +903,13 @@ select {
               transition: 0.1s ease-in-out; }
               .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__leftgroup .publish-button:hover {
                 background-color: #FFCC00;
-                background-image: url(../img/img-publish-icn-hover.png); }
+                background-image: url(../img/publish/light.svg); }
               .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__leftgroup .publish-button.publish-button--disabled {
                 cursor: not-allowed;
-                background-image: url(../img/img-publish-icn-disabled-table.png);
+                background-image: url(../img/publish/light.svg);
                 background-color: rgba(232, 235, 237, 0.5); }
                 .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__leftgroup .publish-button.publish-button--disabled:hover {
-                  background-image: url(../img/img-publish-icn-disabled-table.png); }
+                  background-image: url(../img/publish/light.svg); }
             .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__leftgroup .premium-button {
               width: 36px;
               height: 36px;
@@ -918,25 +918,25 @@ select {
               transition: 0.1s ease-in-out;
               cursor: pointer;
               background-color: #E8EBED;
-              background-image: url(../img/img-payment-icn-table.png);
+              background-image: url(../img/dollar/grey.svg);
               background-repeat: no-repeat;
               background-origin: content-box;
               background-position: center; }
               .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__leftgroup .premium-button:hover {
-                background-image: url(../img/img-payment-icn.png);
+                background-image: url(../img/dollar/white.svg);
                 background-color: #4caf50; }
           .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__delete-button {
             width: 36px;
             height: 36px;
             margin-left: 12px;
             border-radius: 50%;
-            background-image: url(../img/img-delete-icn-table.png);
+            background-image: url(../img/trash/grey.svg);
             background-color: #E8EBED;
             background-repeat: no-repeat;
             background-origin: content-box;
             background-position: center; }
             .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__delete-button:hover {
-              background-image: url(../img/img-delete-icn.png);
+              background-image: url(../img/trash/white.svg);
               background-color: #C2445C; }
           .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary.secondary-table--active {
             max-width: 100%; }
