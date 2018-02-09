@@ -277,7 +277,7 @@
                         cursor: pointer;
                         i {
                             background: {
-                                image: url(../img/img-edit-icn.png);
+                                image: url(../img/pencil/white.svg);
                                 repeat: no-repeat;
                                 position: center;
                                 origin: content-box;
@@ -297,7 +297,7 @@
                         border-radius: 50%;
                         margin-left: 12px;
                         background: {
-                            image: url(../img/img-publish-icn.png);
+                            image: url(../img/publish/white.svg);
                             color: #132026;
                             repeat: no-repeat;
                             origin: content-box;
@@ -310,18 +310,18 @@
                         &:hover {
                             background: {
                                 color: #FFCC00;
-                                image: url(../img/img-publish-icn-hover.png);
+                                image: url(../img/publish/dark.svg);
                             }
                         }
                         &.publish-button--disabled {
                             cursor: not-allowed;
                             background: {
-                                image: url(../img/img-publish-icn-table.png);
+                                image: url(../img/publish/grey.svg);
                                 color: rgba(19, 32, 38, 0.5);
                             }
                             &:hover {
                                 background: {
-                                    image: url(../img/img-publish-icn-table.png);
+                                    image: url(../img/publish/grey.svg);
                                     color: rgba(19, 32, 38, 0.5);
                                 }
                             }
@@ -336,7 +336,7 @@
                         cursor: pointer;
                         background: {
                             color: #132026;
-                            image: url(../img/img-payment-icn.png);
+                            image: url(../img/dollar/white.svg);
                             repeat: no-repeat;
                             origin: content-box;
                             position: center;
@@ -351,7 +351,7 @@
                     height: 36px;
                     border-radius: 50%;
                     background: {
-                        image: url(../img/img-delete-icn.png);
+                        image: url(../img/trash/white.svg);
                         color: #132026;
                         repeat: no-repeat;
                         origin: content-box;
@@ -452,6 +452,9 @@
                 border-radius: 2px;
                 &:focus {
                    border-color: rgba(51,143,255,0.6);
+                }
+                &::placeholder {
+                color: #BCC7D1;
                 }
             }
         }
@@ -630,7 +633,7 @@
                     cursor: pointer;
                     i {
                         background: {
-                            image: url(../img/img-edit-icn-table.png);
+                            image: url(../img/pencil/grey.svg);
                             repeat: no-repeat;
                             position: center;
                             origin: content-box;
@@ -645,17 +648,17 @@
                         background-color: #3B7694;
                         color: #fff;
                         i {
-                            background-image: url(../img/img-edit-icn.png);
+                            background-image: url(../img/pencil/white.svg);
                         }
                         
                     }
                     &.expired {
                         i {
-                            background-image: url(../img/img-payment-icn-table.png);
+                            background-image: url(../img/dollar/grey.svg);
                         }
                         &:hover {
                             i {
-                                background-image: url(../img/img-payment-icn.png);
+                                background-image: url(../img/dollar/white.svg);
                             }
                         }
                     }
@@ -665,7 +668,7 @@
                     border-radius: 50%;
                     margin-left: 12px;
                     background: {
-                        image: url(../img/img-publish-icn-table.png);
+                        image: url(../img/publish/grey.svg);
                         color: #E8EBED;
                         repeat: no-repeat;
                         origin: content-box;
@@ -678,17 +681,17 @@
                     &:hover {
                         background: {
                             color: #FFCC00;
-                            image: url(../img/img-publish-icn-hover.png);
+                            image: url(../img/publish/light.svg);
                         }
                     }
                     &.publish-button--disabled {
                         cursor: not-allowed;
                         background: {
-                            image: url(../img/img-publish-icn-disabled-table.png);
+                            image: url(../img/publish/light.svg);
                             color: rgba(232, 235, 237, 0.5);
                         }
                         &:hover {
-                            background-image: url(../img/img-publish-icn-disabled-table.png);
+                            background-image: url(../img/publish/light.svg);
                         }
                     }
                 }
@@ -701,14 +704,14 @@
                     cursor: pointer;
                     background: {
                         color: #E8EBED;
-                        image: url(../img/img-payment-icn-table.png);
+                        image: url(../img/dollar/grey.svg);
                         repeat: no-repeat;
                         origin: content-box;
                         position: center;
                     }
                     &:hover {
                         background: {
-                            image: url(../img/img-payment-icn.png);
+                            image: url(../img/dollar/white.svg);
                             color: #4caf50;
                         }
                     }
@@ -720,7 +723,7 @@
                 margin-left: 12px;
                 border-radius: 50%;
                 background: {
-                    image: url(../img/img-delete-icn-table.png);
+                    image: url(../img/trash/grey.svg);
                     color: #E8EBED;
                     repeat: no-repeat;
                     origin: content-box;
@@ -728,7 +731,7 @@
                 }
                 &:hover {
                     background: {
-                        image: url(../img/img-delete-icn.png);
+                        image: url(../img/trash/white.svg);
                         color: #C2445C;
                     }
                     
