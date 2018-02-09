@@ -1087,7 +1087,7 @@ select {
           padding-bottom: 18px;
           padding-left: 18px; }
           .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .info__site-name {
-            width: 90%; }
+            width: 80%; }
           .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .info__site-data-wrapper {
             width: 90%;
             -webkit-box-pack: start;
@@ -1099,12 +1099,14 @@ select {
         .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table:hover .preview__overlay {
           opacity: 1; }
         .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary {
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
+          display: none;
           -webkit-box-pack: justify;
           -ms-flex-pack: justify;
           justify-content: space-between;
+          height: 100%;
+          -webkit-box-shadow: -30px 0 50px 25px #fff;
+          box-shadow: -30px 0 50px 25px #fff;
+          background-color: #fff;
           padding: 0;
           top: 50%;
           max-width: 0;
@@ -1137,6 +1139,7 @@ select {
               -webkit-box-align: center;
               -ms-flex-align: center;
               align-items: center;
+              white-space: nowrap;
               cursor: pointer; }
               .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__leftgroup .edit-button i {
                 background-image: url(../img/pencil/grey.svg);
@@ -1210,23 +1213,38 @@ select {
               background-image: url(../img/trash/white.svg);
               background-color: #C2445C; }
           .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary.secondary-table--active {
-            max-width: 100%; }
+            max-width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex; }
         .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .buttonView-secondary-table {
           opacity: 0;
           width: 36px;
           height: 36px;
           border-radius: 50%;
           background-color: #E8EBED;
+          background-image: url(../img/threedots/grey.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-origin: content-box;
           position: absolute;
           top: 50%;
           right: 12px;
-          -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-          -webkit-transition: opacity, .5s ease;
-          transition: opacity, .5s ease;
-          cursor: pointer; }
+          -webkit-transform: translateY(-50%) rotate(0deg);
+          transform: translateY(-50%) rotate(0deg);
+          -webkit-transition: opacity .5s ease, -webkit-transform .4s ease;
+          transition: opacity .5s ease, -webkit-transform .4s ease;
+          transition: opacity .5s ease, transform .4s ease;
+          transition: opacity .5s ease, transform .4s ease, -webkit-transform .4s ease;
+          cursor: pointer;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none; }
           .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .buttonView-secondary-table.buttonView-secondary-table--active {
-            opacity: 1; }
+            opacity: 1;
+            -webkit-transform: translateY(-50%) rotate(-90deg);
+            transform: translateY(-50%) rotate(-90deg); }
         .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table:hover .secondary-table {
           display: -webkit-box;
           display: -ms-flexbox;

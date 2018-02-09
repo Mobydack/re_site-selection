@@ -7,8 +7,7 @@
         modal: document.querySelector('.modal'),
         createNewSite: document.querySelector('.tile.create-new-site'),
         dashWrapper: document.querySelector('.dash-wrapper'),
-        editButtonToTest: document.querySelectorAll('.edit-button'), //testbutton
-        buttonViewSecondaryTable: document.querySelector('.buttonView-secondary-table')
+        buttonViewSecondaryTable: document.querySelectorAll('.buttonView-secondary-table')
     }
     listElements.buttonModalView.addEventListener('click', viewEvent);
     var arrCard = Array.from(document.querySelectorAll('.modal__item-site'));
@@ -25,13 +24,13 @@
         }
     });
 
-    var massAltTooltip = Array.from(document.querySelectorAll(".ukit-alt .ukit-alt-title-img"));
-    massAltTooltip.forEach(function(el, i, arr){
+    Array.from(document.querySelectorAll(".ukit-alt .ukit-alt-title-img")).forEach(function(el, i, arr){
         el.addEventListener('mouseenter', hoverEnterAltTooltip);
         el.addEventListener('mouseleave', hoverLeaveAltTooltip);
     });
-
-    listElements.buttonViewSecondaryTable.addEventListener("click", viewLeftGroup);
+    Array.from(listElements.buttonViewSecondaryTable).forEach(function(el, i, arr){
+        el.addEventListener("click", viewLeftGroup);
+    });
 
     function hoverEnterAltTooltip() {
         console.log(this)
