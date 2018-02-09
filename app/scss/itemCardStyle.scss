@@ -1,5 +1,6 @@
 .tile.create-new-site {
     min-height: 300px;
+    flex-direction: column;
     .zero-site {
         background-color: #f7f9fc;
         display: flex;
@@ -168,9 +169,7 @@
     min-width: 320px;
     max-width: 550px;
     margin: 20px;
-    display: flex;
     flex: 1 1 23%;
-    flex-direction: column;
     border-radius: 4px;
 }
 

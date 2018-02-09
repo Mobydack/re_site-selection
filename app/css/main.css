@@ -318,12 +318,8 @@ select {
   position: relative;
   max-height: 0;
   opacity: 0;
-<<<<<<< HEAD
-  -webkit-transform: translateY(-20px);
-  transform: translateY(-20px);
-=======
+  -webkit-transform: translateY(-10px);
   transform: translateY(-10px);
->>>>>>> 7e7fab943cf52dc7a7c50f251f6992f684823555
   background-color: #1D2A33;
   -webkit-transition: opacity, 0.3s cubic-bezier(0, 0, 0.2, 1), -webkit-transform;
   transition: opacity, 0.3s cubic-bezier(0, 0, 0.2, 1), -webkit-transform;
@@ -483,12 +479,8 @@ select {
     opacity: 0; }
 
 .modal-wrapper {
-<<<<<<< HEAD
-  -webkit-transform: translateY(-20px);
-  transform: translateY(-20px);
-=======
+  -webkit-transform: translateY(-15px);
   transform: translateY(-15px);
->>>>>>> 7e7fab943cf52dc7a7c50f251f6992f684823555
   opacity: 0;
   -webkit-transition: opacity, 0.3s cubic-bezier(0, 0, 0.2, 1), -webkit-transform;
   transition: opacity, 0.3s cubic-bezier(0, 0, 0.2, 1), -webkit-transform;
@@ -519,7 +511,11 @@ select {
       max-width: 980px;
       padding: 0 26px 48px 26px; }
     .modal-wrapper .modal .tile.create-new-site {
-      min-height: 300px; }
+      min-height: 300px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
       .modal-wrapper .modal .tile.create-new-site .zero-site {
         background-color: #f7f9fc;
         display: -webkit-box;
@@ -706,16 +702,9 @@ select {
       min-width: 320px;
       max-width: 550px;
       margin: 20px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
       -webkit-box-flex: 1;
       -ms-flex: 1 1 23%;
       flex: 1 1 23%;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
       border-radius: 4px; }
     .modal-wrapper .modal .tile.modal__item-site {
       position: relative;
@@ -968,6 +957,12 @@ select {
           border-radius: 2px; }
           .modal-wrapper .modal .tile.modal__item-site .info__site-name input:focus {
             border-color: rgba(51, 143, 255, 0.6); }
+          .modal-wrapper .modal .tile.modal__item-site .info__site-name input::-webkit-input-placeholder {
+            color: #BCC7D1; }
+          .modal-wrapper .modal .tile.modal__item-site .info__site-name input:-ms-input-placeholder {
+            color: #BCC7D1; }
+          .modal-wrapper .modal .tile.modal__item-site .info__site-name input::-ms-input-placeholder {
+            color: #BCC7D1; }
           .modal-wrapper .modal .tile.modal__item-site .info__site-name input::placeholder {
             color: #BCC7D1; }
         .modal-wrapper .modal .tile.modal__item-site .info__site-data-wrapper {
@@ -1245,8 +1240,16 @@ select {
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
     margin-top: 126px; }
-    .modal-wrapper.modal-wrapper--active .modal .tile {
-      display: inherit; }
+    .modal-wrapper.modal-wrapper--active .modal .tile.create-new-site {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+    .modal-wrapper.modal-wrapper--active .modal .tile.modal__item-site {
+      display: block; }
+    .modal-wrapper.modal-wrapper--active .modal .tile.modal__item-site--table {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
 
 .ukit-alt-tooltip {
   pointer-events: none;

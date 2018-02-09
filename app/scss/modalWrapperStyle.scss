@@ -27,8 +27,14 @@
         transform: translateY(0px);
         margin-top: 126px;
         .modal {
-            .tile {
-                display: inherit;
+            .tile.create-new-site {
+                display: flex;
+            }
+            .tile.modal__item-site {
+                display: block;
+            }
+            .tile.modal__item-site--table {
+                display: flex;
             }
         }
     }
