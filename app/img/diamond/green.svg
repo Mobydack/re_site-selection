@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
-    <title>icn / site-select / diamond / green</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="icn-/-site-select-/-diamond-/-green" fill="#4CAF50">
-            <path d="M17.2293874,6.08022358 L9,16.0730511 L0.770612621,6.08022358 L3.94575236,1 L14.0542476,1 L17.2293874,6.08022358 Z M14.7706126,5.91977642 L12.9457524,3 L5.05424764,3 L3.22938738,5.91977642 L9,12.9269489 L14.7706126,5.91977642 Z" id="Path-4" fill-rule="nonzero"></path>
-            <rect id="Rectangle" x="2" y="5" width="14" height="2"></rect>
-            <polygon id="Path-6" fill-rule="nonzero" points="8.5972645 2.70224688 6.93688651 2 5.5 6.32158227 7.80743548 14.6493984 9.5 14.0528484 7.37422431 6.38066461"></polygon>
-            <polygon id="Path-6" fill-rule="nonzero" transform="translate(10.500000, 8.324699) scale(-1, 1) translate(-10.500000, -8.324699) " points="11.5972645 2.70224688 9.93688651 2 8.5 6.32158227 10.8074355 14.6493984 12.5 14.0528484 10.3742243 6.38066461"></polygon>
-        </g>
-    </g>
-</svg>
+<svg width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill="#4CAF50" fill-rule="evenodd"><path d="M17.23 6.08L9 16.073.77 6.08 3.947 1h10.108l3.175 5.08zm-2.46-.16L12.947 3H5.054L3.23 5.92 9 12.927l5.77-7.007z" fill-rule="nonzero"/><path d="M2 5h14v2H2z"/><path fill-rule="nonzero" d="M8.597 2.702L6.937 2 5.5 6.322l2.307 8.327 1.693-.596L7.374 6.38z"/><path fill-rule="nonzero" d="M9.403 2.702L11.063 2 12.5 6.322l-2.307 8.327-1.693-.596 2.126-7.672z"/></g></svg>
