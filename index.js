@@ -6,13 +6,13 @@ const execFile = require("child_process").execFile;
 const zlib = require('zlib');
 
 let mimeType = {
-    ".html": "text/html", 
+    ".html": "text/html;charset=utf-8", 
     ".png": "image/png", 
-    ".svg": "image/svg+xml",
+    ".svg": "image/svg+xml;charset=utf-8",
     ".jpeg": "image/jpeg",
     ".jpg": "image/jpeg",
-    ".css": "text/css",
-    ".js": "text/javascript",
+    ".css": "text/css;charset=utf-8",
+    ".js": "text/javascript;charset=utf-8",
     ".ttf": "application/x-font-ttf",
     ".otf": "application/x-font-opentype",
     ".woff": "application/font-woff",
@@ -36,6 +36,7 @@ http.createServer((req, res)=>{
                 console.log(mimeType[path.parse(pathName).ext])
                 res.setHeader('Content-Type', mimeType[path.parse(pathName).ext]);
                 res.setHeader('Content-Encoding', "gzip");
+                res.setHeader('Cache-Control', "no-cache")
                 let file = fs.createReadStream(pathName);
                 file.on('open', ()=>{
                     res.statusCode = 200;
