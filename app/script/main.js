@@ -105,7 +105,6 @@
     }
     function imgLoadError() { //функция замены не загрузившегося скриншота сайта
         var img = this;
-        console.log(this);
         var canvas = document.createElement("canvas");
         var ctx = canvas.getContext("2d");
         ctx.fillStyle = "rgba(255, 255, 255, 0)";
