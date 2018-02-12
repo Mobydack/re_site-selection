@@ -43,7 +43,9 @@
         el.addEventListener('focus', siteNameFocus);
     });
 
-    Array.from(listElements.imgSite.addEventListener("error", ))
+    Array.from(listElements.imgSite).forEach(function(el, i, arr){
+        el.addEventListener("error", imgLoadError);
+    });
 
     //Список функций и процедур для работы с событиями
     function hoverEnterAltTooltip() { //функция позиционирования у тултипа
@@ -101,7 +103,19 @@
             elSecondary.dispatchEvent(ev);
         }
     }
-    function imgLoadError() {
-        var img = new Image();
+    function imgLoadError() { //функция замены не загрузившегося скриншота сайта
+        var img = this;
+        console.log(this);
+        var canvas = document.createElement("canvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "rgba(255, 255, 255, 0)";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        canvas.toBlob(function(blob){
+            var url = URL.createObjectURL(blob);
+            img.onload = function(){
+                URL.revokeObjectURL(url);
+            }
+            img.src = url;
+        });
     }
 })();
