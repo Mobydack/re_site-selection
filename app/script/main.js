@@ -46,10 +46,38 @@
     Array.from(listElements.imgSite).forEach(function(el, i, arr){
         el.addEventListener("error", imgLoadError);
     });
+    
+    //далее не очень хороший код, надо исправить, но он для болванки
+    
+
+    //ponit events none (Переписат кусок кода)
+    // var S = document.querySelectorAll(".tile.modal__item-site"); 
+    
+    // Array.from(S).forEach(function(el, index, arr){
+    //     el.querySelector(".preview").setAttribute("data-hover-active", "false");
+    //     el.querySelector(".preview").addEventListener("touchstart", function(){
+    //         //проверка элемента вызвавшего события
+    //         console.log(this.dataset.hoverActive)
+    //         if(event.target.classList.contains("edit-button") && (this.dataset.hoverActive == "true")) {
+    //            viewEvent();
+    //            console.log(1);
+    //         }
+    //         //
+    //         if(this.dataset.hoverActive == true){
+    //             return 0;
+    //         }
+    //         var beforeHover = document.querySelector(".tile.modal__item-site .preview[data-hover-active='true']");
+    //         if(!(beforeHover === null)) {
+    //             beforeHover.dataset.hoverActive = false;
+    //         }
+    //         this.dataset.hoverActive = true;
+            
+    //     }, false)
+    // });
+
 
     //Список функций и процедур для работы с событиями
     function hoverEnterAltTooltip() { //функция позиционирования у тултипа
-        console.log(this)
         var offset = this.getBoundingClientRect(),
             topMargin = 20,
             leftMargin = 20;

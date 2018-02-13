@@ -258,7 +258,6 @@
                 display: flex;
                 justify-content: space-between;
                 padding: 0 28px 26px;
-                pointer-events: none;
                 &__leftgroup {
                     display: flex;
                     .edit-button {
@@ -389,6 +388,7 @@
                 family: avenir-regular;
                 size: 18px;
             }
+            text-align: center;
             letter-spacing: .4px;
             position: absolute;
             left: 50%;
@@ -428,6 +428,11 @@
                         pointer-events: auto;
                     }
                 }
+            }
+        }
+        @media (max-width: 500px) {
+            .primary {
+                padding-top: 0;
             }
         }
     }
@@ -567,9 +572,12 @@
             }
             &:before {
                 content: " ";
-                background-size: 24%;
+                background-size: 100%;
             }
             &.selected-site, &.expired, &.locked {
+                &:before {
+                    background-size: 24%;
+                }
                 &:after {
                     display: none;
                 }

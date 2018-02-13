@@ -36,7 +36,7 @@ http.createServer((req, res)=>{
                 console.log(mimeType[path.parse(pathName).ext])
                 res.setHeader('Content-Type', mimeType[path.parse(pathName).ext]);
                 res.setHeader('Content-Encoding', "gzip");
-                res.setHeader('Cache-Control', "no-cache")
+                res.setHeader('Cache-Control', "no-cache, no-store, must-revalidate")
                 let file = fs.createReadStream(pathName);
                 file.on('open', ()=>{
                     res.statusCode = 200;
