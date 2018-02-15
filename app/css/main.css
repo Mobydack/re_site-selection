@@ -942,7 +942,18 @@ select {
             pointer-events: auto; }
         @media (max-width: 500px) {
           .modal-wrapper .modal .tile.modal__item-site .preview .primary {
-            padding-top: 0; } }
+            padding-top: 0; }
+          .modal-wrapper .modal .tile.modal__item-site .preview .text--hidden .edit-button {
+            width: 36px;
+            padding: 0;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center; }
+            .modal-wrapper .modal .tile.modal__item-site .preview .text--hidden .edit-button i {
+              margin-left: 0;
+              margin-right: 0; }
+            .modal-wrapper .modal .tile.modal__item-site .preview .text--hidden .edit-button .edit-button-text {
+              display: none; } }
       .modal-wrapper .modal .tile.modal__item-site .info {
         padding: 24px 24px 32px;
         height: 100%;
@@ -1262,7 +1273,10 @@ select {
     opacity: 1;
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
-    margin-top: 126px; }
+    top: 126px;
+    position: absolute;
+    left: 0;
+    right: 0; }
     .modal-wrapper.modal-wrapper--active .modal .tile.create-new-site {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1280,7 +1294,6 @@ select {
   opacity: 0;
   z-index: 9999;
   max-width: 420px;
-  width: 100%;
   text-align: center;
   -webkit-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
@@ -1295,3 +1308,6 @@ select {
   font-family: avenir-regular;
   font-size: 14px;
   pointer-events: none; }
+  @media (max-width: 419px) {
+    .ukit-alt-tooltip {
+      left: 50%; } }

@@ -25,7 +25,10 @@
     &.modal-wrapper--active {
         opacity: 1;
         transform: translateY(0px);
-        margin-top: 126px;
+        top: 126px;
+        position: absolute;
+        left: 0;
+        right: 0;
         .modal {
             .tile.create-new-site {
                 display: flex;

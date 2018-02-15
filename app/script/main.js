@@ -9,7 +9,8 @@
         dashWrapper: document.querySelector('.dash-wrapper'),
         buttonViewSecondaryTable: document.querySelectorAll('.buttonView-secondary-table'),
         infoSiteName: document.querySelectorAll('.info__site-name input'),
-        imgSite: document.querySelectorAll(".preview__image-site")
+        imgSite: document.querySelectorAll(".preview__image-site"),
+        leftGruopCards: document.querySelectorAll(".secondary:not(.secondary-table) .secondary__leftgroup")
     }
 
     listElements.buttonModalView.addEventListener('click', viewEvent);
@@ -33,6 +34,11 @@
     Array.from(document.querySelectorAll(".ukit-alt .ukit-alt-title-img")).forEach(function(el, i, arr){
         el.addEventListener('mouseenter', hoverEnterAltTooltip);
         el.addEventListener('mouseleave', hoverLeaveAltTooltip);
+        el.addEventListener('click', function(){ //прерывает распростроение событий на ссылку если клик был на тултипе
+            if(event.target.classList.contains("ukit-alt-title-img")) {
+                event.preventDefault();
+            }
+        }, false)
     });
 
     Array.from(listElements.buttonViewSecondaryTable).forEach(function(el, i, arr){
@@ -47,6 +53,12 @@
         el.addEventListener("error", imgLoadError);
     });
     
+    Array.from(listElements.leftGruopCards).forEach(function(el, i, arr){ //hidden text of edit-button if (secondary__leftgroup.Children > 2)
+        console.log(el.childElementCount)
+        if(el.childElementCount > 2) {
+            el.classList.toggle("text--hidden");
+        }
+    });
     //далее не очень хороший код, надо исправить, но он для болванки
     
 
@@ -84,8 +96,14 @@
         console.log(this.clientHeight);
         var tooltip = document.querySelector('.ukit-alt-tooltip.'+ this.dataset.tooltipHover);
         console.log(tooltip);
-        tooltip.style.top = (offset.top - tooltip.getBoundingClientRect().height - topMargin) + "px";
-        tooltip.style.left = (offset.left - tooltip.getBoundingClientRect().width / 2 + offset.width / 2) + "px";
+        var left = (offset.left - tooltip.getBoundingClientRect().width / 2 + offset.width / 2),
+            top = (offset.top - tooltip.getBoundingClientRect().height - topMargin);
+        if(window.innerWidth < 420) {
+            left = 24;
+            tooltip.style.right = 24 + "px";
+        }
+        tooltip.style.top = top + "px";
+        tooltip.style.left = left + "px";
         tooltip.style.opacity = 1;
     }
 

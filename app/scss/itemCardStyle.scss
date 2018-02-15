@@ -434,6 +434,20 @@
             .primary {
                 padding-top: 0;
             }
+            .text--hidden{
+                .edit-button {
+                    width: 36px;
+                    padding: 0;
+                    justify-content: center;
+                    i {
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                    .edit-button-text {
+                        display: none;
+                    }
+                }
+            }
         }
     }
     .info {
