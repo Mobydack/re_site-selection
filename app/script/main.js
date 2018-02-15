@@ -54,7 +54,6 @@
     });
     
     Array.from(listElements.leftGruopCards).forEach(function(el, i, arr){ //hidden text of edit-button if (secondary__leftgroup.Children > 2)
-        console.log(el.childElementCount)
         if(el.childElementCount > 2) {
             el.classList.toggle("text--hidden");
         }
@@ -93,9 +92,7 @@
         var offset = this.getBoundingClientRect(),
             topMargin = 20,
             leftMargin = 20;
-        console.log(this.clientHeight);
         var tooltip = document.querySelector('.ukit-alt-tooltip.'+ this.dataset.tooltipHover);
-        console.log(tooltip);
         var left = (offset.left - tooltip.getBoundingClientRect().width / 2 + offset.width / 2),
             top = (offset.top - tooltip.getBoundingClientRect().height - topMargin);
         if(window.innerWidth < 420) {
