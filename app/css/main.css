@@ -341,7 +341,8 @@ select {
       .header-wrapper .bottom-wrapper .bottom .sort-filter .filter-select-wrapper {
         color: #8DA8B8; }
         .header-wrapper .bottom-wrapper .bottom .sort-filter .filter-select-wrapper .select-title {
-          margin-right: 4px; }
+          margin-right: 4px;
+          white-space: nowrap; }
         .header-wrapper .bottom-wrapper .bottom .sort-filter .filter-select-wrapper .filter-select {
           background-color: transparent;
           cursor: pointer; }
@@ -1126,8 +1127,8 @@ select {
           padding: 0;
           top: 50%;
           max-width: 0;
-          -webkit-transition: max-width, .5s ease-in-out;
-          transition: max-width, .5s ease-in-out;
+          -webkit-transition: max-width, .5s ease;
+          transition: max-width, .5s ease;
           -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
           -webkit-box-align: center;
@@ -1176,6 +1177,18 @@ select {
                 background-image: url(../img/dollar/grey.svg); }
               .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__leftgroup .edit-button.expired:hover i {
                 background-image: url(../img/dollar/white.svg); }
+              .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__leftgroup .edit-button-default {
+                width: 36px;
+                padding: 0;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                margin-right: 12px;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center; }
+                .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__leftgroup .edit-button-default i {
+                  margin: 0; }
             .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__leftgroup .publish-button {
               display: inline-block;
               border-radius: 50%;

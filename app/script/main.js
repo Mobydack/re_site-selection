@@ -129,6 +129,12 @@
 
     }
     function viewLeftGroup() {//функци по отображению дополнительных элементов управления карточкой при нажатии на кнопку
+        var beforeActiveElement = document.querySelector('.buttonView-secondary-table--active');
+        console.log(beforeActiveElement)
+        if(!(beforeActiveElement === null)) {
+            beforeActiveElement.classList.toggle("buttonView-secondary-table--active");
+            beforeActiveElement.parentNode.querySelector(".secondary-table").classList.toggle("secondary-table--active");
+        }
         this.classList.toggle("buttonView-secondary-table--active");
         this.parentNode.querySelector(".secondary-table").classList.toggle("secondary-table--active");
     }

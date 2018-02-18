@@ -633,7 +633,7 @@
             padding: 0;
             top: 50%;
             max-width: 0;//new type
-            transition: max-width, .5s ease-in-out; //new style
+            transition: max-width, .5s ease; //new style
             transform: translateY(-50%);
             align-items: center;
             position: absolute;
@@ -687,6 +687,17 @@
                             }
                         }
                     }
+                    &-default {
+                        width: 36px;
+                        padding: 0;
+                        display: flex;
+                        margin-right: 12px;
+                        justify-content: center;
+                        i {
+                            margin: 0;
+                        }
+                    }
+
                 }
                 .publish-button {
                     display: inline-block;
