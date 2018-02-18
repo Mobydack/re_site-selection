@@ -142,8 +142,6 @@
         @media (max-width: 767.99px) {
             .top {
                 max-width: 100%;
-                &__logo {
-                }
                 &__site {
                     min-width: 50%;
                     .create-new-site {
@@ -311,5 +309,5 @@
         top: 0;
         width: 100%;
         z-index: 2;
-    } 
+    }
 }

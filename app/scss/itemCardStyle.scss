@@ -519,26 +519,18 @@
             }
             .tariff-name {
                 @include flexMidlleText;
-                img {
-                }
                 span {
                     margin-left: 6px;
                 }
             }
             .tariff-counter {
                 @include flexMidlleText;
-                img {
-
-                }
                 span {
                     margin-left: 7px;
                 }
             }
             .tariff-expired {
                 @include flexMidlleText;
-                img {
-
-                }
                 span {
                     margin-left: 7px;
                     color: #C2445C;
