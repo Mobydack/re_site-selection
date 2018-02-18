@@ -347,14 +347,11 @@ select {
         color: #8DA8B8; }
         .header-wrapper .bottom-wrapper .bottom .sort-filter .filter-select-wrapper .select-title {
           margin-right: 4px;
-<<<<<<< HEAD
           white-space: nowrap; }
-=======
           max-width: 180px;
           overflow: hidden;
           text-overflow: ellipsis;
           cursor: default; }
->>>>>>> fe02c0ede892e85720cf6ca38a0bb6cd437a8fa4
         .header-wrapper .bottom-wrapper .bottom .sort-filter .filter-select-wrapper .filter-select {
           background-color: transparent;
           cursor: pointer; }
