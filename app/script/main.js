@@ -130,8 +130,8 @@
     }
     function viewLeftGroup() {//функци по отображению дополнительных элементов управления карточкой при нажатии на кнопку
         var beforeActiveElement = document.querySelector('.buttonView-secondary-table--active');
-        console.log(beforeActiveElement)
-        if(!(beforeActiveElement === null)) {
+        console.log(beforeActiveElement === this)
+        if(!(beforeActiveElement === null) && !(beforeActiveElement === this)) {
             beforeActiveElement.classList.toggle("buttonView-secondary-table--active");
             beforeActiveElement.parentNode.querySelector(".secondary-table").classList.toggle("secondary-table--active");
         }
