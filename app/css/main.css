@@ -153,10 +153,10 @@ select {
 
 @media (max-width: 991.99px) {
   .grid__row-md {
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column; } }
+    -ms-flex-direction: row;
+    flex-direction: row; } }
 
 @media (max-width: 1199.99px) {
   .grid__row-lg {
@@ -214,6 +214,10 @@ select {
         -moz-user-select: none;
         -webkit-user-select: none;
         user-select: none;
+        max-width: 180px;
+        min-width: 120px;
+        overflow: hidden;
+        text-overflow: ellipsis;
         cursor: pointer; }
         .header-wrapper .top-wrapper .top__site .open-modal-view span {
           white-space: nowrap; }
@@ -283,7 +287,10 @@ select {
           color: #3B7694;
           font-size: 12px;
           white-space: nowrap;
-          margin-left: 10px; }
+          margin-left: 10px;
+          max-width: 150px;
+          overflow: hidden;
+          text-overflow: ellipsis; }
         .header-wrapper .top-wrapper .top__profile .user:hover .user__name {
           color: #4b93b7; }
       .header-wrapper .top-wrapper .top__profile .notifications {
@@ -309,8 +316,6 @@ select {
         min-width: 50%; }
         .header-wrapper .top-wrapper .top__site .create-new-site {
           display: none; }
-      .header-wrapper .top-wrapper .top__profile .notifications {
-        display: none; }
       .header-wrapper .top-wrapper .top__profile .user__name {
         display: none; } }
 
@@ -342,7 +347,14 @@ select {
         color: #8DA8B8; }
         .header-wrapper .bottom-wrapper .bottom .sort-filter .filter-select-wrapper .select-title {
           margin-right: 4px;
+<<<<<<< HEAD
           white-space: nowrap; }
+=======
+          max-width: 180px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          cursor: default; }
+>>>>>>> fe02c0ede892e85720cf6ca38a0bb6cd437a8fa4
         .header-wrapper .bottom-wrapper .bottom .sort-filter .filter-select-wrapper .filter-select {
           background-color: transparent;
           cursor: pointer; }
@@ -433,7 +445,9 @@ select {
     opacity: 1; }
   @media (max-width: 768px) {
     .header-wrapper .bottom-wrapper .bottom .view-select {
-      display: none; } }
+      display: none; }
+    .header-wrapper .bottom-wrapper .bottom {
+      padding: 8px 0 8px 16px; } }
   @media (max-width: 1200px) {
     .header-wrapper .bottom-wrapper .bottom .view-select {
       -webkit-box-pack: start;
@@ -1261,10 +1275,10 @@ select {
           right: 12px;
           -webkit-transform: translateY(-50%) rotate(0deg);
           transform: translateY(-50%) rotate(0deg);
-          -webkit-transition: opacity .5s ease, -webkit-transform .4s ease;
-          transition: opacity .5s ease, -webkit-transform .4s ease;
-          transition: opacity .5s ease, transform .4s ease;
-          transition: opacity .5s ease, transform .4s ease, -webkit-transform .4s ease;
+          -webkit-transition: opacity 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.18s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transition: opacity 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.18s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transition: opacity 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.18s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transition: opacity 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.18s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.18s cubic-bezier(0.25, 0.46, 0.45, 0.94);
           cursor: pointer;
           -webkit-user-select: none;
           -moz-user-select: none;
