@@ -347,7 +347,7 @@ select {
         color: #8DA8B8; }
         .header-wrapper .bottom-wrapper .bottom .sort-filter .filter-select-wrapper .select-title {
           margin-right: 4px;
-          white-space: nowrap; }
+          white-space: nowrap;
           max-width: 180px;
           overflow: hidden;
           text-overflow: ellipsis;
