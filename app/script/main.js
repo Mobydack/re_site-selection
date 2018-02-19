@@ -59,7 +59,39 @@
         }
     });
     //далее не очень хороший код, надо исправить, но он для болванки
-    
+    var S = document.querySelectorAll(".tile.modal__item-site");
+
+    Array.from(S).forEach(function(el, index, arr){
+        var preview =  el.querySelector(".preview__overlay");
+        preview.setAttribute('data-hover', false);
+        // preview.querySelector('.primary').style.pointerEvents = "none";
+        // preview.querySelector('.secondary').style.pointerEvents = "none";
+        Array.from(preview.querySelectorAll("*")).forEach(function(el, indx, arr){
+            el.style.pointerEvents = "none";
+        });
+        preview.addEventListener('mouseover', function(){
+            console.log(event.currentTarget.dataset.hover === "false")
+            if(event.currentTarget.dataset.hover === "false") {
+                event.currentTarget.dataset.hover = true;
+            }
+        });
+        preview.addEventListener('click', function(){
+            if(event.currentTarget.dataset.hover === "true") {
+                console.log("tap")
+                Array.from(preview.querySelectorAll("*")).forEach(function(el, indx, arr){
+                    el.style.pointerEvents = "auto";
+                });
+            }
+        })
+        preview.addEventListener('mouseout', function(){
+            if(event.currentTarget.dataset.hover === "true") {
+                event.currentTarget.dataset.hover = "false"
+                Array.from(preview.querySelectorAll("*")).forEach(function(el, indx, arr){
+                    el.style.pointerEvents = "none";
+                });
+            }
+        });
+    })
 
     //ponit events none (Переписат кусок кода)
     // var S = document.querySelectorAll(".tile.modal__item-site"); 
@@ -130,6 +162,12 @@
 
     }
     function viewLeftGroup() {//функци по отображению дополнительных элементов управления карточкой при нажатии на кнопку
+        var beforeActiveElement = document.querySelector('.buttonView-secondary-table--active');
+        console.log(beforeActiveElement === this)
+        if(!(beforeActiveElement === null) && !(beforeActiveElement === this)) {
+            beforeActiveElement.classList.toggle("buttonView-secondary-table--active");
+            beforeActiveElement.parentNode.querySelector(".secondary-table").classList.toggle("secondary-table--active");
+        }
         this.classList.toggle("buttonView-secondary-table--active");
         this.parentNode.querySelector(".secondary-table").classList.toggle("secondary-table--active");
     }
