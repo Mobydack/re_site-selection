@@ -15,7 +15,7 @@
     </style>
 </head>
 <body>
-    <header class="h"></header>
+    <!-- <header class="h"></header>
     <div class="new-site-wrapper">
         <div class="left-wrapper">
 
@@ -24,7 +24,7 @@
             <div class="fix-header">
                 <div class="left">
                     <span class="left-text">Мгновенный сайт:</span>
-                    <div class="faceebok">
+                    <div class="facebook">
                         <div class="icon"></div>
                         <span class="text">Создать сайт из страницы Facebook</span>
                     </div>
@@ -41,7 +41,43 @@
 
             </div>
         </div>
+    </div> -->
+    <header class="wizard-main-header-wrapper">
+        <div class="wizard-main-header">
+                <div class="w-logo"></div>
+                <div class="w-topbar__profile-links"></div>
+        </div>
+    </header>
+    <div class="wizard-main-body">
+        <div class="w-choose-templates">
+        </div>
+        <div class="w-region-templates">
+            <div class="w-tosocial-wrapper">
+                <div class="tosocial">
+                    <span class="tosocial-text">Мгновенный сайт:</span>
+                    <div class="tosocial-facebook">
+                        <div class="icon"></div>
+                        <span class="social-text">Создать сайт из страницы Facebook</span>
+                    </div>
+                    <div class="tosocial-vk">
+                        <div class="icon"></div>
+                        <span class="social-text">Создать сайт из паблика VK</span>
+                    </div>
+                </div>
+                <div class="close"></div>  
+            </div>
+            <div class="w-tmpls"></div>
+        </div>
     </div>
-    <script></script>
+    <script>
+        var  closeBut = document.querySelector('.w-tosocial-wrapper .close');
+        close.addEventListener("click", function(){
+            var parent = this.parentNode;
+            while(parent.classList.contains("w-tosocial-wrapper")) {
+                parent = parent.parentNode;
+            }
+            parent.classList.toggle("w-tosocial-wrapper--hidden");
+        });
+    </script>
 </body>
 </html>
