@@ -766,7 +766,9 @@
                             margin: 0;
                         }
                     }
-
+                    &-help {
+                        padding: 8px 16px 10px 16px;
+                    }
                 }
                 .publish-button {
                     display: inline-block;

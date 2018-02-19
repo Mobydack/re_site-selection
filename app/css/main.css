@@ -1285,6 +1285,8 @@ select {
                 justify-content: center; }
                 .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__leftgroup .edit-button-default i {
                   margin: 0; }
+              .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__leftgroup .edit-button-help {
+                padding: 8px 16px 10px 16px; }
             .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__leftgroup .publish-button {
               display: inline-block;
               border-radius: 50%;
