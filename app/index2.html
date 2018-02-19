@@ -71,9 +71,9 @@
     </div>
     <script>
         var  closeBut = document.querySelector('.w-tosocial-wrapper .close');
-        close.addEventListener("click", function(){
+        closeBut.addEventListener("click", function(){
             var parent = this.parentNode;
-            while(parent.classList.contains("w-tosocial-wrapper")) {
+            while(!(parent.classList.contains("w-tosocial-wrapper"))) {
                 parent = parent.parentNode;
             }
             parent.classList.toggle("w-tosocial-wrapper--hidden");
