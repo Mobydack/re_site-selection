@@ -354,7 +354,10 @@ select {
           cursor: default; }
         .header-wrapper .bottom-wrapper .bottom .sort-filter .filter-select-wrapper .filter-select {
           background-color: transparent;
-          cursor: pointer; }
+          cursor: pointer;
+          max-width: 180px;
+          overflow: hidden;
+          text-overflow: ellipsis; }
           .header-wrapper .bottom-wrapper .bottom .sort-filter .filter-select-wrapper .filter-select:hover {
             color: #a2b9c7; }
           .header-wrapper .bottom-wrapper .bottom .sort-filter .filter-select-wrapper .filter-select option {
@@ -553,7 +556,11 @@ select {
           font-size: 18px;
           line-height: 24px;
           margin-top: 18px;
-          color: #3A3D41; }
+          color: #3A3D41;
+          max-width: 280px;
+          max-height: 24px;
+          overflow: hidden;
+          text-overflow: ellipsis; }
         .modal-wrapper .modal .tile.create-new-site .zero-site:hover {
           background-color: #fff; }
         .modal-wrapper .modal .tile.create-new-site .zero-site button {
@@ -627,7 +634,11 @@ select {
           .modal-wrapper .modal .tile.create-new-site .ukit-alt__button-fb2ukit img, .modal-wrapper .modal .tile.create-new-site .ukit-alt__button-vk2ukit img {
             margin: 8px; }
           .modal-wrapper .modal .tile.create-new-site .ukit-alt__button-fb2ukit span, .modal-wrapper .modal .tile.create-new-site .ukit-alt__button-vk2ukit span {
-            text-align: center; }
+            text-align: center;
+            max-width: 180px;
+            max-height: 36px;
+            overflow: hidden;
+            text-overflow: ellipsis; }
           .modal-wrapper .modal .tile.create-new-site .ukit-alt__button-fb2ukit .ukit-alt-title-img, .modal-wrapper .modal .tile.create-new-site .ukit-alt__button-vk2ukit .ukit-alt-title-img {
             position: absolute;
             top: 12px;
@@ -707,7 +718,12 @@ select {
               -ms-flex-preferred-size: 100%;
               flex-basis: 100%;
               width: 100%;
-              margin-bottom: 0px; } }
+              margin-bottom: 0px; }
+              .modal-wrapper .modal .tile.create-new-site.create-new-site--table .ukit-alt__button-fb2ukit span, .modal-wrapper .modal .tile.create-new-site.create-new-site--table .ukit-alt__button-vk2ukit span {
+                max-width: 260px;
+                max-height: 36px;
+                overflow: hidden;
+                text-overflow: ellipsis; } }
     .modal-wrapper .modal .tile {
       background-color: rgba(58, 61, 65, 0);
       overflow: hidden;
@@ -794,6 +810,19 @@ select {
                 -webkit-box-align: center;
                 -ms-flex-align: center;
                 align-items: center; }
+                .modal-wrapper .modal .tile.modal__item-site .preview__overlay .primary button.primary__pay a {
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  -webkit-box-align: center;
+                  -ms-flex-align: center;
+                  align-items: center; }
+                  .modal-wrapper .modal .tile.modal__item-site .preview__overlay .primary button.primary__pay a span {
+                    max-width: 180px;
+                    max-height: 18px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    text-align: left; }
                 .modal-wrapper .modal .tile.modal__item-site .preview__overlay .primary button.primary__pay i {
                   display: inline-block;
                   width: 18px;
@@ -809,6 +838,13 @@ select {
                 font-size: 14px;
                 line-height: normal;
                 border-radius: 18px; }
+                .modal-wrapper .modal .tile.modal__item-site .preview__overlay .primary button.primary__help a {
+                  text-align: center; }
+                  .modal-wrapper .modal .tile.modal__item-site .preview__overlay .primary button.primary__help a span {
+                    max-width: 180px;
+                    max-height: 18px;
+                    overflow: hidden;
+                    text-overflow: ellipsis; }
               .modal-wrapper .modal .tile.modal__item-site .preview__overlay .primary button:hover {
                 background-color: #67bd6a; }
           .modal-wrapper .modal .tile.modal__item-site .preview__overlay .secondary {
@@ -839,6 +875,13 @@ select {
                 -ms-flex-align: center;
                 align-items: center;
                 cursor: pointer; }
+                .modal-wrapper .modal .tile.modal__item-site .preview__overlay .secondary__leftgroup .edit-button a {
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  -webkit-box-align: center;
+                  -ms-flex-align: center;
+                  align-items: center; }
                 .modal-wrapper .modal .tile.modal__item-site .preview__overlay .secondary__leftgroup .edit-button i {
                   background-image: url(../img/pencil/white.svg);
                   background-repeat: no-repeat;
@@ -1044,7 +1087,10 @@ select {
             overflow: hidden;
             cursor: pointer; }
             .modal-wrapper .modal .tile.modal__item-site .info__site-data-wrapper .tariff-name span {
-              margin-left: 6px; }
+              margin-left: 6px;
+              max-width: 180px;
+              overflow: hidden;
+              text-overflow: ellipsis; }
           .modal-wrapper .modal .tile.modal__item-site .info__site-data-wrapper .tariff-counter {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -1095,6 +1141,11 @@ select {
               background-color: transparent;
               font-family: avenir-medium;
               font-size: 14px; }
+              .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .preview .primary button a {
+                max-width: 180px;
+                max-height: 24px;
+                overflow: hidden;
+                text-overflow: ellipsis; }
             .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .preview .primary .primary__help {
               display: none; }
             .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .preview .primary .primary__pay {
@@ -1169,6 +1220,19 @@ select {
               align-items: center;
               white-space: nowrap;
               cursor: pointer; }
+              .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__leftgroup .edit-button a {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center; }
+                .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__leftgroup .edit-button a span {
+                  max-width: 150px;
+                  max-height: 18px;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  text-align: left; }
               .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__leftgroup .edit-button i {
                 background-image: url(../img/pencil/grey.svg);
                 background-repeat: no-repeat;
