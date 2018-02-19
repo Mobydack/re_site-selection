@@ -246,7 +246,7 @@ select {
           content: "";
           width: 16px;
           height: 16px;
-          background-image: url("../img/img-icon-add.png");
+          background-image: url("../img/plus/green.svg");
           background-repeat: no-repeat;
           background-origin: content-box;
           background-position: center; }
@@ -800,7 +800,7 @@ select {
               line-height: 24px;
               letter-spacing: .5px;
               border-radius: 6px;
-              padding: 15px 32px 11px 34px; }
+              padding: 15px 32px 14px 34px; }
               .modal-wrapper .modal .tile.modal__item-site .preview__overlay .primary button.primary__pay {
                 margin-top: 18px;
                 font-size: 14px;
@@ -1135,6 +1135,8 @@ select {
               color: #C2445C; }
             .modal-wrapper .modal .tile.modal__item-site .info__site-data-wrapper .tariff-expired a {
               color: #338FFF; }
+      .modal-wrapper .modal .tile.modal__item-site .secondary-table {
+        display: none; }
       .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table {
         margin-left: 8px;
         margin-right: 8px;
@@ -1196,9 +1198,7 @@ select {
         .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table:hover .preview__overlay {
           opacity: 1; }
         .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary {
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
+          display: none;
           -webkit-box-pack: justify;
           -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1209,8 +1209,8 @@ select {
           padding: 0;
           top: 50%;
           max-width: 0;
-          -webkit-transition: max-width .5s ease;
-          transition: max-width .5s ease;
+          -webkit-transition: max-width, .5s ease;
+          transition: max-width, .5s ease;
           -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
           -webkit-box-align: center;
@@ -1372,6 +1372,10 @@ select {
             opacity: 1;
             -webkit-transform: translateY(-50%) rotate(-90deg);
             transform: translateY(-50%) rotate(-90deg); }
+        .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table:hover .secondary-table {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; }
         .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table:hover .buttonView-secondary-table {
           opacity: 1; }
     .modal-wrapper .modal .tile {
