@@ -560,7 +560,8 @@ select {
           max-width: 280px;
           max-height: 24px;
           overflow: hidden;
-          text-overflow: ellipsis; }
+          text-overflow: ellipsis;
+          display: inline-block; }
         .modal-wrapper .modal .tile.create-new-site .zero-site:hover {
           background-color: #fff; }
         .modal-wrapper .modal .tile.create-new-site .zero-site button {
@@ -638,7 +639,8 @@ select {
             max-width: 180px;
             max-height: 36px;
             overflow: hidden;
-            text-overflow: ellipsis; }
+            text-overflow: ellipsis;
+            display: inline-block; }
           .modal-wrapper .modal .tile.create-new-site .ukit-alt__button-fb2ukit .ukit-alt-title-img, .modal-wrapper .modal .tile.create-new-site .ukit-alt__button-vk2ukit .ukit-alt-title-img {
             position: absolute;
             top: 12px;
@@ -723,7 +725,8 @@ select {
                 max-width: 260px;
                 max-height: 36px;
                 overflow: hidden;
-                text-overflow: ellipsis; } }
+                text-overflow: ellipsis;
+                display: inline-block; } }
     .modal-wrapper .modal .tile {
       background-color: rgba(58, 61, 65, 0);
       overflow: hidden;
@@ -797,7 +800,7 @@ select {
               line-height: 24px;
               letter-spacing: .5px;
               border-radius: 6px;
-              padding: 15px 32px 16px 34px; }
+              padding: 15px 32px 11px 34px; }
               .modal-wrapper .modal .tile.modal__item-site .preview__overlay .primary button.primary__pay {
                 margin-top: 18px;
                 font-size: 14px;
@@ -822,7 +825,8 @@ select {
                     max-height: 18px;
                     overflow: hidden;
                     text-overflow: ellipsis;
-                    text-align: left; }
+                    text-align: left;
+                    display: inline-block; }
                 .modal-wrapper .modal .tile.modal__item-site .preview__overlay .primary button.primary__pay i {
                   display: inline-block;
                   width: 18px;
@@ -839,12 +843,19 @@ select {
                 line-height: normal;
                 border-radius: 18px; }
                 .modal-wrapper .modal .tile.modal__item-site .preview__overlay .primary button.primary__help a {
-                  text-align: center; }
+                  text-align: center;
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  -webkit-box-align: center;
+                  -ms-flex-align: center;
+                  align-items: center; }
                   .modal-wrapper .modal .tile.modal__item-site .preview__overlay .primary button.primary__help a span {
                     max-width: 180px;
                     max-height: 18px;
                     overflow: hidden;
-                    text-overflow: ellipsis; }
+                    text-overflow: ellipsis;
+                    display: inline-block; }
               .modal-wrapper .modal .tile.modal__item-site .preview__overlay .primary button:hover {
                 background-color: #67bd6a; }
           .modal-wrapper .modal .tile.modal__item-site .preview__overlay .secondary {
@@ -882,6 +893,13 @@ select {
                   -webkit-box-align: center;
                   -ms-flex-align: center;
                   align-items: center; }
+                  .modal-wrapper .modal .tile.modal__item-site .preview__overlay .secondary__leftgroup .edit-button a span {
+                    max-width: 150px;
+                    max-height: 18px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    text-align: left;
+                    display: inline-block; }
                 .modal-wrapper .modal .tile.modal__item-site .preview__overlay .secondary__leftgroup .edit-button i {
                   background-image: url(../img/pencil/white.svg);
                   background-repeat: no-repeat;
@@ -1090,7 +1108,8 @@ select {
               margin-left: 6px;
               max-width: 180px;
               overflow: hidden;
-              text-overflow: ellipsis; }
+              text-overflow: ellipsis;
+              display: inline-block; }
           .modal-wrapper .modal .tile.modal__item-site .info__site-data-wrapper .tariff-counter {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -1145,7 +1164,8 @@ select {
                 max-width: 180px;
                 max-height: 24px;
                 overflow: hidden;
-                text-overflow: ellipsis; }
+                text-overflow: ellipsis;
+                display: inline-block; }
             .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .preview .primary .primary__help {
               display: none; }
             .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .preview .primary .primary__pay {
@@ -1232,7 +1252,8 @@ select {
                   max-height: 18px;
                   overflow: hidden;
                   text-overflow: ellipsis;
-                  text-align: left; }
+                  text-align: left;
+                  display: inline-block; }
               .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__leftgroup .edit-button i {
                 background-image: url(../img/pencil/grey.svg);
                 background-repeat: no-repeat;
