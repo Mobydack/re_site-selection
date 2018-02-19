@@ -1397,7 +1397,7 @@ select {
       left: 50%; } }
 
 body {
-  min-height: 200vh; }
+  min-height: 100vh; }
 
 .wizard-main-header-wrapper {
   height: 62px; }
@@ -1465,9 +1465,12 @@ body {
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between;
-      height: 60px;
-      padding: 0 38px;
-      background-color: #263845; }
+      min-height: 60px;
+      padding: 12px 38px;
+      background-color: #263845;
+      overflow: hidden;
+      -webkit-transition: min-height .25s ease;
+      transition: min-height .25s ease; }
       .wizard-main-body .w-region-templates .w-tosocial-wrapper .tosocial {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1487,19 +1490,18 @@ body {
           -webkit-box-align: center;
           -ms-flex-align: center;
           align-items: center;
-          padding-left: 18px;
-          padding-right: 16px;
-          height: 36px;
+          -ms-flex-item-align: stretch;
+          align-self: stretch;
+          padding: 9px 16px 9px 18px;
           margin-left: 16px;
           border-radius: 6px;
           background-color: #39579a;
           cursor: pointer; }
           .wizard-main-body .w-region-templates .w-tosocial-wrapper .tosocial-facebook .icon {
-            width: 10px;
-            height: 18px;
+            min-width: 10px;
+            min-height: 18px;
             background-image: url(../img/index2/icn-fb.svg);
             background-position: center;
-            background-size: content;
             background-repeat: no-repeat; }
           .wizard-main-body .w-region-templates .w-tosocial-wrapper .tosocial-facebook .social-text {
             margin-left: 11px;
@@ -1514,19 +1516,18 @@ body {
           -webkit-box-align: center;
           -ms-flex-align: center;
           align-items: center;
-          padding-left: 18px;
-          padding-right: 16px;
-          height: 36px;
+          -ms-flex-item-align: stretch;
+          align-self: stretch;
+          padding: 9px 16px 9px 18px;
           margin-left: 16px;
           border-radius: 6px;
           background-color: #4d6d8f;
           cursor: pointer; }
           .wizard-main-body .w-region-templates .w-tosocial-wrapper .tosocial-vk .icon {
-            width: 25px;
-            height: 18px;
+            min-width: 25px;
+            min-height: 18px;
             background-image: url(../img/index2/icn-vk.svg);
             background-position: center;
-            background-size: content;
             background-repeat: no-repeat; }
           .wizard-main-body .w-region-templates .w-tosocial-wrapper .tosocial-vk .social-text {
             margin-left: 11px;
@@ -1535,8 +1536,9 @@ body {
             letter-spacing: .5px;
             color: #fff; }
       .wizard-main-body .w-region-templates .w-tosocial-wrapper .close {
-        width: 26px;
-        height: 26px;
+        min-width: 26px;
+        min-height: 26px;
+        margin-left: 64px;
         position: relative;
         cursor: pointer; }
         .wizard-main-body .w-region-templates .w-tosocial-wrapper .close:before, .wizard-main-body .w-region-templates .w-tosocial-wrapper .close:after {
@@ -1553,9 +1555,12 @@ body {
         .wizard-main-body .w-region-templates .w-tosocial-wrapper .close:after {
           -webkit-transform: rotate(45deg);
           transform: rotate(45deg); }
+    .wizard-main-body .w-region-templates .w-tosocial-wrapper--hidden {
+      min-height: 0;
+      max-height: 0;
+      padding: 0 38px; }
     .wizard-main-body .w-region-templates .w-tmpls {
-      width: 1076px;
-      margin: auto;
+      max-width: 1076px;
       -webkit-box-flex: 1;
       -ms-flex: 1;
       flex: 1;

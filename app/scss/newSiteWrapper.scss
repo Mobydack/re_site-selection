@@ -107,7 +107,7 @@
 //     }
 // }
 body {
-    min-height: 200vh;
+    min-height: 100vh;
 }
 .wizard-main-header-wrapper {
     height: 62px;
@@ -164,9 +164,11 @@ body {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 60px;
-            padding: 0 38px;
+            min-height: 60px;
+            padding: 12px 38px;
             background-color: #263845;
+            overflow: hidden;
+            transition: min-height .25s ease;
             .tosocial {
                 display: flex;
                 align-items: center;
@@ -182,20 +184,18 @@ body {
                 &-facebook {
                     display: flex;
                     align-items: center;
-                    padding-left: 18px;
-                    padding-right: 16px;
-                    height: 36px;
+                    align-self: stretch;
+                    padding: 9px 16px 9px 18px;
                     margin-left: 16px;
                     border-radius: 6px;
                     background-color: #39579a;
                     cursor: pointer;
                     .icon {
-                        width: 10px;
-                        height: 18px;
+                        min-width: 10px;
+                        min-height: 18px;
                         background: {
                             image: url(../img/index2/icn-fb.svg);
                             position: center;
-                            size: content;
                             repeat: no-repeat;
                         }
                     }
@@ -212,20 +212,18 @@ body {
                 &-vk {
                     display: flex;
                     align-items: center;
-                    padding-left: 18px;
-                    padding-right: 16px; 
-                    height: 36px;
+                    align-self: stretch;
+                    padding: 9px 16px 9px 18px;
                     margin-left: 16px;
                     border-radius: 6px;
                     background-color: #4d6d8f;
                     cursor: pointer;
                     .icon {
-                        width: 25px;
-                        height: 18px;
+                        min-width: 25px;
+                        min-height: 18px;
                         background: {
                             image: url(../img/index2/icn-vk.svg);
                             position: center;
-                            size: content;
                             repeat: no-repeat;
                         }
                     }
@@ -241,8 +239,9 @@ body {
                 }
             }
             .close {
-                width: 26px;
-                height: 26px;
+                min-width: 26px;
+                min-height: 26px;
+                margin-left: 64px;
                 position: relative;
                 cursor: pointer;
                 &:before, &:after {
@@ -262,9 +261,13 @@ body {
                 }
             }
         }
+        .w-tosocial-wrapper--hidden {
+            min-height: 0;
+            max-height: 0;
+            padding: 0 38px;
+        }
         .w-tmpls {
-            width: 1076px;
-            margin: auto;
+            max-width: 1076px;
             flex: 1;
             background: {
                 image: url(../img/index2/templates-right-pane.jpg);
