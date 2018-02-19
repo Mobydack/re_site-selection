@@ -126,11 +126,12 @@
             leftMargin = 20;
         var tooltip = document.querySelector('.ukit-alt-tooltip.'+ this.dataset.tooltipHover);
         var left = (offset.left - tooltip.getBoundingClientRect().width / 2 + offset.width / 2),
-            top = (offset.top - tooltip.getBoundingClientRect().height - topMargin);
-        if(window.innerWidth < 420) {
-            left = 24;
-            tooltip.style.right = 24 + "px";
-        }
+            // top = (offset.top - tooltip.getBoundingClientRect().height - topMargin);
+            top = (offset.top - topMargin);
+        // if(window.innerWidth < 420) {
+        //     left = 24;
+        //     tooltip.style.right = 24 + "px";
+        // }
         tooltip.style.top = top + "px";
         tooltip.style.left = left + "px";
         tooltip.style.opacity = 1;
@@ -162,7 +163,6 @@
     }
     function viewLeftGroup() {//функци по отображению дополнительных элементов управления карточкой при нажатии на кнопку
         var beforeActiveElement = document.querySelector('.buttonView-secondary-table--active');
-        console.log(beforeActiveElement === this)
         if(!(beforeActiveElement === null) && !(beforeActiveElement === this)) {
             beforeActiveElement.classList.toggle("buttonView-secondary-table--active");
             beforeActiveElement.parentNode.querySelector(".secondary-table").classList.toggle("secondary-table--active");
