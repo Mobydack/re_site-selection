@@ -241,7 +241,7 @@
                     line-height: 24px;
                     letter-spacing: .5px;
                     border-radius: 6px;
-                    padding: 15px 32px 11px 34px;
+                    padding: 15px 32px 14px 34px;
                     &.primary__pay {
                         margin-top: 18px;
                         font-size: 14px;
@@ -602,6 +602,9 @@
             }
         }
     }
+    .secondary-table {
+        display: none;
+    }
     &.modal__item-site--table {
         margin-left: 8px;
         margin-right: 8px;
@@ -682,7 +685,7 @@
         }
         .secondary {
             //display: none; old type
-            display: flex; //new style
+            display: none; //new style
             justify-content: space-between;
             height: 100%;
             box-shadow: -30px 0 50px 25px #fff;
@@ -690,7 +693,7 @@
             padding: 0;
             top: 50%;
             max-width: 0;//new type
-            transition: max-width .5s ease; //new style
+            transition: max-width, .5s ease; //new style
             transform: translateY(-50%);
             align-items: center;
             position: absolute;
@@ -872,6 +875,9 @@
             }
         }
         &:hover {
+            .secondary-table {
+                display: flex;
+            }
             .buttonView-secondary-table { //new style
                 opacity: 1;
             }
