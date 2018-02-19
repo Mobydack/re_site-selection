@@ -22,6 +22,7 @@
             max-height: 24px;
             overflow: hidden;
             text-overflow: ellipsis;
+            display: inline-block;
         }
         &:hover {
             background-color: #fff;
@@ -89,6 +90,7 @@
                     max-height: 36px;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                    display: inline-block;
                 }
                 .ukit-alt-title-img {
                     position: absolute;
@@ -173,6 +175,7 @@
                             max-height: 36px;
                             overflow: hidden;
                             text-overflow: ellipsis;
+                            display: inline-block;
                         }
                     }
                 }
@@ -238,7 +241,7 @@
                     line-height: 24px;
                     letter-spacing: .5px;
                     border-radius: 6px;
-                    padding: 15px 32px 16px 34px;
+                    padding: 15px 32px 11px 34px;
                     &.primary__pay {
                         margin-top: 18px;
                         font-size: 14px;
@@ -256,6 +259,7 @@
                                 overflow: hidden;
                                 text-overflow: ellipsis;
                                 text-align: left;
+                                display: inline-block;
                             }
                         }
                         i {
@@ -279,11 +283,14 @@
                         border-radius: 18px;
                         a {
                             text-align: center;
+                            display: flex;
+                            align-items: center;
                             span {
                                 max-width: 180px;
                                 max-height: 18px;
                                 overflow: hidden;
                                 text-overflow: ellipsis;
+                                display: inline-block;
                             }
                         }
                     }
@@ -314,6 +321,14 @@
                         a {
                             display: flex;
                             align-items: center;
+                            span {
+                                max-width: 150px;
+                                max-height: 18px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                text-align: left;
+                                display: inline-block;
+                            }
                         }
                         i {
                             background: {
@@ -566,6 +581,7 @@
                     max-width: 180px;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                    display: inline-block;
                 }
             }
             .tariff-counter {
@@ -612,6 +628,7 @@
                         max-height: 24px;
                         overflow: hidden;
                         text-overflow: ellipsis;
+                        display: inline-block;
                     }
                 }
                 .primary__help {
@@ -692,6 +709,7 @@
                             overflow: hidden;
                             text-overflow: ellipsis;
                             text-align: left;
+                            display: inline-block;
                         }
                     }
                     font: {
