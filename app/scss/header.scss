@@ -191,6 +191,9 @@
                     .filter-select {
                         background-color: transparent;
                         cursor: pointer;
+                        max-width: 180px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                         &:hover {
                             color: #a2b9c7;
                         }

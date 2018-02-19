@@ -18,6 +18,10 @@
             line-height: 24px;
             margin-top: 18px;
             color: #3A3D41;
+            max-width: 280px;
+            max-height: 24px;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         &:hover {
             background-color: #fff;
@@ -81,6 +85,10 @@
                 }
                 span {
                     text-align: center;
+                    max-width: 180px;
+                    max-height: 36px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
                 .ukit-alt-title-img {
                     position: absolute;
@@ -158,6 +166,16 @@
                 flex-basis: 100%;
                 width: 100%;
                 margin-bottom: 0px;
+                &__button {
+                    &-fb2ukit, &-vk2ukit {
+                        span {
+                            max-width: 260px;
+                            max-height: 36px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                }
             }
         }
     }
@@ -229,6 +247,17 @@
                         border-radius: 18px;
                         display: flex;
                         align-items: center;
+                        a {
+                            display: flex;
+                            align-items: center;
+                            span {
+                                max-width: 180px;
+                                max-height: 18px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                text-align: left;
+                            }
+                        }
                         i {
                             display: inline-block;
                             width: 18px;
@@ -248,6 +277,15 @@
                         font-size: 14px;
                         line-height: normal;
                         border-radius: 18px;
+                        a {
+                            text-align: center;
+                            span {
+                                max-width: 180px;
+                                max-height: 18px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+                        }
                     }
                     &:hover {
                         background-color: #67bd6a;
@@ -273,6 +311,10 @@
                         display: flex;
                         align-items: center;
                         cursor: pointer;
+                        a {
+                            display: flex;
+                            align-items: center;
+                        }
                         i {
                             background: {
                                 image: url(../img/pencil/white.svg);
@@ -521,6 +563,9 @@
                 @include flexMidlleText;
                 span {
                     margin-left: 6px;
+                    max-width: 180px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
             }
             .tariff-counter {
@@ -561,6 +606,12 @@
                     font: {
                         family: avenir-medium;
                         size: 14px;
+                    }
+                    a {
+                        max-width: 180px;
+                        max-height: 24px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                 }
                 .primary__help {
@@ -632,6 +683,17 @@
             &__leftgroup {
                 display: flex;
                 .edit-button {
+                    a {
+                        display: flex;
+                        align-items: center;
+                        span {
+                            max-width: 150px;
+                            max-height: 18px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            text-align: left;
+                        }
+                    }
                     font: {
                         family: avenir-regular;
                         size: 14px;
