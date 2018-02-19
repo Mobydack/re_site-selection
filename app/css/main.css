@@ -1335,3 +1335,114 @@ select {
   @media (max-width: 419px) {
     .ukit-alt-tooltip {
       left: 50%; } }
+
+.new-site-wrapper {
+  min-height: 200vh;
+  background-color: #4d6d8f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .new-site-wrapper .left-wrapper {
+    background-color: #1c2a33;
+    width: 291px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0; }
+  .new-site-wrapper .right-wrapper {
+    position: relative;
+    width: 100%; }
+    .new-site-wrapper .right-wrapper .fix-header {
+      width: 100%;
+      position: fixed;
+      height: 60px;
+      background-color: #263845;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .new-site-wrapper .right-wrapper .fix-header .left {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 0 38px; }
+        .new-site-wrapper .right-wrapper .fix-header .left .left-text {
+          margin-right: 16px;
+          font-size: 16px;
+          font-family: avenir-demi;
+          line-height: 1.5;
+          color: #e2e5e9; }
+        .new-site-wrapper .right-wrapper .fix-header .left .faceebok {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          margin-right: 12px;
+          width: 314px;
+          height: 36px;
+          border-radius: 6px;
+          background-color: #39579a; }
+          .new-site-wrapper .right-wrapper .fix-header .left .faceebok .icon {
+            margin-left: 18px;
+            margin-right: 11px;
+            width: 10px;
+            height: 18px;
+            background-color: #ffffff;
+            -webkit-box-shadow: 0 1px 1px 0 rgba(28, 55, 115, 0.6);
+            box-shadow: 0 1px 1px 0 rgba(28, 55, 115, 0.6); }
+          .new-site-wrapper .right-wrapper .fix-header .left .faceebok .text {
+            color: #fff;
+            font-size: 14px;
+            font-family: avenir-medium; }
+        .new-site-wrapper .right-wrapper .fix-header .left .vk {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          width: 268px;
+          height: 36px;
+          border-radius: 6px;
+          background-color: #4d6d8f; }
+          .new-site-wrapper .right-wrapper .fix-header .left .vk .icon {
+            width: 25px;
+            height: 18px;
+            margin-right: 8px;
+            margin-left: 18px;
+            background-image: url(../img/icn-vk.svg);
+            background-size: content-box;
+            background-position: center;
+            background-repeat: no-repeat; }
+          .new-site-wrapper .right-wrapper .fix-header .left .vk .text {
+            color: #fff;
+            font-size: 14px;
+            font-family: avenir-medium; }
+      .new-site-wrapper .right-wrapper .fix-header .right {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
+      .new-site-wrapper .right-wrapper .fix-header .closest {
+        width: 22px;
+        height: 22px;
+        position: relative;
+        cursor: pointer; }
+        .new-site-wrapper .right-wrapper .fix-header .closest:before, .new-site-wrapper .right-wrapper .fix-header .closest:after {
+          content: "";
+          position: absolute;
+          background-color: #7094a7;
+          height: 2px;
+          left: 0;
+          right: 0;
+          top: 50%; }
+        .new-site-wrapper .right-wrapper .fix-header .closest:before {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+        .new-site-wrapper .right-wrapper .fix-header .closest:after {
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg); }

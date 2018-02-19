@@ -5,27 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .h {
+            height: 60px;
+            background-color: red;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <button class="b1" type="button">button-1(touchstart)</button>
-    <button class="b2">button-2(toushend)</button>
-    <div class="b3" style="border: 2px solid red; padding: 25px 15px; margin-top: 15px;">button-3(touch)</div>
-    <div class="b4" style="border: 2px solid red; padding: 25px 15px; margin-top: 15px;">button-4(touch)</div>
-    <script>
-        var listButton = {
-            b1: document.querySelector(".b1"),
-            b2: document.querySelector(".b2"),
-            b3: document.querySelector(".b3"),
-            b4: document.querySelector(".b4")
-        }
-        listButton.b1.addEventListener('touchstart', test);
-        listButton.b2.addEventListener('touchend', test);
-        listButton.b3.addEventListener('click', test);
-        listButton.b4.addEventListener('touchend', test);
-        var a = `asdasdasd${123}`
-        function test() {
-            alert(`hello, world, this eventtarget: (${this.classList})`);
-        }
-    </script>
+    <header class="h"></header>
+    <div class="new-site-wrapper">
+        <div class="left-wrapper">
+
+        </div>
+        <div class="right-wrapper">
+            <div class="fix-header">
+                <div class="left">
+                    <span class="left-text">Мгновенный сайт:</span>
+                    <div class="faceebok">
+                        <div class="icon"></div>
+                        <span class="text">Создать сайт из страницы Facebook</span>
+                    </div>
+                    <div class="vk">
+                            <div class="icon"></div>
+                            <span class="text">Создать сайт из паблика VK</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="closest"></div>
+                </div>
+            </div>
+            <div class="list-site">
+
+            </div>
+        </div>
+    </div>
+    <script></script>
 </body>
 </html>
