@@ -1387,10 +1387,6 @@ select {
             opacity: 1;
             -webkit-transform: translateY(-50%) rotate(-90deg);
             transform: translateY(-50%) rotate(-90deg); }
-        .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table:hover .secondary-table {
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex; }
         .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table:hover .buttonView-secondary-table {
           opacity: 1; }
     .modal-wrapper .modal .tile {
