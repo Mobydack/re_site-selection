@@ -183,7 +183,7 @@
         while(!(elDelete.classList.contains("modal__item-site"))) {
             elDelete = elDelete.parentNode;
         }
-        var str = "Удалить " + elDelete.querySelector(".publish-domain-name").textContent + "?";
+        var str = "Сайт " + elDelete.querySelector(".publish-domain-name").textContent + " будет удален навсегда";
         delWrap = delWrap.replace(/%{text}/gi, str);
         document.body.insertAdjacentHTML('beforeend', delWrap);
         var elDialog = document.querySelector(".ukit-confrim-wrapper");
