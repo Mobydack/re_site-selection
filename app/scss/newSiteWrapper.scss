@@ -154,6 +154,7 @@
                         family: "ukit";
                     }
                     color: #7094A7;
+                    transition: color .5s cubic-bezier(0.23, 1, 0.32, 1);
                 }
                 &:hover:before {
                     color: #9fb7c4;
@@ -174,12 +175,6 @@
             flex: 1;
             overflow-x: auto;
             overflow-y: hidden;
-            // background: {
-            //     image: url(../img/index2/templates-right-pane.jpg);
-            //     position: left top;
-            //     size: auto 100%;
-            //     repeat: no-repeat;
-            // }
             img {
                 width: 1076px;
             }
