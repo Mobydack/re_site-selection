@@ -271,8 +271,8 @@ body {
             flex: 1;
             background: {
                 image: url(../img/index2/templates-right-pane.jpg);
-                position: top;
-                size: contain;
+                position: left top;
+                size: auto 100%;
                 repeat: no-repeat;
             }
         }

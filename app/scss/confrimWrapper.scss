@@ -1,0 +1,90 @@
+.ukit-confrim-wrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999999;
+    background-color: rgba(19, 32, 38, .85);
+    &__dialog {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-radius: 8px;
+        transform: translate(-50%, -50%);
+        min-width: 274px;
+        background-color: #1B4F6B;
+        user-select: none;
+        overflow: hidden;
+        padding: 0 6px 6px;
+        .dialog {
+            &__title {
+                font: {
+                    family: avenir-medium;
+                    size: 14px;
+                }
+                letter-spacing: .5px;
+                padding: 2px 18px;
+                color: #e8ebed;
+                line-height: 18px;
+                margin: 18px 0 0;
+                text-align: center;
+            }
+            &__action-text {
+                font: {
+                    family: avenir-medium;
+                    size: 12px;
+                }
+                letter-spacing: .5px;
+                padding: 2px 18px;
+                color: #8da8b8;
+                line-height: 14px;
+                margin: 8px 0 0;
+                word-wrap: break-word;
+                text-align: center;
+            }
+            &__button-wrapper {
+                margin-top: 22px;
+                text-align: center;
+                .cancel {
+                    color: #fff;
+                    cursor: pointer;
+                    font: {
+                        family: avenir-medium;
+                        size: 14px;
+                    }
+                    letter-spacing: .5px;
+                    white-space: nowrap;
+                    line-height: 33px;
+                    height: 36px;
+                    padding: 2px 18px;
+                    min-width: 128px;
+                    border-radius: 6px;
+                    background-color: #3B7694;
+                    &:hover {
+                        background-color: #478db1;
+                    }
+                }
+                .confrim {
+                    color: #fff;
+                    cursor: pointer;
+                    font: {
+                        family: avenir-medium;
+                        size: 14px;
+                    }
+                    letter-spacing: .5px;
+                    white-space: nowrap;
+                    line-height: 33px;
+                    height: 36px;
+                    padding: 2px 18px;
+                    min-width: 128px;
+                    border-radius: 6px;
+                    background-color: #338FFF;
+                    &:hover {
+                        background-color: #5ca5ff;
+                    }
+                }
+            }
+        }
+    }
+}

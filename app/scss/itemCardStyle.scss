@@ -663,8 +663,9 @@
             padding-right: 18px;
             padding-bottom: 18px;
             padding-left: 18px;
+            display: flex;
             &__site-name {
-                width: 80%;
+                width: 60%;
             }
             &__site-data-wrapper {
                 width: 90%;

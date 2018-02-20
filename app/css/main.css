@@ -1184,9 +1184,12 @@ select {
           padding-top: 12px;
           padding-right: 18px;
           padding-bottom: 18px;
-          padding-left: 18px; }
+          padding-left: 18px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; }
           .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .info__site-name {
-            width: 80%; }
+            width: 60%; }
           .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .info__site-data-wrapper {
             width: 90%;
             -webkit-box-pack: start;
@@ -1423,6 +1426,82 @@ select {
     .ukit-alt-tooltip {
       left: 50%; } }
 
+.ukit-confrim-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999999;
+  background-color: rgba(19, 32, 38, 0.85); }
+  .ukit-confrim-wrapper__dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 8px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    min-width: 274px;
+    background-color: #1B4F6B;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: hidden;
+    padding: 0 6px 6px; }
+    .ukit-confrim-wrapper__dialog .dialog__title {
+      font-family: avenir-medium;
+      font-size: 14px;
+      letter-spacing: .5px;
+      padding: 2px 18px;
+      color: #e8ebed;
+      line-height: 18px;
+      margin: 18px 0 0;
+      text-align: center; }
+    .ukit-confrim-wrapper__dialog .dialog__action-text {
+      font-family: avenir-medium;
+      font-size: 12px;
+      letter-spacing: .5px;
+      padding: 2px 18px;
+      color: #8da8b8;
+      line-height: 14px;
+      margin: 8px 0 0;
+      word-wrap: break-word;
+      text-align: center; }
+    .ukit-confrim-wrapper__dialog .dialog__button-wrapper {
+      margin-top: 22px;
+      text-align: center; }
+      .ukit-confrim-wrapper__dialog .dialog__button-wrapper .cancel {
+        color: #fff;
+        cursor: pointer;
+        font-family: avenir-medium;
+        font-size: 14px;
+        letter-spacing: .5px;
+        white-space: nowrap;
+        line-height: 33px;
+        height: 36px;
+        padding: 2px 18px;
+        min-width: 128px;
+        border-radius: 6px;
+        background-color: #3B7694; }
+        .ukit-confrim-wrapper__dialog .dialog__button-wrapper .cancel:hover {
+          background-color: #478db1; }
+      .ukit-confrim-wrapper__dialog .dialog__button-wrapper .confrim {
+        color: #fff;
+        cursor: pointer;
+        font-family: avenir-medium;
+        font-size: 14px;
+        letter-spacing: .5px;
+        white-space: nowrap;
+        line-height: 33px;
+        height: 36px;
+        padding: 2px 18px;
+        min-width: 128px;
+        border-radius: 6px;
+        background-color: #338FFF; }
+        .ukit-confrim-wrapper__dialog .dialog__button-wrapper .confrim:hover {
+          background-color: #5ca5ff; }
+
 body {
   min-height: 100vh; }
 
@@ -1592,6 +1671,6 @@ body {
       -ms-flex: 1;
       flex: 1;
       background-image: url(../img/index2/templates-right-pane.jpg);
-      background-position: top;
-      background-size: contain;
+      background-position: left top;
+      background-size: auto 100%;
       background-repeat: no-repeat; }

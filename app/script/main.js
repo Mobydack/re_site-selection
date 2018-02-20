@@ -10,7 +10,8 @@
         buttonViewSecondaryTable: document.querySelectorAll('.buttonView-secondary-table'),
         infoSiteName: document.querySelectorAll('.info__site-name input'),
         imgSite: document.querySelectorAll(".preview__image-site"),
-        leftGruopCards: document.querySelectorAll(".secondary:not(.secondary-table) .secondary__leftgroup")
+        leftGruopCards: document.querySelectorAll(".secondary:not(.secondary-table) .secondary__leftgroup"),
+        deleteButtonCards: document.querySelectorAll(".secondary__delete-button")
     }
 
     listElements.buttonModalView.addEventListener('click', viewEvent);
@@ -58,65 +59,42 @@
             el.classList.toggle("text--hidden");
         }
     });
-    //далее не очень хороший код, надо исправить, но он для болванки
-    var S = document.querySelectorAll(".tile.modal__item-site");
 
-    Array.from(S).forEach(function(el, index, arr){
-        var preview =  el.querySelector(".preview__overlay");
-        preview.setAttribute('data-hover', false);
-        // preview.querySelector('.primary').style.pointerEvents = "none";
-        // preview.querySelector('.secondary').style.pointerEvents = "none";
-        Array.from(preview.querySelectorAll("*")).forEach(function(el, indx, arr){
-            el.style.pointerEvents = "none";
-        });
-        preview.addEventListener('mouseover', function(){
-            console.log(event.currentTarget.dataset.hover === "false")
-            if(event.currentTarget.dataset.hover === "false") {
-                event.currentTarget.dataset.hover = true;
-            }
-        });
-        preview.addEventListener('click', function(){
-            if(event.currentTarget.dataset.hover === "true") {
-                console.log("tap")
-                Array.from(preview.querySelectorAll("*")).forEach(function(el, indx, arr){
-                    el.style.pointerEvents = "auto";
-                });
-            }
-        })
-        preview.addEventListener('mouseout', function(){
-            if(event.currentTarget.dataset.hover === "true") {
-                event.currentTarget.dataset.hover = "false"
-                Array.from(preview.querySelectorAll("*")).forEach(function(el, indx, arr){
-                    el.style.pointerEvents = "none";
-                });
-            }
-        });
+    Array.from(listElements.deleteButtonCards).forEach(function(el, i, arr){
+        el.addEventListener('click', deleteCards);
     })
+    //далее не очень хороший код, надо исправить, но он для болванки
+    // var S = document.querySelectorAll(".tile.modal__item-site");
 
-    //ponit events none (Переписат кусок кода)
-    // var S = document.querySelectorAll(".tile.modal__item-site"); 
-    
     // Array.from(S).forEach(function(el, index, arr){
-    //     el.querySelector(".preview").setAttribute("data-hover-active", "false");
-    //     el.querySelector(".preview").addEventListener("touchstart", function(){
-    //         //проверка элемента вызвавшего события
-    //         console.log(this.dataset.hoverActive)
-    //         if(event.target.classList.contains("edit-button") && (this.dataset.hoverActive == "true")) {
-    //            viewEvent();
-    //            console.log(1);
+    //     var preview =  el.querySelector(".preview__overlay");
+    //     preview.setAttribute('data-hover', false);
+    //     // preview.querySelector('.primary').style.pointerEvents = "none";
+    //     // preview.querySelector('.secondary').style.pointerEvents = "none";
+    //     Array.from(preview.querySelectorAll("*")).forEach(function(el, indx, arr){
+    //         el.style.pointerEvents = "none";
+    //     });
+    //     preview.addEventListener('mouseover', function(){
+    //         if(event.currentTarget.dataset.hover === "false") {
+    //             event.currentTarget.dataset.hover = true;
     //         }
-    //         //
-    //         if(this.dataset.hoverActive == true){
-    //             return 0;
+    //     });
+    //     preview.addEventListener('click', function(){
+    //         if(event.currentTarget.dataset.hover === "true") {
+    //             Array.from(preview.querySelectorAll("*")).forEach(function(el, indx, arr){
+    //                 el.style.pointerEvents = "auto";
+    //             });
     //         }
-    //         var beforeHover = document.querySelector(".tile.modal__item-site .preview[data-hover-active='true']");
-    //         if(!(beforeHover === null)) {
-    //             beforeHover.dataset.hoverActive = false;
+    //     })
+    //     preview.addEventListener('mouseout', function(){
+    //         if(event.currentTarget.dataset.hover === "true") {
+    //             event.currentTarget.dataset.hover = "false"
+    //             Array.from(preview.querySelectorAll("*")).forEach(function(el, indx, arr){
+    //                 el.style.pointerEvents = "none";
+    //             });
     //         }
-    //         this.dataset.hoverActive = true;
-            
-    //     }, false)
-    // });
+    //     });
+    // })
 
 
     //Список функций и процедур для работы с событиями
@@ -196,6 +174,27 @@
                 URL.revokeObjectURL(url);
             }
             img.src = url;
+        });
+    }
+
+    function deleteCards(){
+        var delWrap = document.querySelector("#confrimWrapper").innerHTML;
+        elDelete  = event.currentTarget; //Эль-Дэльте
+        while(!(elDelete.classList.contains("modal__item-site"))) {
+            elDelete = elDelete.parentNode;
+        }
+        var str = "Удалить " + elDelete.querySelector(".publish-domain-name").textContent + "?";
+        delWrap = delWrap.replace(/%{text}/gi, str);
+        document.body.insertAdjacentHTML('beforeend', delWrap);
+        var elDialog = document.querySelector(".ukit-confrim-wrapper");
+        var cancelBut = elDialog.querySelector(".cancel"),
+            confrimBut = elDialog.querySelector('.confrim');
+        cancelBut.addEventListener("click", function(){
+            document.body.removeChild(elDialog);
+        });
+        confrimBut.addEventListener('click', function(){
+            document.querySelector(".modal-wrapper .modal").removeChild(elDelete);
+            document.body.removeChild(elDialog);
         });
     }
 })();
