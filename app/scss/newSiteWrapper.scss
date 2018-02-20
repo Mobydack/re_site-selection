@@ -145,6 +145,14 @@
                     repeat: no-repeat;
                     position: center;
                 }
+                &:before {
+                    content: "\E60B";
+                    font: {
+                        family: "ukit";
+                        size: 26px;
+                    }
+                    color: red;
+                }
             }
         }
         .w-tosocial-wrapper--hidden {
