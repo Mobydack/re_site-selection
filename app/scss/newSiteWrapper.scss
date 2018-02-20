@@ -160,6 +160,7 @@ body {
         flex-direction: column;
         margin-left: 291px;
         flex: 1;
+        overflow: hidden;
         .w-tosocial-wrapper {
             display: flex;
             align-items: center;
@@ -237,6 +238,12 @@ body {
                         color: #fff;
                     }
                 }
+                @media (max-width: 828px) {
+                    flex-direction: column;
+                    &-facebook, &-vk {
+                        margin-top: 16px;
+                    }
+                }
             }
             .close {
                 min-width: 26px;
@@ -269,11 +276,16 @@ body {
         .w-tmpls {
             max-width: 1076px;
             flex: 1;
-            background: {
-                image: url(../img/index2/templates-right-pane.jpg);
-                position: left top;
-                size: auto 100%;
-                repeat: no-repeat;
+            overflow-x: auto;
+            overflow-y: hidden;
+            // background: {
+            //     image: url(../img/index2/templates-right-pane.jpg);
+            //     position: left top;
+            //     size: auto 100%;
+            //     repeat: no-repeat;
+            // }
+            img {
+                width: 1076px;
             }
         }
     }
