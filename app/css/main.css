@@ -1517,6 +1517,7 @@ select {
     height: 62px;
     width: 100%;
     position: fixed;
+    z-index: 2;
     background-color: #132026;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1592,6 +1593,7 @@ select {
         -ms-flex-align: center;
         align-items: center; }
         .wizard-main-body .w-region-templates .w-tosocial-wrapper .tosocial-text {
+          margin-right: 16px;
           font-family: avenir-medium;
           font-size: 16px;
           line-height: 1.5;
@@ -1606,7 +1608,7 @@ select {
           -ms-flex-item-align: stretch;
           align-self: stretch;
           padding: 9px 16px 9px 18px;
-          margin-left: 16px;
+          margin-right: 8px;
           border-radius: 6px;
           background-color: #39579a;
           cursor: pointer; }
@@ -1632,7 +1634,7 @@ select {
           -ms-flex-item-align: stretch;
           align-self: stretch;
           padding: 9px 16px 9px 18px;
-          margin-left: 16px;
+          margin-right: 8px;
           border-radius: 6px;
           background-color: #4d6d8f;
           cursor: pointer; }
@@ -1648,14 +1650,17 @@ select {
             font-size: 14px;
             letter-spacing: .5px;
             color: #fff; }
-        @media (max-width: 828px) {
+        @media (max-width: 1023px) {
           .wizard-main-body .w-region-templates .w-tosocial-wrapper .tosocial {
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
             -webkit-box-orient: vertical;
             -webkit-box-direction: normal;
             -ms-flex-direction: column;
             flex-direction: column; }
             .wizard-main-body .w-region-templates .w-tosocial-wrapper .tosocial-facebook, .wizard-main-body .w-region-templates .w-tosocial-wrapper .tosocial-vk {
-              margin-top: 16px; } }
+              margin-top: 10px; } }
       .wizard-main-body .w-region-templates .w-tosocial-wrapper .close {
         min-width: 26px;
         min-height: 26px;
@@ -1665,6 +1670,12 @@ select {
         background-image: url(../img/templates-cross-small.svg);
         background-repeat: no-repeat;
         background-position: center; }
+      @media (max-width: 1023px) {
+        .wizard-main-body .w-region-templates .w-tosocial-wrapper {
+          -webkit-box-align: start;
+          -ms-flex-align: start;
+          align-items: flex-start;
+          padding: 12px 38px 16px; } }
     .wizard-main-body .w-region-templates .w-tosocial-wrapper--hidden {
       min-height: 0;
       max-height: 0;
