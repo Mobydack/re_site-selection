@@ -139,23 +139,24 @@
 
             }
             .close {
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 min-width: 26px;
                 min-height: 26px;
                 margin-left: 64px;
                 position: relative;
                 cursor: pointer;
-                background: {
-                    image: url(../img/templates-cross-small.svg);
-                    repeat: no-repeat;
-                    position: center;
-                }
                 &:before {
                     content: "\E60B";
+                    display: inline;
                     font: {
                         family: "ukit";
-                        size: 26px;
                     }
-                    color: red;
+                    color: #7094A7;
+                }
+                &:hover:before {
+                    color: #9fb7c4;
                 }
             }
             @media (max-width: 1023px) {
