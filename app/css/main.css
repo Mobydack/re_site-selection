@@ -785,7 +785,9 @@ select {
           width: 100%;
           top: 0;
           opacity: 0;
-          background-color: rgba(38, 56, 69, 0.9); }
+          background-color: rgba(38, 56, 69, 0.9);
+          -webkit-transition: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transition: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
           .modal-wrapper .modal .tile.modal__item-site .preview__overlay .primary {
             -webkit-box-flex: 1;
             -ms-flex: 1;
