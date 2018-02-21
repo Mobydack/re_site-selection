@@ -696,22 +696,22 @@
             }
         }
         .secondary {
-            //display: none; old type
             display: flex; //new style
             justify-content: space-between;
             height: 100%;
             background-color: #fff;
             padding: 0;
             top: 50%;
-            max-width: 0;//new type
-            transition: max-width, .5s ease; //new style
+            box-shadow: -3px 9px 60px 23px #fff;
+            // background-image: linear-gradient(90deg, transparent 0, #fff 40px);
+            // max-width: 0;//new type
+            transition: box-shadow .5s ease, right .5s ease; //new style
             transform: translateY(-50%);
             align-items: center;
             position: absolute;
-            // right: 18px; old style
-            right: 62px; //new style
+            right: -100%; //new style
             overflow: hidden; //new style
-            z-index: 2;
+            z-index: 1;
             &__leftgroup {
                 display: flex;
                 .edit-button {
@@ -860,10 +860,10 @@
                 }
             }
             &.secondary-table--active {//new style
+                padding-left: 40px;
+                right: 62px;
                 max-width: 100%;
                 display: flex;
-                box-shadow: -30px 0 50px 25px #fff;
-                z-index: 2;
             }
         }
         .buttonView-secondary-table { //new style
@@ -879,8 +879,11 @@
                 origin: content-box;
             }
             position: absolute;
+            z-index: 2;
             top: 50%;
             right: 12px;
+            border: 6px solid #fff;
+            box-sizing: content-box;
             transform: translateY(-50%) rotate(0deg);
             transition: opacity .25s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform .18s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             cursor: pointer;
@@ -888,13 +891,11 @@
             &.buttonView-secondary-table--active {
                 opacity: 1;
                 transform: translateY(-50%) rotate(-90deg);
-                box-shadow: 0px 0 30px 24px #fff;
             }
         }
         &:hover {
             .buttonView-secondary-table { //new style
                 opacity: 1;
-                box-shadow: 0px 0 30px 24px #fff;
             }
         }
     }

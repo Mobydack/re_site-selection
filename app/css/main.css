@@ -1223,18 +1223,21 @@ select {
           background-color: #fff;
           padding: 0;
           top: 50%;
-          max-width: 0;
-          -webkit-transition: max-width, .5s ease;
-          transition: max-width, .5s ease;
+          -webkit-box-shadow: -3px 9px 60px 23px #fff;
+          box-shadow: -3px 9px 60px 23px #fff;
+          -webkit-transition: right .5s ease, -webkit-box-shadow .5s ease;
+          transition: right .5s ease, -webkit-box-shadow .5s ease;
+          transition: box-shadow .5s ease, right .5s ease;
+          transition: box-shadow .5s ease, right .5s ease, -webkit-box-shadow .5s ease;
           -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
           -webkit-box-align: center;
           -ms-flex-align: center;
           align-items: center;
           position: absolute;
-          right: 62px;
+          right: -100%;
           overflow: hidden;
-          z-index: 2; }
+          z-index: 1; }
           .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__leftgroup {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -1356,13 +1359,12 @@ select {
               background-image: url(../img/trash/white.svg);
               background-color: #C2445C; }
           .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary.secondary-table--active {
+            padding-left: 40px;
+            right: 62px;
             max-width: 100%;
             display: -webkit-box;
             display: -ms-flexbox;
-            display: flex;
-            -webkit-box-shadow: -30px 0 50px 25px #fff;
-            box-shadow: -30px 0 50px 25px #fff;
-            z-index: 2; }
+            display: flex; }
         .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .buttonView-secondary-table {
           opacity: 0;
           width: 36px;
@@ -1374,8 +1376,12 @@ select {
           background-repeat: no-repeat;
           background-origin: content-box;
           position: absolute;
+          z-index: 2;
           top: 50%;
           right: 12px;
+          border: 6px solid #fff;
+          -webkit-box-sizing: content-box;
+          box-sizing: content-box;
           -webkit-transform: translateY(-50%) rotate(0deg);
           transform: translateY(-50%) rotate(0deg);
           -webkit-transition: opacity 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.18s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -1390,13 +1396,9 @@ select {
           .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .buttonView-secondary-table.buttonView-secondary-table--active {
             opacity: 1;
             -webkit-transform: translateY(-50%) rotate(-90deg);
-            transform: translateY(-50%) rotate(-90deg);
-            -webkit-box-shadow: 0px 0 30px 24px #fff;
-            box-shadow: 0px 0 30px 24px #fff; }
+            transform: translateY(-50%) rotate(-90deg); }
         .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table:hover .buttonView-secondary-table {
-          opacity: 1;
-          -webkit-box-shadow: 0px 0 30px 24px #fff;
-          box-shadow: 0px 0 30px 24px #fff; }
+          opacity: 1; }
     .modal-wrapper .modal .tile {
       display: none; }
   .modal-wrapper.modal-wrapper--active {
