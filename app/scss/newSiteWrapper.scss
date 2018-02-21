@@ -59,7 +59,7 @@
             padding: 12px 38px;
             background-color: #263845;
             overflow: hidden;
-            transition: min-height .25s ease;
+            transition: min-height .25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             .tosocial {
                 display: flex;
                 align-items: center;

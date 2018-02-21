@@ -221,6 +221,8 @@ select {
         cursor: pointer; }
         .header-wrapper .top-wrapper .top__site .open-modal-view span {
           white-space: nowrap; }
+        .header-wrapper .top-wrapper .top__site .open-modal-view:hover {
+          background-color: #2B404F; }
         .header-wrapper .top-wrapper .top__site .open-modal-view.open-modal-view--active {
           background-color: #09181f; }
       .header-wrapper .top-wrapper .top__site .create-new-site {
@@ -321,15 +323,15 @@ select {
 
 .header-wrapper .bottom-wrapper {
   position: relative;
-  max-height: 0;
+  max-height: 100%;
   opacity: 0;
-  -webkit-transform: translateY(-10px);
-  transform: translateY(-10px);
+  -webkit-transform: translateY(-20px);
+  transform: translateY(-20px);
   background-color: #1D2A33;
-  -webkit-transition: opacity, 0.3s cubic-bezier(0, 0, 0.2, 1), -webkit-transform;
-  transition: opacity, 0.3s cubic-bezier(0, 0, 0.2, 1), -webkit-transform;
-  transition: opacity, transform, 0.3s cubic-bezier(0, 0, 0.2, 1);
-  transition: opacity, transform, 0.3s cubic-bezier(0, 0, 0.2, 1), -webkit-transform;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   font-family: avenir-regular;
   font-size: 14px;
   line-height: 21px;
@@ -494,16 +496,23 @@ select {
     opacity: 0; }
 
 .modal-wrapper {
-  -webkit-transform: translateY(-15px);
-  transform: translateY(-15px);
+  -webkit-transform: translateY(-20px);
+  transform: translateY(-20px);
   opacity: 0;
-  -webkit-transition: opacity, 0.3s cubic-bezier(0, 0, 0.2, 1), -webkit-transform;
-  transition: opacity, 0.3s cubic-bezier(0, 0, 0.2, 1), -webkit-transform;
-  transition: opacity, transform, 0.3s cubic-bezier(0, 0, 0.2, 1);
-  transition: opacity, transform, 0.3s cubic-bezier(0, 0, 0.2, 1), -webkit-transform; }
+  background: #E7EBEE;
+  position: absolute;
+  top: 109px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   .modal-wrapper .modal {
     max-width: 1500px;
     margin: auto;
+    padding-top: 18px;
     padding-bottom: 48px;
     padding-left: 24px;
     padding-right: 24px;
@@ -750,8 +759,8 @@ select {
           width: 100%;
           top: 0;
           z-index: -1;
-          -webkit-transition: 0.2s ease-in-out;
-          transition: 0.2s ease-in-out;
+          -webkit-transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
           background-image: url(../img/icn-big-image.svg);
           background-size: 90px 90px;
           background-position: center;
@@ -876,8 +885,8 @@ select {
                 padding: 8px 16px 10px 10px;
                 background-color: #132026;
                 color: #fff;
-                -webkit-transition: 0.1s ease-in-out;
-                transition: 0.1s ease-in-out;
+                -webkit-transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                 border-radius: 18px;
                 display: -webkit-box;
                 display: -ms-flexbox;
@@ -924,8 +933,8 @@ select {
                 cursor: pointer;
                 width: 36px;
                 height: 36px;
-                -webkit-transition: 0.1s ease-in-out;
-                transition: 0.1s ease-in-out; }
+                -webkit-transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
                 .modal-wrapper .modal .tile.modal__item-site .preview__overlay .secondary__leftgroup .publish-button:hover {
                   background-color: #FFCC00;
                   background-image: url(../img/publish/dark.svg); }
@@ -941,8 +950,8 @@ select {
                 height: 36px;
                 margin-left: 12px;
                 border-radius: 50%;
-                -webkit-transition: 0.1s ease-in-out;
-                transition: 0.1s ease-in-out;
+                -webkit-transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                 cursor: pointer;
                 background-color: #132026;
                 background-image: url(../img/dollar/white.svg);
@@ -1223,12 +1232,12 @@ select {
           background-color: #fff;
           padding: 0;
           top: 50%;
-          -webkit-box-shadow: -3px 9px 60px 23px #fff;
-          box-shadow: -3px 9px 60px 23px #fff;
-          -webkit-transition: right .5s ease, -webkit-box-shadow .5s ease;
-          transition: right .5s ease, -webkit-box-shadow .5s ease;
-          transition: box-shadow .5s ease, right .5s ease;
-          transition: box-shadow .5s ease, right .5s ease, -webkit-box-shadow .5s ease;
+          -webkit-box-shadow: 10px 0px 30px 34px #fff;
+          box-shadow: 10px 0px 30px 34px #fff;
+          -webkit-transition: right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transition: right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transition: box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transition: box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
           -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
           -webkit-box-align: center;
@@ -1248,8 +1257,8 @@ select {
               padding: 8px 16px 10px 10px;
               background-color: #E8EBED;
               color: #7095A7;
-              -webkit-transition: 0.1s ease-in-out;
-              transition: 0.1s ease-in-out;
+              -webkit-transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+              transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
               border-radius: 18px;
               display: -webkit-box;
               display: -ms-flexbox;
@@ -1318,11 +1327,11 @@ select {
               cursor: pointer;
               width: 36px;
               height: 36px;
-              -webkit-transition: 0.1s ease-in-out;
-              transition: 0.1s ease-in-out; }
+              -webkit-transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+              transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
               .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__leftgroup .publish-button:hover {
                 background-color: #FFCC00;
-                background-image: url(../img/publish/light.svg); }
+                background-image: url(../img/publish/dark.svg); }
               .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__leftgroup .publish-button.publish-button--disabled {
                 cursor: not-allowed;
                 background-image: url(../img/publish/light.svg);
@@ -1334,8 +1343,8 @@ select {
               height: 36px;
               margin-left: 12px;
               border-radius: 50%;
-              -webkit-transition: 0.1s ease-in-out;
-              transition: 0.1s ease-in-out;
+              -webkit-transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+              transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
               cursor: pointer;
               background-color: #E8EBED;
               background-image: url(../img/dollar/grey.svg);
@@ -1360,7 +1369,7 @@ select {
               background-color: #C2445C; }
           .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary.secondary-table--active {
             padding-left: 40px;
-            right: 62px;
+            right: 66px;
             max-width: 100%;
             display: -webkit-box;
             display: -ms-flexbox;
@@ -1399,14 +1408,16 @@ select {
             transform: translateY(-50%) rotate(-90deg); }
         .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table:hover .buttonView-secondary-table {
           opacity: 1; }
-    .modal-wrapper .modal .tile {
-      display: none; }
+    .modal-wrapper .modal .tile.create-new-site {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
   .modal-wrapper.modal-wrapper--active {
     opacity: 1;
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
-    top: 126px;
-    position: absolute;
+    top: 109px;
+    position: relative;
     left: 0;
     right: 0; }
     .modal-wrapper.modal-wrapper--active .modal .tile.create-new-site {
@@ -1427,8 +1438,8 @@ select {
   z-index: 9999;
   max-width: 420px;
   text-align: center;
-  -webkit-transition: opacity 0.2s ease-in-out;
-  transition: opacity 0.2s ease-in-out;
+  -webkit-transition: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #3a3d41;
   background-color: #fff;
   border: 1px solid #afc1cb;
@@ -1593,8 +1604,8 @@ select {
       padding: 12px 38px;
       background-color: #263845;
       overflow: hidden;
-      -webkit-transition: min-height .25s ease;
-      transition: min-height .25s ease; }
+      -webkit-transition: min-height 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transition: min-height 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
       .wizard-main-body .w-region-templates .w-tosocial-wrapper .tosocial {
         display: -webkit-box;
         display: -ms-flexbox;

@@ -46,6 +46,9 @@
                     span {
                         white-space: nowrap;
                     }
+                    &:hover {
+                        background-color: #2B404F;
+                    }
                     &.open-modal-view--active {
                         background-color: #09181f;
                     }
@@ -160,11 +163,11 @@
     }
     .bottom-wrapper {
         position: relative;
-        max-height: 0;
+        max-height: 100%;
         opacity: 0;
-        transform: translateY(-10px);
+        transform: translateY(-20px);
         background-color: #1D2A33;
-        transition: opacity, transform, .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+        transition: opacity .3s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         font: {
             family: avenir-regular;
             size: 14px;

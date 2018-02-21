@@ -206,7 +206,7 @@
            width: 100%;
            top: 0;
            z-index: -1;
-           transition: 0.2s ease-in-out;
+           transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
            background-image: url(../img/icn-big-image.svg);
            background-size: 90px 90px;
            background-position: center;
@@ -313,7 +313,7 @@
                         padding: 8px 16px 10px 10px;
                         background-color: #132026;
                         color: #fff;
-                        transition: 0.1s ease-in-out;
+                        transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                         border-radius: 18px;
                         display: flex;
                         align-items: center;
@@ -361,7 +361,7 @@
                         cursor: pointer;
                         width: 36px;
                         height: 36px;
-                        transition: 0.1s ease-in-out;
+                        transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                         &:hover {
                             background: {
                                 color: #FFCC00;
@@ -387,7 +387,7 @@
                         height: 36px;
                         margin-left: 12px;
                         border-radius: 50%;
-                        transition: 0.1s ease-in-out;
+                        transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                         cursor: pointer;
                         background: {
                             color: #132026;
@@ -702,10 +702,10 @@
             background-color: #fff;
             padding: 0;
             top: 50%;
-            box-shadow: -3px 9px 60px 23px #fff;
+            box-shadow: 10px 0px 30px 34px #fff;
             // background-image: linear-gradient(90deg, transparent 0, #fff 40px);
             // max-width: 0;//new type
-            transition: box-shadow .5s ease, right .5s ease; //new style
+            transition: box-shadow .5s cubic-bezier(0.25, 0.46, 0.45, 0.94), right .5s cubic-bezier(0.25, 0.46, 0.45, 0.94); //new style
             transform: translateY(-50%);
             align-items: center;
             position: absolute;
@@ -734,7 +734,7 @@
                     padding: 8px 16px 10px 10px;
                     background-color: #E8EBED;
                     color: #7095A7;
-                    transition: 0.1s ease-in-out;
+                    transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                     border-radius: 18px;
                     display: flex;
                     align-items: center;
@@ -799,11 +799,11 @@
                     cursor: pointer;
                     width: 36px;
                     height: 36px;
-                    transition: 0.1s ease-in-out;
+                    transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                     &:hover {
                         background: {
                             color: #FFCC00;
-                            image: url(../img/publish/light.svg);
+                            image: url(../img/publish/dark.svg);
                         }
                     }
                     &.publish-button--disabled {
@@ -822,7 +822,7 @@
                     height: 36px;
                     margin-left: 12px;
                     border-radius: 50%;
-                    transition: 0.1s ease-in-out;
+                    transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                     cursor: pointer;
                     background: {
                         color: #E8EBED;
@@ -861,7 +861,7 @@
             }
             &.secondary-table--active {//new style
                 padding-left: 40px;
-                right: 62px;
+                right: 66px;
                 max-width: 100%;
                 display: flex;
             }

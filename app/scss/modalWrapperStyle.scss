@@ -2,6 +2,7 @@
     .modal {
         max-width: 1500px;
         margin: auto;
+        padding-top: 18px;
         padding-bottom: 48px;
         padding-left: 24px;
         padding-right: 24px;
@@ -15,18 +16,25 @@
             padding: 0 26px 48px 26px;
         }
         @import 'itemCardStyle.scss';
-        .tile {
-            display: none;
+        .tile.create-new-site {
+            display: flex;
         }
     }
-    transform: translateY(-15px);
+    transform: translateY(-20px);
     opacity: 0;
-    transition: opacity, transform, 0.3s cubic-bezier(0, 0, 0.2, 1);
+    background: #E7EBEE;
+    position: absolute;
+    top: 109px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     &.modal-wrapper--active {
         opacity: 1;
         transform: translateY(0px);
-        top: 126px;
-        position: absolute;
+        top: 109px;
+        position: relative;
         left: 0;
         right: 0;
         .modal {
