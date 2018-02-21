@@ -42,6 +42,7 @@
                     min-width: 100px;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                    transition: background-color .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                     cursor: pointer;
                     span {
                         white-space: nowrap;
@@ -64,7 +65,7 @@
                     justify-content: center;
                     align-items: center;
                     margin-left: 6px;
-                    transition: background, .5s cubic-bezier(0.23, 1, 0.32, 1);
+                    transition: background-color .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                     &:before {
                         content: "";
                         width: 16px;
@@ -163,6 +164,7 @@
     }
     .bottom-wrapper {
         position: relative;
+        pointer-events: none;
         max-height: 100%;
         opacity: 0;
         transform: translateY(-20px);
@@ -290,6 +292,7 @@
             transform: translateY(0px);
             max-height: 100%;
             opacity: 1;
+            pointer-events: auto;
         }
         @media (max-width: 768px) {
             .bottom .view-select {

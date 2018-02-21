@@ -218,6 +218,8 @@ select {
         min-width: 100px;
         overflow: hidden;
         text-overflow: ellipsis;
+        -webkit-transition: background-color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        transition: background-color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         cursor: pointer; }
         .header-wrapper .top-wrapper .top__site .open-modal-view span {
           white-space: nowrap; }
@@ -242,8 +244,8 @@ select {
         -ms-flex-align: center;
         align-items: center;
         margin-left: 6px;
-        -webkit-transition: background, 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-        transition: background, 0.5s cubic-bezier(0.23, 1, 0.32, 1); }
+        -webkit-transition: background-color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        transition: background-color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
         .header-wrapper .top-wrapper .top__site .create-new-site:before {
           content: "";
           width: 16px;
@@ -323,6 +325,7 @@ select {
 
 .header-wrapper .bottom-wrapper {
   position: relative;
+  pointer-events: none;
   max-height: 100%;
   opacity: 0;
   -webkit-transform: translateY(-20px);
@@ -444,7 +447,8 @@ select {
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
     max-height: 100%;
-    opacity: 1; }
+    opacity: 1;
+    pointer-events: auto; }
   @media (max-width: 768px) {
     .header-wrapper .bottom-wrapper .bottom .view-select {
       display: none; }
