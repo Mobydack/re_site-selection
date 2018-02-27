@@ -383,6 +383,26 @@
                             }
                         }
                     }
+                    .dublicate-button {
+                        display: inline-block;
+                        border-radius: 50%;
+                        margin-left: 12px;
+                        background: {
+                            image: url(../img/copy/white.svg);
+                            color: #132026;
+                            repeat: no-repeat;
+                            origin: content-box;
+                            position: center;
+                        }
+                        cursor: pointer;
+                        width: 36px;
+                        height: 36px;
+                        transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+                        &:hover {
+                            background-color: #3B7694;
+                        }
+                    }
                     .premium-button {
                         width: 36px;
                         height: 36px;
@@ -602,6 +622,21 @@
                 margin-left: 14px;
                 span {
                     margin-left: 7px;
+                    color: #4CAF4F;
+                    max-width: 180px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: inline-block;
+                }
+                a {
+                    color: #338FFF;
+                }
+            }
+            .tariff-locked {
+                @include flexMidlleText;
+                margin-left: 14px;
+                span {
+                    margin-left: 7px;
                     color: #C2445C;
                     max-width: 180px;
                     overflow: hidden;
@@ -766,10 +801,14 @@
                         i {
                             background-image: url(../img/dollar/grey.svg);
                         }
+                        
+
                         &:hover {
                             i {
                                 background-image: url(../img/dollar/white.svg);
                             }
+                            background-color: #4CAF50;
+
                         }
                     }
                     &-default {
@@ -818,6 +857,29 @@
                         }
                     }
                 }
+                .dublicate-button {
+                    display: inline-block;
+                    border-radius: 50%;
+                    margin-left: 12px;
+                    background: {
+                        image: url(../img/copy/grey.svg);
+                        color: #E8EBED;
+                        repeat: no-repeat;
+                        origin: content-box;
+                        position: center;
+                    }
+                    cursor: pointer;
+                    width: 36px;
+                    height: 36px;
+                    transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                    &:hover {
+                        background: {
+                            color: #3B7694;
+                            image: url(../img/copy/white.svg);
+                        }
+                    }
+                }
+
                 .premium-button {
                     width: 36px;
                     height: 36px;
