@@ -436,6 +436,13 @@
                     &:hover {
                         background-color: #C2445C;
                     }
+                    &.delete-button--disabled {
+                        cursor: not-allowed;
+                            background: {
+                                image: url(../img/publish/grey.svg);
+                                color: rgba(19, 32, 38, 0.5);
+                            }
+                    }
                 }
             }
         }

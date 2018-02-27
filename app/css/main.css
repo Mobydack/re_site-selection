@@ -993,6 +993,10 @@ select {
               background-position: center; }
               .modal-wrapper .modal .tile.modal__item-site .preview__overlay .secondary__delete-button:hover {
                 background-color: #C2445C; }
+              .modal-wrapper .modal .tile.modal__item-site .preview__overlay .secondary__delete-button.delete-button--disabled {
+                cursor: not-allowed;
+                background-image: url(../img/publish/grey.svg);
+                background-color: rgba(19, 32, 38, 0.5); }
         .modal-wrapper .modal .tile.modal__item-site .preview:before {
           content: "";
           width: 100%;
