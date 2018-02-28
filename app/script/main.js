@@ -30,6 +30,21 @@
         if(window.innerWidth <= 768 && arrCard[0].classList.contains('modal__item-site--table')) {
             toggleClass();
         }
+        if(listElements.modalWrapper.classList.contains('modal-wrapper--active')){ //
+            Array.from(listElements.leftGruopCards).forEach(function(el, i, arr){ //hidden text of edit-button if (secondary__leftgroup.Children > 2)
+                const element = el.parentNode;
+                const propComputed = window.getComputedStyle(element, null);
+                const pdLeft = parseFloat(propComputed.getPropertyValue('padding-left')),
+                    pdright = parseFloat(propComputed.getPropertyValue('padding-right'));
+                if(((element.clientWidth - (pdLeft + pdright)) < 
+                (el.clientWidth + element.querySelector(".secondary__delete-button").clientWidth)) && !(el.classList.contains('text-hidden'))
+            ){
+                    el.classList.toggle("text--hidden");
+                } else if(el.classList.contains("text--hidden")){
+                    el.classList.toggle("text--hidden");
+                }
+            });
+        }
     });
 
     Array.from(document.querySelectorAll(".ukit-alt .ukit-alt-title-img")).forEach(function(el, i, arr){
@@ -53,48 +68,10 @@
     Array.from(listElements.imgSite).forEach(function(el, i, arr){
         el.addEventListener("error", imgLoadError);
     });
-    
-    Array.from(listElements.leftGruopCards).forEach(function(el, i, arr){ //hidden text of edit-button if (secondary__leftgroup.Children > 2)
-        if(el.childElementCount > 2) {
-            el.classList.toggle("text--hidden");
-        }
-    });
 
     Array.from(listElements.deleteButtonCards).forEach(function(el, i, arr){
         el.addEventListener('click', deleteCards);
     })
-    //далее не очень хороший код, надо исправить, но он для болванки
-    // var S = document.querySelectorAll(".tile.modal__item-site");
-
-    // Array.from(S).forEach(function(el, index, arr){
-    //     var preview =  el.querySelector(".preview__overlay");
-    //     preview.setAttribute('data-hover', false);
-    //     // preview.querySelector('.primary').style.pointerEvents = "none";
-    //     // preview.querySelector('.secondary').style.pointerEvents = "none";
-    //     Array.from(preview.querySelectorAll("*")).forEach(function(el, indx, arr){
-    //         el.style.pointerEvents = "none";
-    //     });
-    //     preview.addEventListener('mouseover', function(){
-    //         if(event.currentTarget.dataset.hover === "false") {
-    //             event.currentTarget.dataset.hover = true;
-    //         }
-    //     });
-    //     preview.addEventListener('click', function(){
-    //         if(event.currentTarget.dataset.hover === "true") {
-    //             Array.from(preview.querySelectorAll("*")).forEach(function(el, indx, arr){
-    //                 el.style.pointerEvents = "auto";
-    //             });
-    //         }
-    //     })
-    //     preview.addEventListener('mouseout', function(){
-    //         if(event.currentTarget.dataset.hover === "true") {
-    //             event.currentTarget.dataset.hover = "false"
-    //             Array.from(preview.querySelectorAll("*")).forEach(function(el, indx, arr){
-    //                 el.style.pointerEvents = "none";
-    //             });
-    //         }
-    //     });
-    // })
 
 
     //Список функций и процедур для работы с событиями

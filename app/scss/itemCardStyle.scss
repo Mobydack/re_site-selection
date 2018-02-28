@@ -423,8 +423,9 @@
                     }
                 }
                 &__delete-button {
-                    width: 36px;
+                    min-width: 36px;
                     height: 36px;
+                    margin-left: 12px;
                     border-radius: 50%;
                     background: {
                         image: url(../img/trash/white.svg);
@@ -515,23 +516,23 @@
                 }
             }
         }
+        .text--hidden{
+            .edit-button {
+                width: 36px;
+                padding: 0;
+                justify-content: center;
+                i {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+                .edit-button-text {
+                    display: none;
+                }
+            }
+        }
         @media (max-width: 500px) {
             .primary {
                 padding-top: 0;
-            }
-            .text--hidden{
-                .edit-button {
-                    width: 36px;
-                    padding: 0;
-                    justify-content: center;
-                    i {
-                        margin-left: 0;
-                        margin-right: 0;
-                    }
-                    .edit-button-text {
-                        display: none;
-                    }
-                }
             }
         }
     }
@@ -910,7 +911,7 @@
                 }
             }
             &__delete-button {
-                width: 36px;
+                min-width: 36px;
                 height: 36px;
                 margin-left: 12px;
                 border-radius: 50%;

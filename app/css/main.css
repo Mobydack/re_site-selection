@@ -983,8 +983,9 @@ select {
                 .modal-wrapper .modal .tile.modal__item-site .preview__overlay .secondary__leftgroup .premium-button:hover {
                   background-color: #4caf50; }
             .modal-wrapper .modal .tile.modal__item-site .preview__overlay .secondary__delete-button {
-              width: 36px;
+              min-width: 36px;
               height: 36px;
+              margin-left: 12px;
               border-radius: 50%;
               background-image: url(../img/trash/white.svg);
               background-color: #132026;
@@ -1048,6 +1049,17 @@ select {
           z-index: 2; }
           .modal-wrapper .modal .tile.modal__item-site .preview:hover .preview__overlay .secondary {
             pointer-events: auto; }
+        .modal-wrapper .modal .tile.modal__item-site .preview .text--hidden .edit-button {
+          width: 36px;
+          padding: 0;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center; }
+          .modal-wrapper .modal .tile.modal__item-site .preview .text--hidden .edit-button i {
+            margin-left: 0;
+            margin-right: 0; }
+          .modal-wrapper .modal .tile.modal__item-site .preview .text--hidden .edit-button .edit-button-text {
+            display: none; }
         @media (max-width: 500px) {
           .modal-wrapper .modal .tile.modal__item-site .preview .primary {
             padding-top: 0; }
@@ -1419,7 +1431,7 @@ select {
                 background-image: url(../img/dollar/white.svg);
                 background-color: #4caf50; }
           .modal-wrapper .modal .tile.modal__item-site.modal__item-site--table .secondary__delete-button {
-            width: 36px;
+            min-width: 36px;
             height: 36px;
             margin-left: 12px;
             border-radius: 50%;
