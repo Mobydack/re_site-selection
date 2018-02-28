@@ -30,7 +30,7 @@
         if(window.innerWidth <= 768 && arrCard[0].classList.contains('modal__item-site--table')) {
             toggleClass();
         }
-        if(listElements.modalWrapper.classList.contains('modal-wrapper--active')){ //
+        if(listElements.modalWrapper.classList.contains('modal-wrapper--active')){ //code for hidden text if(parentNode < summ(childeNodes))
             Array.from(listElements.leftGruopCards).forEach(function(el, i, arr){ //hidden text of edit-button if (secondary__leftgroup.Children > 2)
                 const element = el.parentNode;
                 const propComputed = window.getComputedStyle(element, null);
