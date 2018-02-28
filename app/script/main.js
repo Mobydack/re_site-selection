@@ -26,24 +26,15 @@
 
     document.querySelector(".close-modal").addEventListener('click', viewEvent);
 
+    window.onload = function(){
+        hiddenText();
+    }
     window.addEventListener('resize', function(){ // слежение за ресайзом вьюпорта
         if(window.innerWidth <= 768 && arrCard[0].classList.contains('modal__item-site--table')) {
             toggleClass();
         }
-        if(listElements.modalWrapper.classList.contains('modal-wrapper--active')){ //code for hidden text if(parentNode < summ(childeNodes))
-            Array.from(listElements.leftGruopCards).forEach(function(el, i, arr){ //hidden text of edit-button if (secondary__leftgroup.Children > 2)
-                const element = el.parentNode;
-                const propComputed = window.getComputedStyle(element, null);
-                const pdLeft = parseFloat(propComputed.getPropertyValue('padding-left')),
-                    pdright = parseFloat(propComputed.getPropertyValue('padding-right'));
-                if(((element.clientWidth - (pdLeft + pdright)) < 
-                (el.clientWidth + element.querySelector(".secondary__delete-button").clientWidth)) && !(el.classList.contains('text-hidden'))
-            ){
-                    el.classList.toggle("text--hidden");
-                } else if(el.classList.contains("text--hidden")){
-                    el.classList.toggle("text--hidden");
-                }
-            });
+        if(listElements.modalWrapper.classList.contains('modal-wrapper--active')){ 
+            hiddenText();
         }
     });
 
@@ -75,6 +66,23 @@
 
 
     //Список функций и процедур для работы с событиями
+    function hiddenText(){ //code for hidden text if(parentNode < summ(childeNodes))
+        Array.from(listElements.leftGruopCards).forEach(function(el, i, arr){ //hidden text of edit-button if (secondary__leftgroup.Children > 2)
+            const element = el.parentNode;
+            const propComputed = window.getComputedStyle(element, null);
+            const pdLeft = parseFloat(propComputed.getPropertyValue('padding-left')),
+                pdright = parseFloat(propComputed.getPropertyValue('padding-right'));
+                console.log(el.classList)
+            if(((element.clientWidth - (pdLeft + pdright)) < 
+            (el.clientWidth + element.querySelector(".secondary__delete-button").clientWidth)) && !(el.classList.contains('text-hidden'))
+        ){
+                el.classList.toggle("text--hidden");
+            } else if(el.classList.contains("text--hidden")){
+                
+                el.classList.toggle("text--hidden");
+            }
+        });
+    }
     function hoverEnterAltTooltip() { //функция позиционирования у тултипа
         var offset = this.getBoundingClientRect(),
             topMargin = 20,
