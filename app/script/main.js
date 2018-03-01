@@ -33,9 +33,7 @@
         if(window.innerWidth <= 768 && arrCard[0].classList.contains('modal__item-site--table')) {
             toggleClass();
         }
-        if(listElements.modalWrapper.classList.contains('modal-wrapper--active')){ 
-            hiddenText();
-        }
+        hiddenText();
     });
 
     Array.from(document.querySelectorAll(".ukit-alt .ukit-alt-title-img")).forEach(function(el, i, arr){
@@ -68,17 +66,70 @@
     //Список функций и процедур для работы с событиями
     function hiddenText(){ //code for hidden text if(parentNode < summ(childeNodes))
         Array.from(listElements.leftGruopCards).forEach(function(el, i, arr){ //hidden text of edit-button if (secondary__leftgroup.Children > 2)
-            const element = el.parentNode;
-            const dButton = element.querySelector(".secondary__delete-button");
-            const propComputed = window.getComputedStyle(element, null);
-            const pdLeft = parseFloat(propComputed.getPropertyValue('padding-left')),
-                pdright = parseFloat(propComputed.getPropertyValue('padding-right'));
-                console.log(el.classList)
-            if(((element.clientWidth - (pdLeft + pdright)) < (el.clientWidth + dButton.clientWidth + parseFloat(window.getComputedStyle(dButton, null).getPropertyValue('margin-left')))) && !(el.classList.contains('text-hidden'))){
-                el.classList.toggle("text--hidden");
-            } else if(el.classList.contains("text--hidden")){
-                
-                el.classList.toggle("text--hidden");
+            // const element = el.parentNode;
+            // const dButton = element.querySelector(".secondary__delete-button");
+            // const propComputed = window.getComputedStyle(element, null);
+            // const pdLeft = parseFloat(propComputed.getPropertyValue('padding-left')),
+            //     pdright = parseFloat(propComputed.getPropertyValue('padding-right'));
+            // if(((element.clientWidth - (pdLeft + pdright)) < (el.clientWidth + dButton.clientWidth + parseFloat(window.getComputedStyle(dButton, null).getPropertyValue('margin-left')))) && !(el.classList.contains('text-hidden'))){
+            //     el.classList.toggle("text--hidden");
+            // } else if(el.classList.contains("text--hidden")){
+            //     el.classList.toggle("text--hidden");
+            // }
+            // const deleteButton = el.parentNode.querySelector('.secondary__delete-button'); //получаем ссылку на Element delete__button
+            // const dbComputed = {
+            //     marginL: parseFloat(window.getComputedStyle(deleteButton, null).getPropertyValue('margin-left')),
+            //     width: parseFloat(window.getComputedStyle(deleteButton, null).getPropertyValue('width'))
+            // };
+            // console.log(el);
+            // const elComStyle = {
+            //     width: parseFloat(window.getComputedStyle(el, null).getPropertyValue('width'))
+            // }
+            // const propComputed = {
+            //     width: parseFloat(window.getComputedStyle(el.parentNode, null).getPropertyValue('width')),
+            //     paddingL: parseFloat(window.getComputedStyle(el.parentNode, null).getPropertyValue('padding-left')),
+            //     paddingR: parseFloat(window.getComputedStyle(el.parentNode, null).getPropertyValue('padding-right'))
+            // };
+            // const parentWitdth = propComputed.width - (propComputed.paddingL + propComputed.paddingR);
+            // const childrenNode = el.offsetWidth + dbComputed.marginL + dbComputed.width;
+            // if(parentWitdth < childrenNode){
+            //     console.log(1);
+            //     if(!(el.classList.contains('text--hidden'))){
+            //         console.log(1.1)
+            //         el.classList.add('text--hidden')
+            //     }
+            // }
+            // else if(el.classList.contains('text--hidden')){
+            //     console.clear()
+            //     console.log(2)
+            //     console.log(`parentWidth: ${parentWitdth} | childrenWidth: ${el.offsetWidth}`)
+            //     console.log(el)
+            //     console.log(`ChildrenWidth: el.ClientWith(${elComStyle.width}) + dvComputed(${parseFloat(dbComputed.width)}) + deleteButton.clientWidth(${dbComputed.marginL})`)
+            //     el.classList.remove('text--hidden');
+            // }
+            if(el.hasChildNodes()){ //Begin
+                const elChildren = el.children; // По сути часть с [begin] и до [end] должна выполнятсься при открытии [Мои сайты]
+                let commonWidth = 0;
+                for(let i = 0; i < elChildren.length; i++) {
+                    commonWidth += getCSS(elChildren[i], "width") + getCSS(elChildren[i], "margin-left") + getCSS(elChildren[i], "margin-right");
+                }//end
+                const parentWidth = getCSS(el.parentNode, "width") - (getCSS(el.parentNode, "padding-left") + getCSS(el.parentNode, "padding-right"));
+                const dButton = el.parentNode.querySelector(".secondary__delete-button");
+                commonWidth += getCSS(dButton, "width") + getCSS(dButton, "margin-left") + getCSS(dButton, "margin-right");
+                if (parentWidth < commonWidth && !(el.classList.contains("text--hidden"))){
+                    console.clear()
+                    console.log(1)
+                    el.classList.add('text--hidden')
+                }
+                else {
+                    console.clear();
+                    console.log(`cW: ${commonWidth} | pW: ${parentWidth}`);
+                    el.classList.remove('text--hidden');
+                }
+            }
+            function getCSS(el, nameCss){
+                console.log(el)
+                return parseFloat(window.getComputedStyle(el, null).getPropertyValue(nameCss));
             }
         });
     }
