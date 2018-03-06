@@ -972,3 +972,69 @@
     }
 }
 
+.publishing {
+    position: relative;
+    &:before {
+        content:'';
+        position: absolute;
+        top:0;
+        right:0;
+        left: 0;
+        bottom: 0;
+        z-index: 4;
+        background: {
+            color: rgba(38,56,69,0.90);
+        }
+    }
+    .state {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        z-index: 5;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        align-content: center;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-message-wrapper {
+        span {
+            margin-bottom: 15%;
+            display: block;
+            position: relative;
+            text-align: center;
+            font-family: avenir-regular;
+            font-size: 24px;
+            color: #DAE1E6;
+            letter-spacing: 0;
+            text-align: center;
+            line-height: 30px;
+        }
+    }
+    &-loader {
+        width: 200px;
+        height: 200px;
+        margin-top: 13%;
+        background: {
+            image: url(../img/publication/loader.svg);
+            position: center;
+            repeat: no-repeat;
+            origin: content-box;
+            color: transparent;
+        }
+    }
+    &-progressbar {
+        width: 250px;
+        height: 4px;
+        background: {
+            image: url(../img/publication/progress-bar.svg);
+            position: center;
+            repeat: no-repeat;
+            origin: content-box;
+            color: transparent;
+        }
+    }
+}
+
