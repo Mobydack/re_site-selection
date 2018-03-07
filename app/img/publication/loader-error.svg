@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="196px" height="196px" viewBox="0 0 196 196" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>loader-error</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Site-Selection" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard-/-Choice-of-Sites-/-Publication" transform="translate(-1029.000000, -1073.000000)">
+            <g id="loader-error" transform="translate(1029.000000, 1073.000000)">
+                <circle id="Ring-4" stroke-opacity="0.03" stroke="#FFFFFF" stroke-width="3" cx="98" cy="98" r="96.5"></circle>
+                <circle id="Ring-2" fill="#1C2A33" opacity="0.75" cx="98" cy="98" r="72"></circle>
+                <circle id="Ring-2" stroke="#C2445C" stroke-width="3" cx="98" cy="98" r="70.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

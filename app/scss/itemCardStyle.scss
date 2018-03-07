@@ -1001,7 +1001,7 @@
     }
     &-message-wrapper {
         span {
-            margin-bottom: 15%;
+            margin-bottom: 25%;
             display: block;
             position: relative;
             text-align: center;
@@ -1015,19 +1015,19 @@
     }
     &-loader {
         width: 200px;
-        height: 200px;
-        margin-top: 13%;
-        background: {
-            image: url(../img/publication/loader.svg);
-            position: center;
-            repeat: no-repeat;
-            origin: content-box;
-            color: transparent;
+        height: 50%;
+        margin-top: 10%;
+        margin-bottom: 5%;
+        flex: 1 1 auto;
+        img {
+            width: 100%;
+            height: 100%;
         }
     }
     &-progressbar {
         width: 250px;
-        height: 4px;
+        min-height: 4px;
+        margin-bottom: 10%;
         background: {
             image: url(../img/publication/progress-bar.svg);
             position: center;
@@ -1035,6 +1035,12 @@
             origin: content-box;
             color: transparent;
         }
+        &-error {
+            background: {
+                image: url(../img/publication/progress-bar-success.svg);
+            }
+        }
+
     }
 }
 

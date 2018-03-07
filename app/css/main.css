@@ -1507,7 +1507,7 @@ select {
         -ms-flex-pack: justify;
         justify-content: space-between; }
       .modal-wrapper .modal .publishing-message-wrapper span {
-        margin-bottom: 15%;
+        margin-bottom: 25%;
         display: block;
         position: relative;
         text-align: center;
@@ -1519,21 +1519,26 @@ select {
         line-height: 30px; }
       .modal-wrapper .modal .publishing-loader {
         width: 200px;
-        height: 200px;
-        margin-top: 13%;
-        background-image: url(../img/publication/loader.svg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-origin: content-box;
-        background-color: transparent; }
+        height: 50%;
+        margin-top: 10%;
+        margin-bottom: 5%;
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto; }
+        .modal-wrapper .modal .publishing-loader img {
+          width: 100%;
+          height: 100%; }
       .modal-wrapper .modal .publishing-progressbar {
         width: 250px;
-        height: 4px;
+        min-height: 4px;
+        margin-bottom: 10%;
         background-image: url(../img/publication/progress-bar.svg);
         background-position: center;
         background-repeat: no-repeat;
         background-origin: content-box;
         background-color: transparent; }
+        .modal-wrapper .modal .publishing-progressbar-error {
+          background-image: url(../img/publication/progress-bar-success.svg); }
     .modal-wrapper .modal .tile.create-new-site {
       display: -webkit-box;
       display: -ms-flexbox;
